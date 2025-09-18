@@ -1,0 +1,87 @@
+@charset "utf-8";
+// ============================================================
+// mixin
+// ============================================================
+
+//=================================
+// font-size
+//=================================
+
+@mixin fz($size){
+	font-size: ($size*10) + px;
+	font-size: $size + rem;
+}
+
+@mixin fz_em($size,$context){
+	font-size: ($size / $context) + em;
+}
+
+//=================================
+// vw size
+//=================================
+@function vs($size, $design:375){
+  $rate: 100 / $design;
+  @return $rate * $size * 1vw;
+}
+
+
+//=================================
+// safe-area
+//=================================
+@mixin safe_area {
+  padding-top: constant(safe-area-inset-top);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-left: constant(safe-area-inset-left);
+  padding-right: constant(safe-area-inset-right);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+
+// ----------------------------------------------------------------------
+// 両端揃え
+// ----------------------------------------------------------------------
+@mixin justify {
+	text-align: justify;
+	text-justify: inter-ideograph;
+	font-feature-settings: "palt";
+}
+
+//=================================
+// object fit images
+//=================================
+@mixin ofi($size) {
+  object-fit: $size;
+  @include ie {
+    font-family: 'object-fit: #{$size};'
+  }
+}
+
+//=================================
+// focus-ring
+//=================================
+@mixin focus-with-keyboard {
+  html[data-whatinput="keyboard"] &:focus {
+    @content;
+  }
+}
+
+@mixin focus-without-keyboard {
+  html[data-whatinput="initial"] &:focus,
+  html[data-whatinput="mouse"] &:focus,
+  html[data-whatinput="touch"] &:focus {
+    @content;
+  }
+}
+
+@mixin focus-clear {
+  outline: none;
+}
+
+@mixin focus-clear-without-keyboard {
+  @include focus-without-keyboard {
+    @include focus-clear;
+  }
+}

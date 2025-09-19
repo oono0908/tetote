@@ -1,84 +1,111 @@
-@charset "UTF-8";
-/*----------------------------------------
-	reset
-----------------------------------------*/
 *,
-::before,
-::after {
-  -webkit-box-sizing: border-box;
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-* {
-  font-size: inherit;
-  line-height: inherit;
-}
-
-::before,
-::after {
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, dialog, figure, footer, header, main, menu, nav, section,
-time, mark, audio, video {
-  margin: 0;
+/* Remove default padding */
+ul,
+ol {
   padding: 0;
-  vertical-align: baseline;
 }
 
-header, footer, article, section, aside, main, nav, menu, figure, figcaption {
-  display: block;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-span, small, strong, em, b, i {
-  color: inherit;
-}
-
+/* Set core root defaults */
 html {
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
 ul,
 ol {
   list-style: none;
 }
 
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
 img {
-  border: 0;
-  vertical-align: top;
+  max-width: 100%;
+  display: block;
+  width: 100%;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
 }
 
-caption, th {
-  text-align: left;
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-input, select {
-  vertical-align: middle;
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
 }
 
-input, textarea {
-  margin: 0;
+/* フォームリセット */
+input,
+button,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
   padding: 0;
 }
 
-address {
-  font-style: normal;
+textarea {
+  resize: vertical;
 }
 
-q::before,
-q::after {
+input[type="submit"],
+input[type="button"],
+label,
+button,
+select {
+  cursor: pointer;
+}
+
+select::-ms-expand {
   display: none;
 }

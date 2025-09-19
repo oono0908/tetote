@@ -1,0 +1,1 @@
+jQuery(function(e){new Swiper(".mv__swiper",{effect:"fade",fadeEffect:{crossFade:!0},loop:!0,autoplay:{delay:4e3,disableOnInteraction:!1},speed:6e3})});

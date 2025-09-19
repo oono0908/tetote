@@ -1,3 +1,186 @@
-@use "../base/base";
-@use "../global" as *;
+@use "../gloval" as *;
+
+/* =========================================================
+header
+========================================================= */
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  height: 56px;
+  @include mq("md"){
+    height: 118px;
+    padding: 30px;
+  }
+}
+
+.header__logo {
+  width: 154px;
+  @include mq("md"){
+    width: 250px;
+  }
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.header__right .hamburger{
+  margin-left: 40px;
+}
+
+.header__btns{
+  display: flex;
+  align-items: center;
+}
+
+.header__btns .btn:nth-child(2){
+  margin-left: 22px;
+}
+
+.header__btns .btn{
+  font-size: 14px;
+  font-weight: $bold;
+}
+
+/* =========================================================
+  ハンパーガー
+========================================================= */
+.hamburger {
+  width: 32px;
+  @include mq("md"){
+   width: 52px;
+  }
+}
+
+.hamburger__lines {
+  height: 21px;
+  position: relative;
+  width: 100%;
+  @include mq("md"){
+   height: 31px;
+ }
+}
+
+.hamburger__lines span {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #fff;
+  transform-origin: center;
+  transition: transform .25s ease, opacity .2s ease, top .2s ease, bottom .2s ease;
+}
+
+.hamburger__text{
+  font-size: 10px;
+  color: $white;
+  text-align: center;
+  font-weight: $regular;
+  margin-top: 5px;
+  @include mq("md"){
+   font-size: 12px;
+   margin-top: 10px;
+  }
+}
+
+.hamburger__lines span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger__lines span:nth-child(2) {
+  top: 9px;
+  @include mq("md"){
+    top: 15px;
+  }
+}
+
+.hamburger__lines span:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger.is-open .hamburger__lines span:nth-child(1) {
+  top: 9px;
+  transform: rotate(45deg);
+  @include mq("md"){
+    top: 15px;
+  }
+}
+
+.hamburger.is-open .hamburger__lines span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open .hamburger__lines span:nth-child(3) {
+  bottom: auto;
+  top: 9px;
+  transform: rotate(-45deg);
+  @include mq("md"){
+    top: 15px;
+  }
+}
+
+/* =========================================================
+  Drawer
+========================================================= */
+
+.drawer{
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  position:fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.drawer__inner{
+  padding: 90px 12px 53px 12px;
+  height: inherit;
+}
+
+
+.gnav{
+  height: inherit;
+}
+
+.gnav__cols{
+  height: inherit;
+}
+
+.gnav__list{
+  height: inherit;
+}
+
+.gnav__item{
+  height: inherit;
+  border-bottom: 1px solid $green;
+}
+
+.gnav__link{
+  display: inline-block;
+  padding: 13px 0;
+  color: $black;
+  height: inherit;
+}
+
+.gnav__title{
+  font-size: 18px;
+  font-weight: $regular;
+}
+
+.gnav__subtitle{
+  font-size: 12px;
+  font-weight: $bold;
+  margin-top: 10px;
+}
+
+
 

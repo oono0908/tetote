@@ -1,0 +1,146 @@
+@use "../gloval" as *;
+@use "../base/base";
+@use "../base/reset";
+@use "../layout/header";
+@use "../layout/footer";
+
+// 共通パーツ
+
+// ボタン
+.btn{
+  display: inline-block;
+  color: $white;
+  text-align: center;
+}
+
+.btn--small{
+  width: 126px;
+  padding: 14px 0;
+}
+
+.btn--medium{
+  width: 248px;
+  padding: 14px 0;
+}
+
+.btn--large{
+  width: 355px;
+  padding: 30px 0;
+}
+
+.btn--xlarge{
+  width: 956px;
+  padding: 50px 0;
+}
+
+.btn--black{
+  background-color: $black;
+}
+
+.btn--green{
+  background-color: $green;
+}
+
+.btn--white{
+  background-color: $white;
+}
+
+.btn--arrow{
+  position: relative;
+  &:after{
+    border-right: 3px solid $black;
+    border-top: 3px solid $black;
+    bottom: 0;
+    content: "";
+    height: 20px;
+    margin: auto;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    transform: rotate(45deg);
+    width: 20px;
+  }
+}
+
+.btn-round{
+  border-radius: 50%;
+  border: 1px solid $black;
+}
+
+.btn-round--small{
+  width: 40px;
+  height: 40px;
+}
+
+.btn-round--large{
+  width: 58px;
+  height: 58px;
+}
+
+.btn-round--arrow{
+  position:relative;
+   &:before,&:after{
+    content:""; 
+    position:absolute; 
+    left:50%; 
+    top:50%;
+  }
+}
+
+.btn-round--arrow{
+  position:relative;
+   &:before{
+    width:16px; 
+    height:2px; 
+    transform:translate(-3px,-50%);
+   }
+   &:after{
+    width:8px; 
+    height:8px;
+    border-left:2px solid $black; 
+    border-top:2px solid $black;
+    transform:translate(-9px,-50%) rotate(-45deg);
+   }
+}
+
+.btn-round--arrow._reverse{
+  &:before{
+    width: 16px;
+    height: 2px;
+    background: currentColor;
+    transform: translate(-3px, -50%);
+  }
+  &:after{
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid $black;
+    border-top: 2px solid $black;
+    transform: translate(-9px, -50%) rotate(-45deg);
+  }
+}
+
+// テキストカラー
+.font--white{
+  color: $white;
+}
+
+// sp、pc表示の有無
+.md-none{
+  @include mq("md"){
+    display: none !important;
+  }
+}
+
+.md-show{
+  display: none !important;
+  @include mq("md"){
+    display: block !important;
+  }
+}
+
+
+
+
+
+
+

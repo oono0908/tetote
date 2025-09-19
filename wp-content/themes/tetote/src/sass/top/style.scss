@@ -1,0 +1,32 @@
+@use "../gloval" as *;
+
+.mv{
+  height: 100vh;
+  width: 100%;
+}
+
+.mv__inner{
+  height: inherit;
+  position: relative;
+}
+
+.swiper{
+  height: inherit;
+}
+
+.swiper-wrapper{
+  height: inherit;
+}
+
+.swiper-slide{
+  height: inherit;
+}
+
+.mv__img{
+  object-fit: cover;
+  height: 100%;
+}
+
+
+
+

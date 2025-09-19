@@ -20,7 +20,7 @@ const src = {
  
 const dest = {
   css: './assets/css',
-  img: './assets/img/',
+  img: './assets/images/',
   js: './assets/js/'
 };
 

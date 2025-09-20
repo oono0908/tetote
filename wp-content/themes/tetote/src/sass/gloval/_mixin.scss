@@ -19,11 +19,25 @@
 //=================================
 // vw size
 //=================================
-@function vs($size, $design:375){
+@function vw($size, $design){
   $rate: 100 / $design;
   @return $rate * $size * 1vw;
 }
 
+//=================================
+// vh size
+//=================================
+@function vh($size, $design){
+  $rate: 100 / $design;
+  @return $rate * $size * 1vh;
+}
+
+//=================================
+// width size (display: flex用)
+//=================================
+@function width($size, $design) {
+  @return $size / $design * 100%;
+}
 
 //=================================
 // safe-area

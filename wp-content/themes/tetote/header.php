@@ -55,7 +55,7 @@
   </header>
 
    <!-- Drawer Menu -->
-<div class="drawer" role="dialog" aria-labelledby="drawer-menu">
+<div class="drawer js-drawer" role="dialog" aria-labelledby="drawer-menu">
   <div class="drawer__inner">
 
     <!-- 左：ブランド -->

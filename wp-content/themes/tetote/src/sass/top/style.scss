@@ -3,6 +3,7 @@
 .mv{
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 
 .mv__inner{
@@ -26,6 +27,131 @@
   object-fit: cover;
   height: 100%;
 }
+
+.mv__title{
+  position: absolute;
+  color: $white;
+  text-shadow: 0 4px 8px black;
+  font-weight: $regular;
+  line-height: 1.2;
+  z-index: 100;
+  font-size: 48px;
+  bottom: 137px;
+  left: 12px;
+  top: vh(414, 667);
+   @include mq("md"){
+    top: 50%;
+    left: 66px;
+    transform: translateY(-50%);
+    font-size: 96px;
+  }
+}
+
+.mv__subtitle{
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  z-index: 100;
+  padding: 9px 0;
+  width: 228px;
+  font-size: 12px;
+  top: vh(548,667);
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  @include mq("md"){
+    font-size: 24px;
+    top: vh(602,823);
+    width: 515px;
+    padding: 17px 0;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  }
+}
+
+.news{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  border: 1px solid $black;
+  border-radius: 50px;
+  z-index: 100;
+  width: vw(351,375);
+  top: vh(609,667);
+  left: 50%;
+  transform: translateX(-50%);
+  height: 48px;
+  background-color: $white;
+  overflow: hidden;
+  @include mq("md"){
+    bottom: 38px;
+    left: 66px;
+    width: vw(1263, 1440);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 62px;
+  }
+}
+
+.news__title{
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  font-weight: $regular;
+  height: 100%;
+  font-size: vw(10, 375);
+  width: width(52,351);
+  line-height: 48px;
+  @include mq("md"){
+    width: width(190,1263);
+    line-height: 62px;
+    font-size: vw(24, 1440);
+  }
+}
+
+.news__text{
+  background-color: $white;
+  font-weight: $regular;
+  color: $black;
+  height: 100%;
+  width: width(299,351);
+  line-height: 48px;
+  @include mq("md"){
+    width: width(906,1263);
+    font-size: 16px;
+    line-height: 62;
+  }
+}
+
+.news__link{
+  display: none;
+  @include mq("md"){
+    display: inline-block;
+    width: width(170,1263);
+    color: $black;
+    background-color: $white;
+    font-size: 11px;
+    position: relative;
+    height: 100%;
+    line-height: 62px;
+    &:after{
+      border-right: 3px solid $black;
+      border-top: 3px solid $black;
+      bottom: 0;
+      content: "";
+      height: 10px;
+      margin: auto;
+      position: absolute;
+      right: 14%;
+      top: 0;
+      transform: rotate(45deg);
+      width: 10px;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
 
 
 

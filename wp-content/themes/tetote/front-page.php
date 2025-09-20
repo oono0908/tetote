@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!--  mainvisual -->
-<div class="main">
+<main class="main">
   <div class="mv">
     <div class="mv__inner">
       <div class="swiper mv__swiper">
@@ -14,16 +14,16 @@
         </div>
       </div>
     </div>
-    <div class="mv__content">
-      <h1 class="mv__title">
-        <div class="mv__title-line">BECOME A</div>
-        <div class="mv__title-line">CHALLENGER.</div>
-      </h1>
-      <p class="mv__subtitle">君の挑戦が、意思が、未来を変える</p>
+    <h2 class="mv__title">
+      BECOME A</br>CHALLENGER.
+    </h2>
+    <p class="mv__subtitle">君の挑戦が、意思が、未来を変える</p>
+    <div class="news">
+      <div class="news__title">NEWS</div>
+      <div class="news__text"></div>
+      <a href="<?php echo esc_url(home_url('/')); ?>" class="news__link">VIEW MORE</a>
     </div>
-</div>
-
-
-</div>
+  </div>
+</main>
 
 <?php get_footer(); ?>

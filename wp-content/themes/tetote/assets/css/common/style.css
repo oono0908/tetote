@@ -6,7 +6,7 @@ html {
 body {
   overflow-x: hidden;
   overflow-y: auto;
-  font-family: "Roboto", "Noto Serif JP", sans-serif;
+  font-family: "Viga", "Noto Serif JP", sans-serif;
   line-height: 1.75;
   font-size: 16px;
   color: #222222;
@@ -106,6 +106,7 @@ a:not([class]) {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 /* Make images easier to work with */
@@ -340,6 +341,15 @@ header
   top: 0;
   left: 0;
   display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+  z-index: 1000;
+}
+
+.drawer.is-open {
+  display: grid;
+  opacity: 1;
 }
 
 .drawer__inner {

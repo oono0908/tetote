@@ -35,9 +35,6 @@ a[href^="tel:"] {
 img {
   width: 100%;
   height: auto;
-  &.self-size {
-    max-width: 100%;
-  }
 }
 
 button {

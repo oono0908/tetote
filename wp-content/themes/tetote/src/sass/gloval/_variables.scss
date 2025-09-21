@@ -1,0 +1,29 @@
+@use "sass:math";
+// 文字フォントの種類
+$base-font: "Viga", "Noto Serif JP", sans-serif;
+
+// 文字の太さ
+$regular: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+// 色
+$base-color: #222222;
+$black: #222222;
+$white: #FAF7F1;
+$ochres: #AFA86F;
+$green: #988C2C;
+$gray: #979797;
+
+// z-index
+$zindex: (
+  base: 1,
+  drawer: 100,   // ドロワーメニュー
+  header: 200,   // 固定ヘッダー
+  modal: 500,   // モーダル
+  hamburger: 1000,   // ハンバーガー
+  toast: 2000,   // 通知
+);
+
+

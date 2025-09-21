@@ -1,18 +1,41 @@
 @use "../gloval" as *;
 
+// ボタン共通
+// headerのボタン
+.btn--small{
+  width: 126px;
+  padding: 14px 0;
+  color: $white;
+}
+
+// drawerのボタン
+.btn--medium{
+  width: 248px;
+  padding: 14px 0;
+  color: $white;
+}
+
+.btn--black{
+  background-color: $black;
+}
+
+.btn--green{
+  background-color: $green;
+}
+
 /* =========================================================
 header
 ========================================================= */
 .header {
   position: fixed;
   inset: 0 0 auto 0;
-  z-index: 50;
+  z-index: map-get($zindex, header);
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 12px;
-  height: 56px;
+  height: 80px;
   @include mq("md"){
     height: 118px;
     padding: 30px;
@@ -53,6 +76,7 @@ header
   ハンパーガー
 ========================================================= */
 .hamburger {
+  z-index: map-get($zindex, hamburger);
   width: 32px;
   @include mq("md"){
    width: 52px;
@@ -68,7 +92,7 @@ header
  }
 }
 
-.hamburger__lines span {
+.hamburger span {
   display: inline-block;
   position: absolute;
   left: 0;
@@ -77,6 +101,46 @@ header
   background-color: #fff;
   transform-origin: center;
   transition: transform .25s ease, opacity .2s ease, top .2s ease, bottom .2s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+  @include mq("md"){
+    top: 15px;
+  }
+}
+
+.hamburger span:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger.is-open span:nth-child(1) {
+  top: 9px;
+  transform: rotate(45deg);
+  @include mq("md"){
+    top: 15px;
+  }
+}
+
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+  bottom: auto;
+  top: 9px;
+  transform: rotate(-45deg);
+  @include mq("md"){
+    top: 15px;
+  }
+}
+
+.hamburger.is-open span{
+  background-color: $black;
 }
 
 .hamburger__text{
@@ -88,42 +152,6 @@ header
   @include mq("md"){
    font-size: 12px;
    margin-top: 10px;
-  }
-}
-
-.hamburger__lines span:nth-child(1) {
-  top: 0;
-}
-
-.hamburger__lines span:nth-child(2) {
-  top: 9px;
-  @include mq("md"){
-    top: 15px;
-  }
-}
-
-.hamburger__lines span:nth-child(3) {
-  bottom: 0;
-}
-
-.hamburger.is-open .hamburger__lines span:nth-child(1) {
-  top: 9px;
-  transform: rotate(45deg);
-  @include mq("md"){
-    top: 15px;
-  }
-}
-
-.hamburger.is-open .hamburger__lines span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.is-open .hamburger__lines span:nth-child(3) {
-  bottom: auto;
-  top: 9px;
-  transform: rotate(-45deg);
-  @include mq("md"){
-    top: 15px;
   }
 }
 
@@ -141,7 +169,7 @@ header
   display: none;
   opacity: 0;
   transition: opacity 0.25s ease;
-  z-index: 1000;
+    z-index: map-get($zindex, drawer);
 }
 
 .drawer.is-open{
@@ -150,17 +178,57 @@ header
 }
 
 .drawer__inner{
-  padding: 90px 12px 53px 12px;
   height: inherit;
+  width: 100%;
+  position: relative;
 }
 
 
 .gnav{
   height: inherit;
+  padding: 90px 12px 53px 12px;
+  @include mq("md"){
+    position: absolute;
+    top: 50%;
+    right: 9%;
+    transform: translateY(-50%);
+    height: auto;
+    border-left: 1px solid $green;
+    padding: 0;
+    @include mq("lg"){
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: calc(100% + 63px);
+        width: 250px;
+        height: 61px;
+        background: url("../../images/title-black.svg") no-repeat center/contain;
+        transform: translateY(-50%);
+        z-index: 1000;
+      }
+    }
+  }
+}
+
+.gnav__col{
+  @include mq("md"){
+    width: 248px;
+    border-top: 1px solid $green;
+  }
+}
+
+.gnav__col:nth-child(2){
+  @include mq("md"){
+    margin-left: 30px;
+  }
 }
 
 .gnav__cols{
-  height: inherit;
+  @include mq("md"){
+    display: flex;
+    padding-left: 63px;
+    }
 }
 
 .gnav__list{
@@ -177,17 +245,42 @@ header
   padding: 13px 0;
   color: $black;
   height: inherit;
+  @include mq("md"){
+    padding: 23px 0;
+  }
 }
 
 .gnav__title{
   font-size: 18px;
   font-weight: $regular;
+  @include mq("md"){
+    font-size: 32px;
+  }
 }
 
 .gnav__subtitle{
   font-size: 12px;
   font-weight: $bold;
   margin-top: 10px;
+  @include mq("md"){
+    font-size: 16px;
+    margin-top: 11px;
+  }
+}
+
+.gnav__btns{
+  margin-top: 53px;
+  @include mq("md"){
+    margin-left: 63px;
+  }
+}
+
+.gnav__btns .btn:nth-child(2){
+  margin-top: 13px;
+  @include mq("md"){
+    margin-top: 0;
+    margin-left: 30px;
+  }
 }
 
 

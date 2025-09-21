@@ -57,15 +57,6 @@
    <!-- Drawer Menu -->
 <div class="drawer js-drawer" role="dialog" aria-labelledby="drawer-menu">
   <div class="drawer__inner">
-
-    <!-- 左：ブランド -->
-    <div class="drawer__brand md-show">
-      <a class="drawer__brand-link" href="/">
-        <img class="drawer__brand-logo" src="/assets/logo-tetote.svg" alt="TETOTE Recruiting">
-      </a>
-    </div>
-
-    <!-- 右：メニューグリッド -->
     <nav class="gnav" aria-label="サイトメニュー" id="drawer-menu">
       <div class="gnav__cols">
 
@@ -116,16 +107,12 @@
             </li>
           </ul>
         </div>
-
       </div>
-
-      <!-- 下段：CTAボタン -->
-      <div class="drawer__footer">
-        <a class="drawer__cta drawer__cta--dark" href="/guidelines">募集要項</a>
-        <a class="drawer__cta drawer__cta--primary" href="/entry">ENTRY</a>
+      <div class="gnav__btns">
+        <a class="btn btn--medium btn--green" href="/guidelines">募集要項</a>
+        <a class="btn btn--medium btn--black" href="/entry">ENTRY</a>
       </div>
     </nav>
-
   </div>
 </div>
 

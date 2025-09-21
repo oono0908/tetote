@@ -54,13 +54,6 @@ a {
   outline: none;
 }
 
-/* Make images easier to work with */
-img {
-  max-width: 100%;
-  display: block;
-  width: 100%;
-}
-
 /* Natural flow and rhythm in articles by default */
 article > * + * {
   margin-top: 1em;

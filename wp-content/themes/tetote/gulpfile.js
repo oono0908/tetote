@@ -60,12 +60,13 @@ const img_task = () => (
 
 const js_task = () => {
   return gulp.src(src.js)
-    .pipe(uglify())
+    // .pipe(uglify())
     // .pipe(rename({
     //         extname: '.min.js'
     //     }))
     .pipe(gulp.dest(dest.js));
 }
+
 
 const watch_task = () => {
   gulp.watch(src.sass, sass_task);

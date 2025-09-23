@@ -4,6 +4,62 @@
 トップページ共通パーツ
 ========================================================= */
 
+// 各セクションタイトル
+.section-title__main{
+  font-size: 32px;
+  font-weight: $bold;
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 318px;
+    height: 80px;
+    z-index: -1;
+    left: 0;
+    @include mq("xl"){
+      font-size: 52px;
+      transform: translate(-60%,-50%);
+      width: vw(540, 1440);
+      max-width: 540px;
+      left: auto;
+    }
+  }
+}
+
+.member .section-title__main{
+  &:after{
+     background: url("../../images/section-title-member.svg") no-repeat center/contain;
+  }
+}
+
+.member .section-title__main{
+  &:after{
+     background: url("../../images/section-title-benefits.svg") no-repeat center/contain;
+  }
+}
+
+.section-title--center{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title__main span._underline{
+   text-decoration:underline;
+   display: inline-block;
+   padding-top: 5px;
+}
+
+.section-title__sub{
+  font-size: 16px;
+  margin-top: 43px;
+  font-weight: $regular;
+  @include mq("md"){
+    margin-top: 52px;
+  }
+}
+
 // about,memberセクションのボタン
 .btn--large{
   width: 277px;
@@ -36,11 +92,6 @@
   }
 }
 
-.btn-round{
-  border-radius: 50%;
-  border: 1px solid $black;
-}
-
 .btn-round--small{
   width: 40px;
   height: 40px;
@@ -52,44 +103,42 @@
 }
 
 .btn-round--arrow{
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid $black;
   position:relative;
-   &:before,&:after{
+   &:before{
     content:""; 
     position:absolute; 
     left:50%; 
     top:50%;
+    width:12px; 
+    height:2px; 
+    transform:translate(-50%,-50%);
+    background: $black;
+  }
+  &:after{
+    content:""; 
+    position:absolute; 
+    left:50%; 
+    top:50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 8px;
+    height: 8px;
   }
 }
 
-.btn-round--arrow{
-  position:relative;
-   &:before{
-    width:16px; 
-    height:2px; 
-    transform:translate(-3px,-50%);
-   }
+.btn-round--arrow._origin{
    &:after{
-    width:8px; 
-    height:8px;
-    border-left:2px solid $black; 
-    border-top:2px solid $black;
-    transform:translate(-9px,-50%) rotate(-45deg);
+    border-right:2px solid $black; 
+    border-bottom:2px solid $black;
    }
 }
 
 .btn-round--arrow._reverse{
-  &:before{
-    width: 16px;
-    height: 2px;
-    background: currentColor;
-    transform: translate(-3px, -50%);
-  }
   &:after{
-    width: 8px;
-    height: 8px;
     border-left: 2px solid $black;
     border-top: 2px solid $black;
-    transform: translate(-9px, -50%) rotate(-45deg);
   }
 }
 
@@ -262,7 +311,8 @@ aboutセクション
   margin-right: calc(50% - 50vw);
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
-  overflow: visible; 
+  overflow: hidden;
+  padding-bottom: 105px; 
 }
 
 .about__card{
@@ -315,7 +365,6 @@ aboutセクション
 }
 
 .about__body{
-  margin-top: 105px;
   width: 100%;
   padding-bottom: 39px;
   @include mq("md"){
@@ -355,6 +404,176 @@ aboutセクション
 /* =========================================================
 MEMBERセクション
 ========================================================= */
+
+.member__inner{
+  padding-top: 71px;
+  @include mq("md"){
+    padding-top: 86px;
+  }
+}
+
+.member__slider{
+  padding: 52px 0 64px 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+  overflow: hidden;
+  @include mq("md"){
+    padding: 52px 0 80px 0;
+  }
+}
+
+.member .swiper-slide{
+  width: 248px !important;
+  @include mq("md"){
+    width: 300px !important;
+  }
+}
+
+.member .swiper-slide:nth-child(even){
+  margin-top: 20px;
+}
+
+.member__card-thum{
+  position: relative;
+}
+
+.member__card-title{
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+}
+
+.member__card-text{
+  font-weight: $bold;
+  background: $green;
+  color: $black;
+  font-size: 16px;
+  @include mq("md"){
+    font-size: 20px;
+    padding: 5px 7px;
+  }
+}
+
+.member__card-text:nth-child(2){
+  margin-top: 5px;
+}
+
+.member__card-body{
+  margin-top: 36px;
+}
+
+.member__card-role{
+  color: $black;
+  margin-top: 13px;
+  font-size: 12px;
+  @include mq("md"){
+    margin-top: 21px;
+    font-size: 16px;
+  }
+}
+
+.member__card-name{
+  font-size: 20px;
+  font-weight: $bold;
+  margin-top: 14px;
+  @include mq("md"){
+    font-size: 24px;
+    margin-top: 16px;
+  }
+}
+
+.member__btns{
+  position: relative;
+}
+
+.swiper__btn{
+  display: flex;
+}
+
+.swiper__btns{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.member__btns.btn-round--arrow:nth-child(2){
+  margin-left: 20px;
+}
+
+/* =========================================================
+benefits
+========================================================= */
+
+.benefits__items{
+  margin-top: 114px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 36px;
+  column-gap: 0;
+  justify-content: center;
+  align-items: center;
+  @include mq("md"){
+    grid-template-columns: repeat(auto-fit, minmax(0, 430px));
+    column-gap: 94px;
+    row-gap: 0;
+  }
+}
+
+.benefits__thum{
+  width: 251px;
+  height: 251px;
+  border-radius: 50%;
+  background-color: $white;
+  position: relative;
+  margin: 0 auto;
+  &::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+  }
+  @include mq("md"){
+    width: 430px;
+    height: 430px;
+  }
+}
+
+.benefits__item:first-child .benefits__thum{
+  &::after{
+    background-image: url("../../images/benefits01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 145px;
+    aspect-ratio: 145 / 103;
+  }
+  @include mq("md"){
+    &::after{
+      width: 244px;
+      aspect-ratio: 244 / 175;
+    }
+  }
+}
+
+.benefits__item:nth-child(2) .benefits__thum{
+  &::after{
+    background-image: url("../../images/benefits02.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 202px;
+    aspect-ratio: 202 / 135;
+  }
+  @include mq("md"){
+    &::after{
+      width: 344px;
+      aspect-ratio: 344 / 230;
+    }
+  }
+}
 
 
 

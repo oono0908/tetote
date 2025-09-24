@@ -71,7 +71,7 @@
   <section class="member">
     <div class="member__inner inner">
       <div class="section-title">
-        <h2 class="section-title__main"><span class="_underline">人</span>を知る</h2>
+        <h2 class="section-title__main _member"><span class="_underline">人</span>を知る</h2>
         <p class="section-title__sub">TETOTEの社員がどういった信念を持って働いているのか、</br>
            一日のスケジュールや仕事内容などを紹介します。</p>
       </div>
@@ -167,8 +167,8 @@
       <div class="member__btns">
         <a class="about__btn btn btn--large btn--white btn--arrow">VIEW MORE</a>
         <div class="swiper__btns md-show">
-          <button class="btn-prev btn-round--arrow btn-round--large _reverse" aria-label="前へ"></button>
-          <button class="btn-next btn-round--arrow btn-round--large _origin" aria-label="次へ"></button>
+          <button class="btn-prev btn-round--arrow btn-round--large _right" aria-label="前へ"></button>
+          <button class="btn-next btn-round--arrow btn-round--large _left" aria-label="次へ"></button>
         </div>
       </div>
 
@@ -177,27 +177,94 @@
   <section class="benefits">
     <div class="benefits__inner inner">
       <div class="section-title section-title--center">
-        <h2 class="section-title__main"><span class="_underline">制度・環境を知る</span>を知る</h2>
+        <h2 class="section-title__main _benefits"><span class="_underline">制度・環境</span>を知る</h2>
         <p class="section-title__sub">当社では働く従業員とそのご家族が健やかに過ごせるよう、多様な研修、福利厚生を提供しています。</p>
       </div>
       <ul class="benefits__items">
         <li class="benefits__item">
           <div class="benefits__thum">
-            <div class="nbenefits__title-main">研修制度とキャリアパス</div>
+            <div class="benefits__title-main">研修制度とキャリアパス</div>
             <div class="benefits__title-sub">Traning And Career</div>
-            <button class="benefits__btn"></button>
+            <button class="benefits__btn btn-round--arrow _left _reverse"></button>
           </div>
           <p class="benefits__body">個々の目標に合わせたキャリアパスを支える、豊富な研修メニューで、あなた自身の成長を強力にサポートします。</p>
         </li>
         <li class="benefits__item">
            <div class="benefits__thum">
-            <div class="nbenefits__title-main">福利厚生</div>
+            <div class="benefits__title-main">福利厚生</div>
             <div class="benefits__title-sub">Employee Benefits</div>
-            <button class="benefits__btn"></button>
+            <button class="benefits__btn btn-round--arrow _left _reverse"></button>
           </div>
           <p class="benefits__body">TETOTEの福利厚生制度は、従業員の健康と幸福を重視し、働きやすい環境を提供することを目的としています。</p>
         </li>
       </ul>
+    </div>
+  </section>
+  <section class="message">
+    <div class="message__inner inner">
+      <div class="section-title">
+        <h2 class="section-title__main _message">採用ブログ</h2>
+        <p class="section-title__sub">採用情報やイベント情報、社員の紹介など、</br>日々の現場の様子をご紹介します。</p>
+      </div>
+      <ul class="message__cards">
+        <li class="message__card">
+          <figure class="message__img-wrap">
+            <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/message01.jpg')); ?>" alt="" class="message__thumb">
+          </figure>
+          <div class="message__body">
+            <span class="message__tag">社内研修</span>
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="message__txt">新入社員向けに、入社前研修を行いました。</a>
+            <time datetime="2025.03.25" class="message__time">2025.03.25</time>
+          </div>
+        </li>
+         <li class="message__card">
+          <figure class="message__img-wrap">
+            <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/message01.jpg')); ?>" alt="" class="message__thumb">
+          </figure>
+          <div class="message__body">
+            <span class="message__tag">社内研修</span>
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="message__txt">新入社員向けに、入社前研修を行いました。</a>
+            <time datetime="2025.03.25" class="message__time">2025.03.25</time>
+          </div>
+        </li>
+         <li class="message__card">
+          <figure class="message__img-wrap">
+            <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/message01.jpg')); ?>" alt="" class="message__thumb">
+          </figure>
+          <div class="message__body">
+            <span class="message__tag">社内研修</span>
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="message__txt">新入社員向けに、入社前研修を行いました。</a>
+            <time datetime="2025.03.25" class="message__time">2025.03.25</time>
+          </div>
+        </li>
+         <li class="message__card">
+          <figure class="message__img-wrap">
+            <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/message01.jpg')); ?>" alt="" class="message__thumb">
+          </figure>
+          <div class="message__body">
+            <span class="message__tag">社内研修</span>
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="message__txt">新入社員向けに、入社前研修を行いました。</a>
+            <time datetime="2025.03.25" class="message__time">2025.03.25</time>
+          </div>
+        </li>
+      </ul>
+      <a href="<?php echo esc_url(home_url('/')); ?>"class="message__btns">
+        <button class="btn-next btn-round--arrow btn-round--large _left" aria-label="採用ブログをもっと見る"></button>
+        <span class="message__btn-txt">VIEW MORE</span>
+      </a>
+    </div>
+  </section>
+  <section class="recruit">
+    <div class="recruit__inner inner">
+      <div class="section-title">
+        <h2 class="section-title__main _recruit">採用情報</h2>
+        <p class="section-title__sub">募集要項（職種、業務内容、応募条件、選考フロー）とよくある質問・会社概要などをまとめています。</p>
+      </div>
+      <div class="recruit__btns">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn--large btn--white btn--arrow recruit__btn">募集要項</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn--large btn--white btn--arrow recruit__btn">よくある質問</a>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="btn btn--large btn--white btn--arrow recruit__btn">会社概要</a>
+      </div>
     </div>
   </section>
 

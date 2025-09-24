@@ -14,9 +14,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 318px;
-    height: 80px;
-    z-index: -1;
+    width: 100%;
+    object-fit: cover;
     left: 0;
     @include mq("xl"){
       font-size: 52px;
@@ -28,21 +27,36 @@
   }
 }
 
-.member .section-title__main{
+.section-title__main._member{
   &:after{
      background: url("../../images/section-title-member.svg") no-repeat center/contain;
   }
 }
 
-.member .section-title__main{
+.section-title__main._benefits{
   &:after{
      background: url("../../images/section-title-benefits.svg") no-repeat center/contain;
   }
 }
 
+.section-title__main._blog{
+  &:after{
+     background: url("../../images/section-title-blog.svg") no-repeat center/contain;
+  }
+}
+
+.section-title__main._recruit{
+  &:after{
+     background: url("../../images/section-title-recruitment.svg") no-repeat center/contain;
+  }
+}
+
+
 .section-title--center{
-  margin: 0 auto;
-  text-align: center;
+  @include mq("md"){
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .section-title__main span._underline{
@@ -55,6 +69,7 @@
   font-size: 16px;
   margin-top: 43px;
   font-weight: $regular;
+  line-height: 1.5;
   @include mq("md"){
     margin-top: 52px;
   }
@@ -92,21 +107,13 @@
   }
 }
 
-.btn-round--small{
-  width: 40px;
-  height: 40px;
-}
-
-.btn-round--large{
-  width: 58px;
-  height: 58px;
-}
-
 .btn-round--arrow{
   display: inline-block;
   border-radius: 50%;
   border: 1px solid $black;
   position:relative;
+  width: 40px;
+  height: 40px;
    &:before{
     content:""; 
     position:absolute; 
@@ -126,19 +133,34 @@
     width: 8px;
     height: 8px;
   }
+  @include mq("md"){
+    width: 58px;
+    height: 58px;
+  }
 }
 
-.btn-round--arrow._origin{
+.btn-round--arrow._left{
    &:after{
     border-right:2px solid $black; 
     border-bottom:2px solid $black;
    }
 }
 
-.btn-round--arrow._reverse{
+.btn-round--arrow._right{
   &:after{
     border-left: 2px solid $black;
     border-top: 2px solid $black;
+  }
+}
+
+.btn-round--arrow._reverse{
+  background-color: $black;
+  &::before{
+    background-color: white;
+  }
+  &::after{
+    border-right:2px solid white; 
+    border-bottom:2px solid white;
   }
 }
 
@@ -506,18 +528,29 @@ MEMBERセクション
 benefits
 ========================================================= */
 
+.benefits__inner{
+  padding-top: 71px;
+  padding-bottom: 71px;
+  @include mq("md"){
+    padding-top: 121px;
+    padding-bottom: 121px;
+  }
+}
+
 .benefits__items{
   margin-top: 114px;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 36px;
-  column-gap: 0;
   justify-content: center;
   align-items: center;
-  @include mq("md"){
+  @include mq("lg"){
     grid-template-columns: repeat(auto-fit, minmax(0, 430px));
     column-gap: 94px;
     row-gap: 0;
+  }
+  @include mq("md"){
+    row-gap: 58px;
   }
 }
 
@@ -574,6 +607,227 @@ benefits
     }
   }
 }
+
+.benefits__title-main{
+  font-size: 24px;
+  font-weight: $bold;
+  position: absolute;
+  bottom:0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $green;
+  padding: 7px 7px;
+  white-space: nowrap;
+  text-align: center;
+  @include mq("md"){
+    font-size: 33px;
+  }
+}
+
+.benefits__title-sub{
+  writing-mode: vertical-rl;
+  font-size: 14px;
+  font-weight: $regular;
+  list-style: 1.15;
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include mq("md"){
+    font-size: 24px; 
+  }
+}
+
+.benefits__body{
+  font-size: 16px;
+  font-weight: $regular;
+  line-height: 1.5;
+  margin-top: 28px;
+  @include mq("md"){
+    text-align: center;
+  }
+}
+
+.benefits__btn{
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+}
+
+/* =========================================================
+message
+========================================================= */
+.message{
+  background-color: $white;
+}
+
+.message__inner{
+  padding-top: 78px;
+  position: relative;
+}
+
+// .section-title-message{
+//   position: relative;
+// }
+
+.message__cards{
+  margin-top: 43px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 9px;
+  @include mq("lg"){
+    grid-template-columns: 1fr 1fr;
+    column-gap: 52px;  
+  }
+}
+
+.message__card{
+  display: flex;
+  border-radius: 10px;
+}
+
+.message__img-wrap{
+  width: calc(121 / 341 * 100%);
+  @include mq("md"){
+  width: calc(156 / 452 * 100%);
+    
+  }
+}
+
+.message__body{
+  padding: 9px 18px;
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  @include mq("md"){
+    padding: 20px 23px;
+  }
+}
+
+.message__tag{
+  font-size: 12px;
+  font-weight: $regular;
+  position: relative;
+  padding-left: 15px;
+  color: $black;
+  display: inline-block;
+  @include mq("md"){
+    font-size: 14px;
+
+  }
+}
+
+.message__tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 14px;
+  background: url("../../images/blog-tag-img.svg") no-repeat center center / contain;
+  transform: translateY(-50%);
+  @include mq("md"){
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.message__txt{
+  font-size: 14px;
+  font-weight: $bold;
+  line-height: 1.5;
+  margin-top: 9px;
+  color: $black;
+  display: block;
+  text-decoration: underline;
+  @include mq("md"){
+    font-size: 18px; 
+  }
+}
+
+.message__time{
+  margin-top: auto;
+  font-size: 12px;
+  font-weight: $regular;
+  color: $black;
+}
+
+.message__btns{
+  display: flex;
+  align-items: center;
+  margin-top: 81px;
+  @include mq("md"){
+    position: absolute;
+    top: 78px;
+    right: 17px;
+    margin-top: 0;
+  }
+}
+
+.message__btn-txt{
+  font-size: 16px;
+  text-decoration: underline;
+  display: inline-block;
+  margin-left: 6px;
+  color: $black;
+}
+
+/* =========================================================
+recruit
+========================================================= */
+
+.recruit{
+  background-color: $white;
+}
+
+.recruit__inner{
+  padding-top: 90px;
+  padding-bottom: 85px;
+}
+
+.recruit__btns{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 19px;
+  @include mq("md"){
+    column-gap: 20px;
+  } 
+}
+
+.recruit__btn{
+  margin: 0 auto;
+  font-weight: $bold;
+  display: block;
+  flex: 1 1 100%; 
+}
+
+.recruit__btn:first-child{
+  margin-top: 28px;
+  @include mq("md"){
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+.recruit__btn:nth-child(2){
+  // margin-top: 19px;
+  @include mq("md"){
+    flex: 1 1 calc(50% - 10px);
+    margin-top: 28px;
+  }
+}
+
+.recruit__btn:nth-child(3){
+  @include mq("md"){
+    flex: 1 1 100%;
+    // margin-top: 19px;
+  }
+}
+
+
+
+
+
+
+
 
 
 

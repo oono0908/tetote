@@ -256,7 +256,7 @@
   </section>
   <section class="recruit">
     <div class="recruit__inner inner">
-      <div class="section-title">
+      <div class="section-title section-title--center">
         <h2 class="section-title__main _recruit">採用情報</h2>
         <p class="section-title__sub">募集要項（職種、業務内容、応募条件、選考フロー）とよくある質問・会社概要などをまとめています。</p>
       </div>

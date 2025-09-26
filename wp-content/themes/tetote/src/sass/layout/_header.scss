@@ -59,17 +59,17 @@ header
 }
 
 .header__btns{
-  display: flex;
   align-items: center;
 }
 
-.header__btns .btn:nth-child(2){
+.header__btns > .btn:nth-child(2){
   margin-left: 22px;
 }
 
-.header__btns .btn{
+.header__btns > .btn{
   font-size: 14px;
   font-weight: $bold;
+  display: inline-block;
 }
 
 /* =========================================================
@@ -169,7 +169,7 @@ header
   display: none;
   opacity: 0;
   transition: opacity 0.25s ease;
-    z-index: map-get($zindex, drawer);
+  z-index: map-get($zindex, drawer);
 }
 
 .drawer.is-open{
@@ -275,7 +275,11 @@ header
   }
 }
 
-.gnav__btns .btn:nth-child(2){
+.gnav__btns > .btn{
+  display: inline-block;
+}
+
+.gnav__btns > .btn:nth-child(2){
   margin-top: 13px;
   @include mq("md"){
     margin-top: 0;

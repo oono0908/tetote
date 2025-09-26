@@ -13,16 +13,11 @@
     content: "";
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    object-fit: cover;
     left: 0;
+    transform: translateY(-50%);
+    height: 80px;
     @include mq("xl"){
       font-size: 52px;
-      transform: translate(-60%,-50%);
-      width: vw(540, 1440);
-      max-width: 540px;
-      left: auto;
     }
   }
 }
@@ -30,30 +25,62 @@
 .section-title__main._member{
   &:after{
      background: url("../../images/section-title-member.svg") no-repeat center/contain;
+     width: 318px;
+  }
+  @include mq("xl"){
+    &::after{
+     width: 540px;
+     transform: translate(-60%,-50%);
+     left: auto;
+    }
   }
 }
 
 .section-title__main._benefits{
   &:after{
      background: url("../../images/section-title-benefits.svg") no-repeat center/contain;
+     width: 338px;
+  }
+  @include mq("xl"){
+    &::after{
+     width: 574px;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%)
+    }
   }
 }
 
-.section-title__main._blog{
+.section-title__main._message{
   &:after{
      background: url("../../images/section-title-blog.svg") no-repeat center/contain;
+     width: 209px;
+  }
+  @include mq("xl"){
+    &::after{
+     width: 355px;
+    }
   }
 }
 
 .section-title__main._recruit{
   &:after{
      background: url("../../images/section-title-recruitment.svg") no-repeat center/contain;
+     width: 100%;
+  }
+  @include mq("xl"){
+    &::after{
+     width: 899px;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%)
+    }
   }
 }
 
 
 .section-title--center{
-  @include mq("md"){
+  @include mq("xl"){
     margin: 0 auto;
     text-align: center;
   }
@@ -70,7 +97,7 @@
   margin-top: 43px;
   font-weight: $regular;
   line-height: 1.5;
-  @include mq("md"){
+  @include mq("xl"){
     margin-top: 52px;
   }
 }
@@ -334,7 +361,7 @@ aboutセクション
   padding-left: calc(50vw - 50%);
   padding-right: calc(50vw - 50%);
   overflow: hidden;
-  padding-bottom: 105px; 
+  padding-bottom: 105px;
 }
 
 .about__card{
@@ -390,7 +417,6 @@ aboutセクション
   width: 100%;
   padding-bottom: 39px;
   @include mq("md"){
-    margin-top: 136px;
     padding-bottom: 46px;
     background: url("../../images/about-map.jpg") no-repeat center/contain;
   }
@@ -520,7 +546,7 @@ MEMBERセクション
   top: 50%;
   transform: translateY(-50%);
 }
-.member__btns.btn-round--arrow:nth-child(2){
+.swiper__btns > .btn-round--arrow:nth-child(2){
   margin-left: 20px;
 }
 
@@ -571,6 +597,11 @@ benefits
   @include mq("md"){
     width: 430px;
     height: 430px;
+    transition: transform 0.3s, opacity 0.3s;
+    &:hover{
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
   }
 }
 
@@ -642,7 +673,7 @@ benefits
   font-weight: $regular;
   line-height: 1.5;
   margin-top: 28px;
-  @include mq("md"){
+  @include mq("xl"){
     text-align: center;
   }
 }
@@ -664,10 +695,6 @@ message
   padding-top: 78px;
   position: relative;
 }
-
-// .section-title-message{
-//   position: relative;
-// }
 
 .message__cards{
   margin-top: 43px;

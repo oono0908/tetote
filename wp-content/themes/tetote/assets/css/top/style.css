@@ -11,41 +11,69 @@
   content: "";
   position: absolute;
   top: 50%;
+  left: 0;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  left: 0;
+  height: 80px;
 }
 @media screen and (min-width: 1440px) {
   .section-title__main:after {
     font-size: 52px;
-    -webkit-transform: translate(-60%, -50%);
-    transform: translate(-60%, -50%);
-    width: 37.5vw;
-    max-width: 540px;
-    left: auto;
   }
 }
 
 .section-title__main._member:after {
   background: url("../../images/section-title-member.svg") no-repeat center/contain;
+  width: 318px;
+}
+@media screen and (min-width: 1440px) {
+  .section-title__main._member::after {
+    width: 540px;
+    -webkit-transform: translate(-60%, -50%);
+    transform: translate(-60%, -50%);
+    left: auto;
+  }
 }
 
 .section-title__main._benefits:after {
   background: url("../../images/section-title-benefits.svg") no-repeat center/contain;
+  width: 338px;
+}
+@media screen and (min-width: 1440px) {
+  .section-title__main._benefits::after {
+    width: 574px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
-.section-title__main._blog:after {
+.section-title__main._message:after {
   background: url("../../images/section-title-blog.svg") no-repeat center/contain;
+  width: 209px;
+}
+@media screen and (min-width: 1440px) {
+  .section-title__main._message::after {
+    width: 355px;
+  }
 }
 
 .section-title__main._recruit:after {
   background: url("../../images/section-title-recruitment.svg") no-repeat center/contain;
+  width: 100%;
+}
+@media screen and (min-width: 1440px) {
+  .section-title__main._recruit::after {
+    width: 899px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .section-title--center {
     margin: 0 auto;
     text-align: center;
@@ -64,7 +92,7 @@
   font-weight: 300;
   line-height: 1.5;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .section-title__sub {
     margin-top: 52px;
   }
@@ -420,7 +448,6 @@ aboutセクション
 }
 @media screen and (min-width: 768px) {
   .about__body {
-    margin-top: 136px;
     padding-bottom: 46px;
     background: url("../../images/about-map.jpg") no-repeat center/contain;
   }
@@ -570,7 +597,7 @@ MEMBERセクション
   transform: translateY(-50%);
 }
 
-.member__btns.btn-round--arrow:nth-child(2) {
+.swiper__btns > .btn-round--arrow:nth-child(2) {
   margin-left: 20px;
 }
 
@@ -635,6 +662,15 @@ benefits
   .benefits__thum {
     width: 430px;
     height: 430px;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  }
+  .benefits__thum:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0.8;
   }
 }
 
@@ -710,7 +746,7 @@ benefits
   line-height: 1.5;
   margin-top: 28px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1440px) {
   .benefits__body {
     text-align: center;
   }

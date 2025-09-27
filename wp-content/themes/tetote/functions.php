@@ -13,3 +13,6 @@ function my_theme_scripts(){
   wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Viga&display=swap');
   }
 add_action('wp_enqueue_scripts', 'my_theme_scripts');
+
+// サムネイル画像を有効にする
+add_theme_support( 'post-thumbnails' );

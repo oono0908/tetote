@@ -73,6 +73,88 @@ header
 }
 
 /* =========================================================
+  header下の画像
+========================================================= */
+
+.top-title{
+  width: 100%;
+  margin-top: 118px;
+  height: 338px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.top-title__inner{
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 98px;
+  position: relative;
+}
+
+.top-title__main{
+  background: white;
+  color: $black;
+  font-size: 64px;
+  font-weight: $regular;
+  padding: 3px 10px;
+  display: inline-block;
+  position: absolute;
+  top: 68px;
+  left: 0;
+}
+
+.top-title__ja-main{
+  font-size: 24px;
+  font-weight: $regular;
+  padding: 3px 10px;
+  background: white;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 181px;
+}
+
+.top-title__ja-sub{
+  color: #988C2C;
+  font-weight: $bold;
+  font-size: 16px;
+  padding: 3px 10px;
+  background: white;
+  display: inline-block;
+  position: absolute;
+  top: 238px;
+  left: 0;
+}
+
+.about-top-visual{
+  background-image: url("../../images/about-top.jpg");
+}
+
+.detail-top-visual{
+  background-image: url("../../images/details-top.jpg");
+}
+
+.career-top-visual{
+  background-image: url("../../images/career-top.jpg");
+}
+
+.benefits-top-visual{
+  background-image: url("../../images/benefits-top.jpg");
+}
+
+.faq-top-visual{
+  background-image: url("../../images/faq-top.jpg");
+}
+
+.blog-top-visual{
+  background-image: url("../../images/blog-top.jpg");
+}
+
+
+
+/* =========================================================
   ハンパーガー
 ========================================================= */
 .hamburger {

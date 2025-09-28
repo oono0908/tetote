@@ -53,66 +53,106 @@
       </button>
     </div>
   </header>
+  <!-- 下層ページheader下画像の切り替え -->
+<?php
+$visual_classes = [
+  'about'    => 'about-top-visual',
+  'detail'   => 'detail-top-visual',
+  'benefits' => 'benefits-top-visual',
+  'career'   => 'career-top-visual',
+  'details'  => 'details-top-visual',
+  'faq'      => 'faq-top-visual',
+];
 
-   <!-- Drawer Menu -->
-<div class="drawer js-drawer" role="dialog" aria-labelledby="drawer-menu">
-  <div class="drawer__inner">
-    <nav class="gnav" aria-label="サイトメニュー" id="drawer-menu">
-      <div class="gnav__cols">
+// 初期値
+$wrap_class = '';
 
-        <!-- 左カラム -->
-        <div class="gnav__col" aria-label="サイトメニューの左カラム">
-          <ul class="gnav__list">
-            <li class="gnav__item">
-              <a class="gnav__link" href="/about">
-                <div class="gnav__title">ABOUT US</div>
-                <div class="gnav__subtitle">TETOTEについて</div>
-              </a>
-            </li>
-            <li class="gnav__item">
-              <a class="gnav__link" href="/staff">
-                <div class="gnav__title">STAFF</div>
-                <div class="gnav__subtitle">社員について</div>
-              </a>
-            </li>
-            <li class="gnav__item">
-              <a class="gnav__link" href="/blog">
-                <div class="gnav__title">BLOG</div>
-                <div class="gnav__subtitle">採用ブログ</div>
-              </a>
-            </li>
-          </ul>
-        </div>
+// 固定ページスラッグで判定
+foreach ($visual_classes as $slug => $class) {
+  if (is_page($slug)) {
+    $wrap_class = $class;
+    break;
+  }
+}
 
-        <!-- 右カラム -->
-        <div class="gnav__col" aria-label="サイトメニューの右カラム">
-          <ul class="gnav__list">
-            <li class="gnav__item">
-              <a class="gnav__link" href="/benefits">
-                <div class="gnav__title">BENEFITS</div>
-                <div class="gnav__subtitle">福利厚生について</div>
-              </a>
-            </li>
-            <li class="gnav__item">
-              <a class="gnav__link" href="/career">
-                <div class="gnav__title">CAREER</div>
-                <div class="gnav__subtitle">研修制度とキャリアパス</div>
-              </a>
-            </li>
-            <li class="gnav__item">
-              <a class="gnav__link" href="/faq">
-                <div class="gnav__title">FAQ</div>
-                <div class="gnav__subtitle">よくある質問</div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="gnav__btns">
-        <a class="btn btn--medium btn--green" href="/guidelines">募集要項</a>
-        <a class="btn btn--medium btn--black" href="/entry">ENTRY</a>
-      </div>
-    </nav>
+// ブログトップ用
+if (is_home()) {
+  $wrap_class = 'blog-top-visual';
+}
+?>
+
+<?php if ($wrap_class) : ?>
+  <div class="<?php echo esc_attr($wrap_class); ?> top-title">
+    <div class="top-title__inner">
+      <h2 class="top-title__main"><?php the_title(); ?></h2>
+      <p class="top-title__ja-main"><?php the_field('title'); ?></p>
+      <p class="top-title__ja-sub"><?php the_field('title-sub'); ?></p>
+    </div>
   </div>
-</div>
+<?php endif; ?>
+
+
+
+
+  <!-- Drawer Menu -->
+  <div class="drawer js-drawer" role="dialog" aria-labelledby="drawer-menu">
+    <div class="drawer__inner">
+      <nav class="gnav" aria-label="サイトメニュー" id="drawer-menu">
+        <div class="gnav__cols">
+
+          <!-- 左カラム -->
+          <div class="gnav__col" aria-label="サイトメニューの左カラム">
+            <ul class="gnav__list">
+              <li class="gnav__item">
+                <a class="gnav__link" href="/about">
+                  <div class="gnav__title">ABOUT US</div>
+                  <div class="gnav__subtitle">TETOTEについて</div>
+                </a>
+              </li>
+              <li class="gnav__item">
+                <a class="gnav__link" href="/staff">
+                  <div class="gnav__title">STAFF</div>
+                  <div class="gnav__subtitle">社員について</div>
+                </a>
+              </li>
+              <li class="gnav__item">
+                <a class="gnav__link" href="/blog">
+                  <div class="gnav__title">BLOG</div>
+                  <div class="gnav__subtitle">採用ブログ</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 右カラム -->
+          <div class="gnav__col" aria-label="サイトメニューの右カラム">
+            <ul class="gnav__list">
+              <li class="gnav__item">
+                <a class="gnav__link" href="/benefits">
+                  <div class="gnav__title">BENEFITS</div>
+                  <div class="gnav__subtitle">福利厚生について</div>
+                </a>
+              </li>
+              <li class="gnav__item">
+                <a class="gnav__link" href="/career">
+                  <div class="gnav__title">CAREER</div>
+                  <div class="gnav__subtitle">研修制度とキャリアパス</div>
+                </a>
+              </li>
+              <li class="gnav__item">
+                <a class="gnav__link" href="/faq">
+                  <div class="gnav__title">FAQ</div>
+                  <div class="gnav__subtitle">よくある質問</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="gnav__btns">
+          <a class="btn btn--medium btn--green" href="/guidelines">募集要項</a>
+          <a class="btn btn--medium btn--black" href="/entry">ENTRY</a>
+        </div>
+      </nav>
+    </div>
+  </div>
 

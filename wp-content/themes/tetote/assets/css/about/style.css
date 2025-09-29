@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/* =========================================================
+私たちが大切にしていること
+========================================================= */
+.about__inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.about-title {
+  margin-top: 66px;
+  text-align: center;
+  font-size: 32px;
+  font-size: 700;
+}
+
+.about-title._title-left {
+  text-align: left;
+}
+
+.about01__items {
+  margin-top: 86px;
+}
+
+.about01__item {
+  padding: 30px 80px;
+  background-color: #FAF7F1;
+}
+
+.about01__item:not(first-child) {
+  margin-top: 36px;
+}
+
+.about01__item-title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.about01__item-num {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #222222;
+  color: #222222;
+  font-size: 18px;
+  text-align: center;
+  line-height: 48px;
+  font-weight: 300;
+  background-color: transparent;
+  display: inline-block;
+}
+
+.about01__item-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 14px;
+}
+
+.about01__item-txt {
+  margin-top: 35px;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #222222;
+  font-weight: 300;
+}
+
+/* =========================================================
+代表メッセージ
+========================================================= */
+.about02__wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 109px;
+}
+
+.about02__thumb {
+  width: 50%;
+}
+
+.about02__body {
+  width: 50%;
+  padding: 206px 17px 0;
+}
+
+.about02__txt-main {
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.about02__txt-sub {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.about02__txt-sub:not(first-child) {
+  margin-top: 32px;
+}
+
+.about02__name {
+  width: 185px;
+  margin-top: 21px;
+}
+
+/* =========================================================
+事業紹介
+========================================================= */
+.about-title-sub {
+  margin-top: 44px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.about03__cards {
+  margin-top: 82px;
+}
+
+.about03__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 22px 49px;
+}
+
+.about03__card:not(first-child) {
+  border-top: 1px solid #988C2C;
+  padding-top: 49px;
+}
+
+.about03__thumb {
+  width: 50%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about03__body {
+  padding: 0 47px;
+  width: 50%;
+}
+
+.about03__title {
+  color: #988C2C;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 22px;
+}
+
+.about03__txt-main {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about03__txt-sub {
+  margin-top: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* =========================================================
+会社概要
+========================================================= */
+.about04__table {
+  margin-top: 113px;
+  width: 100%;
+}
+
+.about04__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 36px;
+  border-bottom: 1px dotted #222222;
+}
+
+.about04__row:not(first-child) {
+  padding-top: 36px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.about04__head {
+  font-weight: 700;
+  font-size: 16px;
+  width: 250px;
+  color: #222222;
+}
+
+.about04__data {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #222222;
+}
+
+.about04__link {
+  text-decoration: none;
+  color: #222222;
+}

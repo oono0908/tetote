@@ -2,17 +2,33 @@
 /* --------------------------------------------
  * scriptとcssを読み込む
  * -------------------------------------------- */
-function my_theme_scripts(){
-  wp_enqueue_style('style_swiper','//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css');
-  wp_enqueue_style('com', get_theme_file_uri('./assets/css/common/style.css'),[],'1.0');
-	wp_enqueue_style('top', get_theme_file_uri('./assets/css/top/style.css'), [], '1.0');
-	wp_enqueue_script('allpage', get_theme_file_uri('./assets/js/top/script.js'), ['jquery'], '1.0');
-  wp_enqueue_script('script_swiper','//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js',array(), '1.0.0', true);
-  wp_enqueue_style('google-apis','https://fonts.googleapis.com');
-  wp_enqueue_style('google-gstatic','https://fonts.gstatic.com');
-  wp_enqueue_style('google-fonts','https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Viga&display=swap');
+function my_theme_scripts() {
+
+  wp_enqueue_style( 'common-css', get_theme_file_uri('assets/css/common/style.css'), [], '1.0' );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+  wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Viga&display=swap', [], null );
+
+  if ( is_front_page() ) {
+    wp_enqueue_style( 'swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', [], '8' );
+    wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', [], '8', true );
+    wp_enqueue_style( 'top-css', get_theme_file_uri('assets/css/top/style.css'), [], '1.0' );
+    wp_enqueue_script( 'top-js', get_theme_file_uri('assets/js/top/script.js'), ['jquery','swiper-js'], '1.0', true );
   }
-add_action('wp_enqueue_scripts', 'my_theme_scripts');
+
+  elseif ( is_page('about') ) {
+    wp_enqueue_style( 'about-css', get_theme_file_uri('assets/css/about/style.css'), [], '1.0' );
+  }
+
+  elseif ( is_single() ) {
+    // 投稿ページ用の読み込みを書く
+  }
+
+  elseif ( is_category('news') ) {
+    // newsカテゴリ用の読み込みを書く
+  }
+
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
 
 /* --------------------------------------------
  * サムネイル画像を有効にする

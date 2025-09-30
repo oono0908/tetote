@@ -53,8 +53,9 @@
       </button>
     </div>
   </header>
-  <!-- 下層ページheader下画像の切り替え -->
+  
 <?php
+// 下層ページ header 下画像の切り替え（簡潔版）
 $visual_classes = [
   'about'    => 'about-top-visual',
   'detail'   => 'detail-top-visual',
@@ -64,35 +65,44 @@ $visual_classes = [
   'faq'      => 'faq-top-visual',
 ];
 
-// 初期値
 $wrap_class = '';
+$title_main = '';
+$ja_main    = '';
+$ja_sub     = '';
 
-// 固定ページスラッグで判定
-foreach ($visual_classes as $slug => $class) {
-  if (is_page($slug)) {
-    $wrap_class = $class;
-    break;
-  }
-}
-
-// ブログトップ用
-if (is_home()) {
+// 優先順位: ブログトップ → staff アーカイブ → 固定ページ
+if ( is_home() ) {
   $wrap_class = 'blog-top-visual';
+  $title_main = 'BLOG';
+  $ja_main    = '採用ブログ';
+  $ja_sub     = '採用情報やイベント情報などをご紹介します';
+
+} elseif ( is_post_type_archive('staff') ) {
+  $wrap_class = 'staff-top-visual';
+  $title_main = 'STAFF';
+  $ja_main    = '社員について';
+  $ja_sub     = '弊社社員のリアルな声を紹介しています';
+
+} elseif ( is_page() ) {
+  $slug = get_post_field('post_name', get_queried_object_id());
+  if ( isset($visual_classes[$slug]) ) {
+    $wrap_class = $visual_classes[$slug];
+  }
+  $title_main = get_the_title();
+  $ja_main    = get_field('title') ?: '';
+  $ja_sub     = get_field('title-sub') ?: '';
 }
 ?>
 
-<?php if ($wrap_class) : ?>
+<?php if ( $wrap_class ) : ?>
   <div class="<?php echo esc_attr($wrap_class); ?> top-title">
     <div class="top-title__inner">
-      <h2 class="top-title__main"><?php the_title(); ?></h2>
-      <p class="top-title__ja-main"><?php the_field('title'); ?></p>
-      <p class="top-title__ja-sub"><?php the_field('title-sub'); ?></p>
+      <h2 class="top-title__main"><?php echo esc_html($title_main); ?></h2>
+      <?php if ( $ja_main !== '' ) : ?><p class="top-title__ja-main"><?php echo esc_html($ja_main); ?></p><?php endif; ?>
+      <?php if ( $ja_sub  !== '' ) : ?><p class="top-title__ja-sub"><?php echo esc_html($ja_sub); ?></p><?php endif; ?>
     </div>
   </div>
 <?php endif; ?>
-
-
-
 
   <!-- Drawer Menu -->
   <div class="drawer js-drawer" role="dialog" aria-labelledby="drawer-menu">

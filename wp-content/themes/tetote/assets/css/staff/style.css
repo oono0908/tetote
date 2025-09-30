@@ -1,0 +1,82 @@
+.staff__inner {
+  max-width: 986px;
+  margin: 130px auto 0;
+  padding-bottom: 130px;
+}
+
+.staff__cards {
+  display: grid;
+  row-gap: 48px;
+  -webkit-column-gap: 43px;
+  -moz-column-gap: 43px;
+  column-gap: 43px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.staff__card {
+  width: 100%;
+  max-width: 248px;
+}
+@media screen and (min-width: 768px) {
+  .staff__card {
+    max-width: 300px;
+  }
+}
+
+.staff__card-thum {
+  position: relative;
+}
+
+.staff__card-title {
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+}
+
+.staff__card-text {
+  font-weight: 700;
+  background: #988C2C;
+  color: #222222;
+  font-size: 16px;
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .staff__card-text {
+    font-size: 20px;
+    padding: 5px 7px;
+  }
+}
+
+.staff__card-text:nth-child(2) {
+  margin-top: 5px;
+}
+
+.staff__card-body {
+  margin-top: 36px;
+}
+
+.staff__card-role {
+  color: #222222;
+  margin-top: 13px;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .staff__card-role {
+    margin-top: 21px;
+    font-size: 16px;
+  }
+}
+
+.staff__card-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 14px;
+  color: #222222;
+}
+@media screen and (min-width: 768px) {
+  .staff__card-name {
+    font-size: 24px;
+    margin-top: 16px;
+  }
+}

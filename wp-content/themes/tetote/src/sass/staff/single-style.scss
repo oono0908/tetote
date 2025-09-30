@@ -1,0 +1,199 @@
+@use "../gloval" as *;
+
+.staff-dt-top{
+  margin-top: 118px;
+  background-color: $white;
+}
+.staff-dt-top__inner{
+  max-width: 1072px;
+  margin: 0 auto;
+  padding: 43px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.staff-dt-top__body{
+  width: calc(605 / 980 * 100%);
+}
+
+.staff-dt-top__txt01{
+  font-size: 36px;
+  font-weight: $bold;
+  margin-top: 20px;
+  display: inline-block;
+  background-color: white;
+  padding: 3px 10px;
+}
+
+.staff-dt-top__txt02{
+  font-size: 24px;
+  font-weight: $bold;
+  margin-top: 18px;
+  display: inline-block;
+  background-color: white;
+  padding: 3px 10px;
+}
+
+.staff-dt-top__role{
+  margin-top: 30px;
+  color: #988C2C;
+  font-size: 14px;
+  font-weight: $regular;
+}
+
+.staff-dt-top__name{
+  font-weight: $bold;
+  font-size: 24px;
+  margin-right: 20px;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.staff-dt-top__year{
+  font-size: 16px;
+  color: $black;
+  font-weight: $regular;
+  display: inline-block;
+}
+
+.staff-dt-top__career{
+  margin-top: 13px;
+  font-weight: $regular;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.staff-dt-top__thumb{
+  width: 300px;
+}
+/* =========================================================
+メイン
+========================================================= */
+
+.staff-dt__inner{
+  max-width: 1072px;
+  margin: 0 auto;
+  padding: 100px 24px 107px;
+}
+
+.staff-dt__container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.staff-dt__main{
+  width: calc(730 / 980 * 100%);
+}
+
+.staff-dt__title{
+  font-weight: $bold;
+  font-size: 24px;
+  color: $black;
+}
+
+.staff-dt__title:not(:first-child){
+  margin-top: 23px;
+}
+
+.staff-dt__txt{
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: $regular;
+  color: $black;
+  line-height: 1.8;
+}
+/* =========================================================
+サイドバー
+========================================================= */
+
+.staff-dt__side-bar{
+  width: 230px;
+}
+
+.side-bar__item{
+  margin-top: 13px;
+  font-size: 14px;
+  font-weight: $bold;
+  line-height: 1.5;
+  color: #999999;
+}
+
+/* =========================================================
+その他のメンバー
+========================================================= */
+
+.staff-dt__bottom{
+  margin-top: 107px;
+}
+
+.staff-dt__bottom-title{
+  font-size: 32px;
+  font-weight: $bold;
+  text-align: center;
+}
+
+.staff__cards{
+  display: grid;
+  row-gap: 48px;
+  column-gap: 43px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
+}
+
+.staff__card{
+  width: 100%;
+  max-width: 248px;
+  @include mq("md"){
+    max-width: 300px;
+  }
+}
+
+.staff__card-thum{
+  position: relative;
+}
+
+.staff__card-title{
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+}
+
+.staff__card-text{
+  font-weight: $bold;
+  background: $green;
+  color: $black;
+  font-size: 16px;
+  display: inline-block;
+  @include mq("md"){
+    font-size: 20px;
+    padding: 5px 7px;
+  }
+}
+
+.staff__card-text:nth-child(2){
+  margin-top: 5px;
+}
+
+.staff__card-body{
+  margin-top: 36px;
+}
+
+.staff__card-role{
+  color: $black;
+  margin-top: 13px;
+  font-size: 12px;
+  font-weight: $bold;
+  @include mq("md"){
+    margin-top: 21px;
+    font-size: 16px;
+  }
+}
+.staff__card-name{
+  color: $black;
+  font-size: 24px;
+  font-weight: $bold;
+  margin-top: 16px;
+}
+
+
+

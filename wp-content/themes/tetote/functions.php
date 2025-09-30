@@ -19,12 +19,12 @@ function my_theme_scripts() {
     wp_enqueue_style( 'about-css', get_theme_file_uri('assets/css/about/style.css'), [], '1.0' );
   }
 
-  elseif ( is_single() ) {
-    // 投稿ページ用の読み込みを書く
+  elseif (is_post_type_archive('staff')) {
+    wp_enqueue_style( 'about-css', get_theme_file_uri('assets/css/staff/style.css'), [], '1.0' );
   }
 
-  elseif ( is_category('news') ) {
-    // newsカテゴリ用の読み込みを書く
+  elseif (is_singular( 'staff' ) ) {
+    wp_enqueue_style( 'about-css', get_theme_file_uri('assets/css/staff/single-style.css'), [], '1.0' );
   }
 
 }
@@ -42,9 +42,9 @@ add_theme_support( 'post-thumbnails' );
 
 function cpt_register_staff(){
 	$args = [
-		'label' => 'スタッフ',
+		'label' => 'staff',
 		'labels' => [
-			'singular_name' => 'スタッフ',
+			'singular_name' => 'staff',
 			'edit_item' => 'スタッフページを編集',
 			'add_new_item' => 'スタッフを追加'
 		],
@@ -63,3 +63,4 @@ function cpt_register_staff(){
 	register_post_type('staff', $args);
 }
 add_action('init', 'cpt_register_staff');
+

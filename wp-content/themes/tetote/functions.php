@@ -26,7 +26,14 @@ function my_theme_scripts() {
   elseif (is_singular( 'staff' ) ) {
     wp_enqueue_style( 'about-css', get_theme_file_uri('assets/css/staff/single-style.css'), [], '1.0' );
   }
+  
+  elseif (is_home( 'blog' ) ) {
+    wp_enqueue_style( 'about-css', get_theme_file_uri('assets/css/blog/style.css'), [], '1.0' );
+  }
 
+    elseif (is_single() ) {
+    wp_enqueue_style( 'about-css', get_theme_file_uri('assets/css/blog/single-style.css'), [], '1.0' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
 

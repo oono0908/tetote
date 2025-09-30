@@ -38,7 +38,7 @@
                       $img_html = '<img src="'.esc_url($img).'" alt="'.esc_attr($alt_text).'" class="member__card__img" />';
                     }
                   }
-                  ?>
+                ?>
                   
                   <li class="staff__card">
                     <div class="staff__card-thum">

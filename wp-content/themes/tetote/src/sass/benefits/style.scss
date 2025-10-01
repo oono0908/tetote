@@ -1,0 +1,48 @@
+@use "../gloval" as *;
+@use "../parts/table";
+
+.benefits__container{
+  padding: 128px 0 138px 0;
+}
+
+.benefits__title{
+  font-size: 32px;
+  font-weight: $bold;
+  color: $black;
+}
+
+.benefits__items{
+  margin-top: 23px;
+  display: flex;
+  column-gap: 46px;
+}
+
+.item{
+  width: 50%;
+}
+
+.item__year{
+  color: #988C2C;
+  font-size: 16px;
+  font-weight: $bold;
+}
+
+.item__name{
+  font-size: 24px;
+  font-weight: $bold;
+  margin-top: 13px;
+  color: $black;
+}
+
+.item__txt{
+  margin-top: 25px;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: $regular;
+  color: $black;
+}
+
+.benefits__img-wrap{
+  width: 100%;
+  margin-top: 38px;
+}

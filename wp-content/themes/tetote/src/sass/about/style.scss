@@ -1,4 +1,5 @@
 @use "../gloval" as *;
+@use "../parts/table";
 
 /* =========================================================
 私たちが大切にしていること
@@ -162,44 +163,4 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: $regular;
-}
-
-/* =========================================================
-会社概要
-========================================================= */
-
-.about04__table{
-  margin-top: 113px;
-  width: 100%;
-}
-
-.about04__row{
-  display: flex;
-  align-items: center;
-  padding-bottom: 36px;
-  border-bottom: 1px dotted $black;
-}
-
-.about04__row:not(first-child){
-  padding-top: 36px;
-  font-family: "Noto Sans JP", sans-serif;
-}
-
-.about04__head{
-  font-weight: $bold;
-  font-size: 16px;
-  width: 250px;
-  color: $black;
-}
-
-.about04__data{
-  font-size: 16px;
-  font-weight: $regular;
-  line-height: 1.5;
-  color: $black;
-}
-
-.about04__link{
-  text-decoration: none;
-  color: $black;
 }

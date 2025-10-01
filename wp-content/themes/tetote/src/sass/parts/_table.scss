@@ -1,0 +1,41 @@
+@use "../gloval" as *;
+
+.table-title{
+  font-size: 32px;
+  font-size: $bold;
+}
+.table{
+  margin-top: 113px;
+  width: 100%;
+}
+
+.table__row{
+  display: flex;
+  align-items: center;
+  padding-bottom: 36px;
+  border-bottom: 1px dotted $black;
+}
+
+.table__row:not(first-child){
+  padding-top: 36px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.table__head{
+  font-weight: $bold;
+  font-size: 16px;
+  width: 250px;
+  color: $black;
+}
+
+.table__data{
+  font-size: 16px;
+  font-weight: $regular;
+  line-height: 1.5;
+  color: $black;
+}
+
+.table__link{
+  text-decoration: none;
+  color: $black;
+}

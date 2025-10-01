@@ -37,6 +37,9 @@ function my_theme_scripts() {
   elseif (is_page('benefits') ) {
     wp_enqueue_style( 'benefits-css', get_theme_file_uri('assets/css/benefits/style.css'), [], '1.0' );
   }
+  elseif (is_page('career') ) {
+    wp_enqueue_style( 'career-css', get_theme_file_uri('assets/css/career/style.css'), [], '1.0' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
 

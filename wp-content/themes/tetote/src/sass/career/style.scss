@@ -1,0 +1,57 @@
+@use "../gloval" as *;
+
+.career__inner{
+  padding-bottom: 178px;
+}
+
+.career__title{
+  font-size: 32px;
+  font-weight: $bold;
+  color: $black;
+}
+
+.career__txt{
+  font-size: 16px;
+  font-weight: $regular;
+}
+
+.career__txt._upper{
+  margin-top: 113px;
+}
+
+.career__txt._lower{
+  margin-top: 37px;
+}
+
+.career__img-wrap{
+  margin-top: 48px;
+  width: 100%;
+}
+
+.career__lists{
+  margin-top: 89px;
+}
+
+.career__list:not(first-child){
+  margin-top: 32px;
+}
+
+.list__title{
+  background-color: #AFA86F;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: $bold;
+  color: $black;
+  padding: 12px 21px;
+}
+
+.list__txt{
+  margin-top: 50px;
+  font-size: 16px;
+  font-weight: $regular;
+  color: $black;
+  line-height: 1.8;
+}
+
+
+

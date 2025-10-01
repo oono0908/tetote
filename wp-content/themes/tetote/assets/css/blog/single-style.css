@@ -119,127 +119,102 @@
   display: none;
 }
 
-/* 全体ラッパー */
-.singlepager {
-  display: grid;
-  grid-template-columns: 1fr 1px 1fr; /* 左カード | 仕切り | 右カード */
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 20px;
-  padding: 16px 0;
-  margin: 32px 0 0;
-  border-top: 2px solid #3b82f6; /* 上の青ライン（お好みで） */
+/* =========================================================
+single.pageの前後の記事のページネーション
+========================================================= */
+.message-nav {
+  background-color: #F0F0F0;
 }
 
-/* 仕切り線 */
-.singlepager__divider {
-  width: 1px;
-  height: 56px;
-  background: #999;
-  opacity: 0.8;
-}
-
-/* 各カード */
-.singlepager__item {
-  display: grid;
-  grid-template-columns: 48px 1fr auto; /* 丸矢印 | テキスト | サムネ(任意) */
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 16px;
-  padding: 12px 16px;
-  background: #f7f7f7;
-  text-decoration: none;
-  color: inherit;
-  border-radius: 10px;
-  -webkit-transition: background 0.2s, -webkit-transform 0.2s;
-  transition: background 0.2s, -webkit-transform 0.2s;
-  transition: background 0.2s, transform 0.2s;
-  transition: background 0.2s, transform 0.2s, -webkit-transform 0.2s;
-}
-
-.singlepager__item:hover {
-  background: #efefef;
-  -webkit-transform: translateY(-1px);
-  transform: translateY(-1px);
-}
-
-/* 48x48 の丸ボタン（矢印） */
-.singlepager__arrow {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 1px solid #999;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 20px;
-  line-height: 1;
-}
-
-/* 右側（次の記事）は矢印を右寄り表現 */
-.singlepager__item--next .singlepager__arrow {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1; /* 先頭カラムのままでもOK。必要なら入れ替え可 */
-}
-
-/* テキスト部分 */
-.singlepager__meta {
+.message-nav__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 4px;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 38px 50px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-.singlepager__label {
-  font-size: 12px;
-  color: #666;
-}
-
-.singlepager__title {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.singlepager__date {
-  font-size: 12px;
-  color: #666;
-}
-
-/* サムネイル（ACF 画像がある場合だけ出る） */
-.singlepager__thumbwrap {
-  width: 72px; /* お好みで */
-  height: 48px;
-  overflow: hidden;
-  border-radius: 6px;
-}
-
-.singlepager__thumb {
-  width: 100%;
+.message-nav__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  width: 50%;
 }
 
-/* スマホ最適化 */
-@media (max-width: 768px) {
-  .singlepager {
-    grid-template-columns: 1fr; /* 縦並び */
-    gap: 12px;
-  }
-  .singlepager__divider {
-    display: none;
-  }
+.massage-nav__item:first-child {
+  padding-right: 20px;
+}
+
+.message-nav__item:nth-child(2) {
+  border-left: 1px solid #222222;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-left: 20px;
+}
+
+.message-nav__btn {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  border: 2px solid #222222;
+  border-radius: 50%;
+}
+
+.message-nav__btn._prev::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-left: 2px solid #222222;
+  border-bottom: 2px solid #222222;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.message-nav__btn._next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid #222222;
+  border-top: 2px solid #222222;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.message-nav__title-wrap {
+  width: 70%;
+}
+
+.message-nav__title {
+  font-size: 16px;
+  font-weight: 300;
+  color: #222222;
+}
+
+.message-nav__time {
+  font-size: 12px;
+  font-weight: 300;
+  color: #222222;
+  margin-top: 6px;
 }

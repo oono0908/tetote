@@ -1,0 +1,121 @@
+@charset "UTF-8";
+.table-title {
+  font-size: 32px;
+  font-size: 700;
+}
+
+.table {
+  margin-top: 113px;
+  width: 100%;
+}
+
+.table__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 36px;
+  border-bottom: 1px dotted #222222;
+}
+
+.table__row:not(first-child) {
+  padding-top: 36px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.table__head {
+  font-weight: 700;
+  font-size: 16px;
+  width: 250px;
+  color: #222222;
+}
+
+.table__data {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #222222;
+}
+
+.table__link {
+  text-decoration: none;
+  color: #222222;
+}
+
+.details__inner {
+  padding-bottom: 139px;
+}
+
+.details__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222222;
+}
+
+.details__txt {
+  margin-top: 113px;
+  font-size: 16px;
+  color: #222222;
+}
+
+.details__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 70px auto 0;
+  width: 100%;
+}
+
+.details__btn {
+  display: inline-block;
+  width: 28.7109375%;
+  padding: 18px 0;
+  color: #222222;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  border-radius: 40px;
+  border: 1px solid #222222;
+  background-color: #FAF7F1;
+}
+
+.details__btn::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 55%;
+  right: 34px;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg); /* 右下向きのV字を作る */
+  margin-left: 6px;
+}
+
+.details__btn::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 20px;
+  background-color: #222222;
+  top: 50%;
+  right: 38px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.container:first-child {
+  margin-top: 97px;
+}
+
+.container:not(:first-child) {
+  margin-top: 88px;
+}

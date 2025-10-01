@@ -40,6 +40,9 @@ function my_theme_scripts() {
   elseif (is_page('career') ) {
     wp_enqueue_style( 'career-css', get_theme_file_uri('assets/css/career/style.css'), [], '1.0' );
   }
+  elseif (is_page('details') ) {
+    wp_enqueue_style( 'details-css', get_theme_file_uri('assets/css/details/style.css'), [], '1.0' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
 

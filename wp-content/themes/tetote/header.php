@@ -41,8 +41,8 @@
 
     <div class="header__right">
       <div class="header__btns md-show">
-        <a class="btn btn--small btn--black" href="<?php echo esc_url(home_url('/')); ?>">募集要項</a>
-        <a class="btn btn--small btn--green" href="<?php echo esc_url(home_url('/')); ?>">ENTRY</a>
+        <a class="btn btn--small btn--black" href="<?php echo esc_url(home_url('/recruit')); ?>">募集要項</a>
+        <a class="btn btn--small btn--green" href="<?php echo esc_url(home_url('/entry')); ?>">ENTRY</a>
       </div>
        <!-- ハンバーガー -->
       <button class="hamburger js-humbuger" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開閉">
@@ -114,19 +114,19 @@ if ( is_home() ) {
           <div class="gnav__col" aria-label="サイトメニューの左カラム">
             <ul class="gnav__list">
               <li class="gnav__item">
-                <a class="gnav__link" href="/about">
+                <a class="gnav__link" href="<?php echo esc_url(home_url('/about')); ?>">
                   <div class="gnav__title">ABOUT US</div>
                   <div class="gnav__subtitle">TETOTEについて</div>
                 </a>
               </li>
               <li class="gnav__item">
-                <a class="gnav__link" href="/staff">
+                <a class="gnav__link" href="<?php echo esc_url(home_url('/staff')); ?>">
                   <div class="gnav__title">STAFF</div>
                   <div class="gnav__subtitle">社員について</div>
                 </a>
               </li>
               <li class="gnav__item">
-                <a class="gnav__link" href="/blog">
+                <a class="gnav__link" href="<?php echo esc_url(home_url('/blog')); ?>">
                   <div class="gnav__title">BLOG</div>
                   <div class="gnav__subtitle">採用ブログ</div>
                 </a>
@@ -138,19 +138,19 @@ if ( is_home() ) {
           <div class="gnav__col" aria-label="サイトメニューの右カラム">
             <ul class="gnav__list">
               <li class="gnav__item">
-                <a class="gnav__link" href="/benefits">
+                <a class="gnav__link" href="<?php echo esc_url(home_url('/benefits')); ?>">
                   <div class="gnav__title">BENEFITS</div>
                   <div class="gnav__subtitle">福利厚生について</div>
                 </a>
               </li>
               <li class="gnav__item">
-                <a class="gnav__link" href="/career">
+                <a class="gnav__link" href="<?php echo esc_url(home_url('/career')); ?>">
                   <div class="gnav__title">CAREER</div>
                   <div class="gnav__subtitle">研修制度とキャリアパス</div>
                 </a>
               </li>
               <li class="gnav__item">
-                <a class="gnav__link" href="/faq">
+                <a class="gnav__link" href="<?php echo esc_url(home_url('/faq')); ?>">
                   <div class="gnav__title">FAQ</div>
                   <div class="gnav__subtitle">よくある質問</div>
                 </a>
@@ -159,8 +159,8 @@ if ( is_home() ) {
           </div>
         </div>
         <div class="gnav__btns">
-          <a class="btn btn--medium btn--green" href="/guidelines">募集要項</a>
-          <a class="btn btn--medium btn--black" href="/entry">ENTRY</a>
+          <a class="btn btn--medium btn--green" href="<?php echo esc_url(home_url('/recruit')); ?>">募集要項</a>
+          <a class="btn btn--medium btn--black" href="<?php echo esc_url(home_url('/entry')); ?>">ENTRY</a>
         </div>
       </nav>
     </div>

@@ -44,6 +44,58 @@
   color: #222222;
 }
 
+.scroll__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 70px auto 0;
+  width: 100%;
+}
+
+.scroll__btn {
+  display: inline-block;
+  width: 28.7109375%;
+  padding: 18px 0;
+  color: #222222;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  border-radius: 40px;
+  border: 1px solid #222222;
+  background-color: #FAF7F1;
+}
+
+.scroll__btn::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 55%;
+  right: 34px;
+  border-right: 2px solid #111;
+  border-bottom: 2px solid #111;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg); /* 右下向きのV字を作る */
+  margin-left: 6px;
+}
+
+.scroll__btn::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 20px;
+  background-color: #222222;
+  top: 50%;
+  right: 38px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .details__inner {
   padding-bottom: 139px;
 }

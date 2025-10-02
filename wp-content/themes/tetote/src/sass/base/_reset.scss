@@ -103,3 +103,10 @@ select {
 select::-ms-expand {
   display: none;
 }
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;  /* デフォルトの枠線を消す */
+  min-width: 0; /* Chrome/Safari で幅が縮まらないのを防ぐ */
+}

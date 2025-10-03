@@ -1,42 +1,92 @@
 @charset "UTF-8";
 .table-title {
-  font-size: 32px;
+  font-size: 28px;
   font-size: 700;
+}
+@media screen and (min-width: 768px) {
+  .table-title {
+    font-size: 32px;
+  }
 }
 
 .table {
-  margin-top: 113px;
+  margin-top: 66px;
   width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .table {
+    margin-top: 113px;
+  }
 }
 
 .table__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-bottom: 36px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 26px;
   border-bottom: 1px dotted #222222;
+}
+@media screen and (min-width: 768px) {
+  .table__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-bottom: 36px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 }
 
 .table__row:not(first-child) {
-  padding-top: 36px;
+  padding-top: 26px;
   font-family: "Noto Sans JP", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .table__row:not(first-child) {
+    padding-top: 36px;
+  }
 }
 
 .table__head {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   width: 250px;
   color: #222222;
 }
+@media screen and (min-width: 768px) {
+  .table__head {
+    font-size: 16px;
+  }
+}
 
 .table__data {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.5;
   color: #222222;
+}
+@media screen and (min-width: 768px) {
+  .table__data {
+    font-size: 16px;
+  }
+}
+
+.table__data:nth-child(2) {
+  margin-top: 8px;
+}
+@media screen and (min-width: 768px) {
+  .table__data:nth-child(2) {
+    margin-top: 0;
+  }
 }
 
 .table__link {

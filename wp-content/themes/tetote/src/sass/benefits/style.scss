@@ -13,12 +13,16 @@
 
 .benefits__items{
   margin-top: 23px;
-  display: flex;
-  column-gap: 46px;
+  @include mq("md"){
+    display: flex;
+    column-gap: 46px;
+  }
 }
 
 .item{
+  @include mq("md"){
   width: 50%;
+  }
 }
 
 .item__year{

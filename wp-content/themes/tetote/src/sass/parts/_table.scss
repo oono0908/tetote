@@ -1,38 +1,67 @@
 @use "../gloval" as *;
 
 .table-title{
-  font-size: 32px;
+  font-size: 28px;
   font-size: $bold;
+  @include mq("md"){
+    font-size: 32px;
+  }
 }
+
 .table{
-  margin-top: 113px;
+  margin-top: 66px;
   width: 100%;
+  @include mq("md"){
+    margin-top: 113px;
+  }
 }
 
 .table__row{
   display: flex;
-  align-items: center;
-  padding-bottom: 36px;
+  flex-direction: column;
+  padding-bottom: 26px;
   border-bottom: 1px dotted $black;
+  @include mq("md"){
+    display: flex;
+    align-items: center;
+    padding-bottom: 36px;
+    flex-direction: row;
+  }
 }
 
 .table__row:not(first-child){
-  padding-top: 36px;
+  padding-top: 26px;
   font-family: "Noto Sans JP", sans-serif;
+  @include mq("md"){
+    padding-top: 36px;
+  }
 }
 
 .table__head{
   font-weight: $bold;
-  font-size: 16px;
+  font-size: 14px;
   width: 250px;
   color: $black;
+  @include mq("md"){
+    font-size: 16px;
+  }
 }
 
 .table__data{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: $regular;
   line-height: 1.5;
   color: $black;
+  @include mq("md"){
+    font-size: 16px;
+  }
+}
+
+.table__data:nth-child(2){
+  margin-top: 8px;
+  @include mq("md"){
+    margin-top: 0;
+  }
 }
 
 .table__link{

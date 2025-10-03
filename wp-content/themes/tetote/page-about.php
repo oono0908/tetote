@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <main>
     <div class="about">
-      <div class="about__inner">
+      <div class="about__inner inner">
         <section class="about01">
           <h3 class="about-title">私達が大切にしていること</h3>
           <ul class="about01__items">
@@ -67,7 +67,7 @@
         </section>
         <section class="about03">
           <h3 class="about-title _title-left">事業紹介</h3>
-          <p class="about-title-sub">TETOTEの主力事業である「コンサルティング」以外に、新規に取り組んでいる事業をいくつか,<br>紹介させていただきます。</p>
+          <p class="about-title-sub">TETOTEの主力事業である「コンサルティング」以外に、新規に取り組んでいる事業をいくつか,<br class="md-show">紹介させていただきます。</p>
           <ul class="about03__cards">
             <li class="about03__card">
               <div class="about03__thumb">
@@ -103,44 +103,44 @@
         </section>
         <section class="about04">
           <h3 class="about-title">会社概要</h3>
-          <table class="about04__table" role="presentation">
+          <table class="table" role="presentation">
             <tbody>
-              <tr class="about04__row">
-                <td class="about04__head">会社名</td>
-                <td class="about04__data">TETOTE株式会社</td>
+              <tr class="table__row">
+                <td class="table__head">会社名</td>
+                <td class="table__data">TETOTE株式会社</td>
               </tr>
-              <tr class="about04__row">
-                <td class="about04__head">所在地</td>
-                <td class="about04__data">〒100-0001 東京都千代田区千代田 1-1-1</td>
+              <tr class="table__row">
+                <td class="table__head">所在地</td>
+                <td class="table__data">〒100-0001 東京都千代田区千代田 1-1-1</td>
               </tr>
-              <tr class="about04__row">
-                <td class="about04__head">代表者名</td>
-                <td class="about04__data">田中 浩二郎（代表取締役）</td>
+              <tr class="table__row">
+                <td class="table__head">代表者名</td>
+                <td class="table__data">田中 浩二郎（代表取締役）</td>
               </tr>
-              <tr class="about04__row">
-                <td class="about04__head">事業内容</td>
-                <td class="about04__data">
-                  <ul class="about04__bullets">
-                    <li>ITコンサルティング</li>
-                    <li>コンサル導入企業への営業</li>
+              <tr class="table__row">
+                <td class="table__head">事業内容</td>
+                <td class="table__data">
+                  <ul class="table__bullets">
+                    <li>&#0183;ITコンサルティング</li>
+                    <li>&#0183;コンサル導入企業への営業</li>
                   </ul>
                 </td>
               </tr>
-              <tr class="about04__row">
-                <td class="about04__head">電話番号</td>
-                <td class="about04__data"><a class="about04__link" href="tel:0312345678">03-1234-5678</a></td>
+              <tr class="table__row">
+                <td class="table__head">電話番号</td>
+                <td class="table__data"><a class="table__link" href="tel:0312345678">03-1234-5678</a></td>
               </tr>
-              <tr class="about04__row">
-                <td class="about04__head">ウェブサイトURL</td>
-                <td class="about04__data"><a class="about04__link" href="https://tetote.co.jp" target="_blank" rel="noopener">https://tetote.co.jp</a></td>
+              <tr class="table__row">
+                <td class="table__head">ウェブサイトURL</td>
+                <td class="table__data"><a class="table__link" href="https://tetote.co.jp" target="_blank" rel="noopener">https://tetote.co.jp</a></td>
               </tr>
-              <tr class="about04__row">
-                <td class="about04__head">メールアドレス</td>
-                <td class="about04__data"><a class="about04__link" href="mailto:tetote@tetote.co.jp">tetote@tetote.co.jp</a></td>
+              <tr class="table__row">
+                <td class="table__head">メールアドレス</td>
+                <td class="table__data"><a class="table__link" href="mailto:tetote@tetote.co.jp">tetote@tetote.co.jp</a></td>
               </tr>
-              <tr class="about04__row">
-                <td class="about04__head">設立年月</td>
-                <td class="about04__data">1923年4月1日</td>
+              <tr class="table__row">
+                <td class="table__head">設立年月</td>
+                <td class="table__data">1923年4月1日</td>
               </tr>
             </tbody>
           </table>

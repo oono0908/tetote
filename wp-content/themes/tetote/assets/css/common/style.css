@@ -254,55 +254,81 @@ header
 ========================================================= */
 .top-title {
   width: 100%;
-  margin-top: 118px;
+  height: 80px;
   height: 338px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   -o-object-fit: cover;
   object-fit: cover;
+  padding: 0 17px;
+}
+@media screen and (min-width: 768px) {
+  .top-title {
+    margin-top: 118px;
+    padding: 0 22px;
+  }
 }
 
 .top-title__inner {
-  max-width: 980px;
+  max-width: 1024px;
   margin: 0 auto;
-  padding-top: 98px;
   position: relative;
 }
 
 .top-title__main {
   background: white;
   color: #222222;
-  font-size: 64px;
   font-weight: 300;
+  font-size: 44px;
   padding: 3px 10px;
   display: inline-block;
   position: absolute;
-  top: 68px;
+  top: 78px;
   left: 0;
+}
+@media screen and (min-width: 768px) {
+  .top-title__main {
+    position: absolute;
+    top: 58px;
+    font-size: 64px;
+  }
 }
 
 .top-title__ja-main {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   padding: 3px 10px;
   background: white;
   display: inline-block;
   position: absolute;
   left: 0;
-  top: 181px;
+  top: 162px;
+}
+@media screen and (min-width: 768px) {
+  .top-title__ja-main {
+    position: absolute;
+    top: 171px;
+    font-size: 24px;
+  }
 }
 
 .top-title__ja-sub {
   color: #988C2C;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   padding: 3px 10px;
   background: white;
   display: inline-block;
   position: absolute;
-  top: 238px;
+  top: 215px;
   left: 0;
+}
+@media screen and (min-width: 768px) {
+  .top-title__ja-sub {
+    top: 228px;
+    font-size: 16px;
+  }
 }
 
 .about-top-visual {
@@ -625,7 +651,7 @@ header
   left: 50%;
   -webkit-transform: translate(-50%, 50%);
   transform: translate(-50%, 50%);
-  width: 343px;
+  width: 80%;
   padding: 24px;
   background-color: white;
   border-radius: 20px;
@@ -810,13 +836,19 @@ header
   }
 }
 
+/* =========================================================
+共通パーツ
+========================================================= */
 .inner {
   padding: 0 17px;
+  margin-top: 80px;
 }
 @media screen and (min-width: 768px) {
   .inner {
-    max-width: 1074px;
+    max-width: 1024px;
+    padding: 0 22px;
     margin: 0 auto;
+    margin-top: 130px;
   }
 }
 

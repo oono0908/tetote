@@ -2,11 +2,11 @@
 <div id="container" class="container_archive_course w_inner">
 	<main>
     <div class="staff">
-      <div class="staff__inner">
+      <div class="staff__inner inner">
         <?php if (have_posts()) : ?>
           <ul class="staff__cards">
             <?php while (have_posts()) : the_post(); ?>
-              <a href="<?php the_permalink(); ?>">
+              <a href="<?php the_permalink(); ?>" class="staff__card-wrap">
                 <?php
                   // ACF 取得
                   $img      = get_field('staff-img');   // 画像（ID / 配列 / URL いずれも可）

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<main>
 		<div class="message">
-			<div class="message__inner">
+			<div class="message__inner inner">
 
         <?php if (have_posts()) : ?>
           <ul class="message__cards">

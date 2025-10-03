@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="staff-dt-top">
-  <div class="staff-dt-top__inner">
+  <div class="staff-dt-top__inner inner">
     <div class="staff-dt-top__body">
       <div class="staff-dt-top__txt-main">
         <p class="staff-dt-top__txt01"><?php echo esc_html(get_field('message01')); ?></p>
@@ -43,8 +43,9 @@
         <?php echo $img_html; ?>
     </div>
   </div>
+</div>
   <section class="staff-dt">
-    <div class="staff-dt__inner">
+    <div class="staff-dt__inner inner">
       <div class="staff-dt__container">
         <div class="staff-dt__main">
           <h2 class="staff-dt__title">業務内容について</h2>

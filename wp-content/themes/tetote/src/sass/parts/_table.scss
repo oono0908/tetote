@@ -1,7 +1,7 @@
 @use "../gloval" as *;
 
 .table-title{
-  font-size: 28px;
+  font-size: 24px;
   font-size: $bold;
   @include mq("md"){
     font-size: 32px;

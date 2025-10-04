@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .table-title {
-  font-size: 28px;
+  font-size: 24px;
   font-size: 700;
 }
 @media screen and (min-width: 768px) {
@@ -109,7 +109,6 @@
 
 .scroll__btn {
   display: inline-block;
-  width: 28.7109375%;
   padding: 18px 0;
   color: #222222;
   font-size: 20px;
@@ -119,19 +118,41 @@
   border: 1px solid #222222;
   background-color: #FAF7F1;
 }
+@media screen and (min-width: 768px) {
+  .scroll__btn {
+    width: 247px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .scroll__btn {
+    width: 294px;
+    font-size: 20px;
+  }
+}
 
 .scroll__btn::after {
   content: "";
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 55%;
-  right: 34px;
   border-right: 2px solid #111;
   border-bottom: 2px solid #111;
   -webkit-transform: translateY(-50%) rotate(45deg);
   transform: translateY(-50%) rotate(45deg); /* 右下向きのV字を作る */
   margin-left: 6px;
+}
+@media screen and (min-width: 768px) {
+  .scroll__btn::after {
+    top: 55%;
+    right: 21px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .scroll__btn::after {
+    top: 55%;
+    right: 30px;
+  }
 }
 
 .scroll__btn::before {
@@ -141,9 +162,18 @@
   height: 20px;
   background-color: #222222;
   top: 50%;
-  right: 38px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+@media screen and (min-width: 768px) {
+  .scroll__btn::before {
+    right: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .scroll__btn::before {
+    right: 34px;
+  }
 }
 
 .details__inner {
@@ -151,67 +181,25 @@
 }
 
 .details__title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: #222222;
 }
+@media screen and (min-width: 768px) {
+  .details__title {
+    font-size: 32px;
+  }
+}
 
 .details__txt {
-  margin-top: 113px;
+  margin-top: 90px;
   font-size: 16px;
   color: #222222;
 }
-
-.details__btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 70px auto 0;
-  width: 100%;
-}
-
-.details__btn {
-  display: inline-block;
-  width: 28.7109375%;
-  padding: 18px 0;
-  color: #222222;
-  font-size: 20px;
-  text-align: center;
-  position: relative;
-  border-radius: 40px;
-  border: 1px solid #222222;
-  background-color: #FAF7F1;
-}
-
-.details__btn::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 55%;
-  right: 34px;
-  border-right: 2px solid #111;
-  border-bottom: 2px solid #111;
-  -webkit-transform: translateY(-50%) rotate(45deg);
-  transform: translateY(-50%) rotate(45deg); /* 右下向きのV字を作る */
-  margin-left: 6px;
-}
-
-.details__btn::before {
-  position: absolute;
-  content: "";
-  width: 2px;
-  height: 20px;
-  background-color: #222222;
-  top: 50%;
-  right: 38px;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+@media screen and (min-width: 768px) {
+  .details__txt {
+    margin-top: 113px;
+  }
 }
 
 .container:first-child {

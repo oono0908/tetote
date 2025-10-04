@@ -7,60 +7,21 @@
   padding-bottom: 139px;
 }
 .details__title{
-  font-size: 32px;
+  font-size: 28px;
   font-weight: $bold;
   color: $black;
+  @include mq("md"){
+    font-size: 32px;
+  }
 }
 
 .details__txt{
-  margin-top: 113px;
+  margin-top: 90px;
   font-size: 16px;
   color: $black;
-}
-
-.details__btns{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 70px auto 0;
-  width: 100%;
-}
-
-.details__btn{
-  display: inline-block;
-  width: calc(294 / 1024 * 100%);
-  padding: 18px 0;
-  color: $black;
-  font-size: 20px;
-  text-align: center;
-  position: relative;
-  border-radius: 40px;
-  border: 1px solid $black;
-  background-color: $white;
-}
-
-.details__btn::after{
-  content:"";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 55%;
-  right: 34px;
-  border-right: 2px solid #111;
-  border-bottom: 2px solid #111;
-  transform: translateY(-50%) rotate(45deg);   /* 右下向きのV字を作る */
-  margin-left: 6px;
-}
-
-.details__btn::before{
-  position: absolute;
-  content: "";
-  width: 2px;
-  height: 20px;
-  background-color: $black;
-  top: 50%;
-  right: 38px;
-  transform: translateY(-50%)
+  @include mq("md"){
+    margin-top: 113px;
+  }
 }
 
 .container:first-child{

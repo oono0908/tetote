@@ -9,11 +9,14 @@
 }
 
 .contact__inner{
-  margin-top: 172px;
-  max-width: 880px;
+  margin-top: 100px;
   background-color: white;
-  padding: 58px 71px 81px;
-  margin: 0 auto;
+  @include mq("md"){
+    padding: 58px 71px 81px;
+    max-width: 880px;
+    margin: 0 auto;
+    margin-top: 172px;
+  }
 }
 
 .contact__title-wrap{
@@ -23,19 +26,26 @@
 }
 
 .contact__title-eng{
-  font-size: 24px;
+  font-size: 20px;
   font-weight: $regular;
   color: $black;
   text-align: center;
   font-family: "Noto Sans JP", sans-serif;
+  @include mq("md"){
+    font-size: 24px;
+  }
 }
 
 .contact__title-ja{
-  font-size: 32px;
+  font-size: 28px;
   font-weight: $bold;
   color: $black;
-  margin-top: 29px;
+  margin-top: 20px;
   text-align: center;
+  @include mq("md"){
+    font-size: 32px;
+    margin-top: 29px;
+  }
 }
 
 .contact__title--red, .contact__txt--red{
@@ -43,20 +53,30 @@
 }
 
 .contact__txt{
-  margin-top: 51px;
-  font-size: 16px;
+  margin-top: 36px;
+  font-size: 14px;
   color: $black;
+  @include mq("md"){
+    font-size: 16px;
+    margin-top: 51px;
+  }
 }
 
 .contact__body-wrap{
-  padding-top: 97px;
+  padding-top: 60px;
   border-top: 1px solid #988C2C;
+  @include mq("md"){
+    padding-top: 97px;
+  }
 }
 
 .contact__group{
-  display: flex;
   align-items: center;
   width: 100%;
+  @include mq("md"){
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contact__group:not(first-child){
@@ -76,15 +96,24 @@
   background-color: #FAF7F1;
   border: 1px solid #988C2C;
   border-radius: 10px;
+  margin-top: 20px;
+  @include mq("md"){
+    margin-top: 0;
+  }
 }
 
 .contact__input{
-    width: calc(575 / 738 * 100%);
+    width: 100%;
+    @include mq("md"){
+      width: calc(575 / 738 * 100%);
+  }
 }
 
 .contact__field{
-  display: flex;
-  align-items: center;
+  @include mq("md"){
+    display: flex;
+    align-items: center;
+  }
 }
 
 .contact__input--year, .contact__select--month,.contact__select--day{
@@ -94,7 +123,10 @@
 
 .contact__input-wrap, .contact__select-wrap{
   position: relative;
-  width: 168px;
+  width: 100%;
+  @include mq("md"){
+    width: 168px;
+  }
 }
 
 .contact__select-wrap{
@@ -118,14 +150,19 @@
 }
 
 .contact__field-group{
-  display: flex;
   margin-top: 27px;
+  @include mq("md"){
+    display: flex;
+  }
 }
 
 .contact__field-wrap{
-  display: flex;
   column-gap: 25px;
   margin-top: 27px;
+  @include mq("md"){
+    display: flex;
+    column-gap: 25px;
+  }
 }
 
 .contact__select{
@@ -186,7 +223,10 @@
 }
 
 .contact__textarea{
-   width: calc(575 / 738 * 100%);
+   width: 100%;
+   @include mq("md"){
+     width: calc(575 / 738 * 100%);
+  }
 }
 
 .contact__group--known{
@@ -203,10 +243,13 @@
 }
 
 .contact__actions{
-  width: 256px;
+  width: 100%;
   text-align: center;
   border: 1px solid $black;
   margin: 59px auto 0;
+  @include mq("md"){
+    width: 256px;
+  }
 }
 
 .contact__submit{

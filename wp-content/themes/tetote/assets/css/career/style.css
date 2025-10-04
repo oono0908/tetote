@@ -3,9 +3,14 @@
 }
 
 .career__title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: #222222;
+}
+@media screen and (min-width: 768px) {
+  .career__title {
+    font-size: 32px;
+  }
 }
 
 .career__txt {
@@ -14,7 +19,12 @@
 }
 
 .career__txt._upper {
-  margin-top: 113px;
+  margin-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  .career__txt._upper {
+    margin-top: 113px;
+  }
 }
 
 .career__txt._lower {
@@ -37,10 +47,18 @@
 .list__title {
   background-color: #AFA86F;
   border-radius: 10px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: #222222;
-  padding: 12px 21px;
+  padding: 10px 18px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .list__title {
+    font-size: 24px;
+    padding: 12px 21px;
+    text-align: left;
+  }
 }
 
 .list__txt {

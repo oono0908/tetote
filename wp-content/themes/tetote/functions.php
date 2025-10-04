@@ -42,9 +42,12 @@ function my_theme_scripts() {
   }
   elseif (is_page('details') ) {
     wp_enqueue_style( 'details-css', get_theme_file_uri('assets/css/details/style.css'), [], '1.0' );
+    wp_enqueue_script( 'scroll-btn-js', get_theme_file_uri('assets/js/scroll-btn/script.js'), ['jquery'], '1.0', true );
   }
   elseif (is_page('faq') ) {
     wp_enqueue_style( 'faq-css', get_theme_file_uri('assets/css/faq/style.css'), [], '1.0' );
+    wp_enqueue_script( 'scroll-btn-js', get_theme_file_uri('assets/js/scroll-btn/script.js'), ['jquery'], '1.0', true );
+    wp_enqueue_script( 'faq-js', get_theme_file_uri('assets/js/faq/script.js'), ['jquery'], '1.0', true );
   }
   elseif (is_page('contact') ) {
     wp_enqueue_style( 'contact-css', get_theme_file_uri('assets/css/contact/style.css'), [], '1.0' );

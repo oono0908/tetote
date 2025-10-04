@@ -58,7 +58,7 @@
 // 下層ページ header 下画像の切り替え（簡潔版）
 $visual_classes = [
   'about'    => 'about-top-visual',
-  'detail'   => 'detail-top-visual',
+  'details'   => 'details-top-visual',
   'benefits' => 'benefits-top-visual',
   'career'   => 'career-top-visual',
   'details'  => 'details-top-visual',

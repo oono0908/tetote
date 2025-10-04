@@ -14,7 +14,6 @@
 
 .scroll__btn {
   display: inline-block;
-  width: 28.7109375%;
   padding: 18px 0;
   color: #222222;
   font-size: 20px;
@@ -24,19 +23,41 @@
   border: 1px solid #222222;
   background-color: #FAF7F1;
 }
+@media screen and (min-width: 768px) {
+  .scroll__btn {
+    width: 247px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .scroll__btn {
+    width: 294px;
+    font-size: 20px;
+  }
+}
 
 .scroll__btn::after {
   content: "";
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 55%;
-  right: 34px;
   border-right: 2px solid #111;
   border-bottom: 2px solid #111;
   -webkit-transform: translateY(-50%) rotate(45deg);
   transform: translateY(-50%) rotate(45deg); /* 右下向きのV字を作る */
   margin-left: 6px;
+}
+@media screen and (min-width: 768px) {
+  .scroll__btn::after {
+    top: 55%;
+    right: 21px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .scroll__btn::after {
+    top: 55%;
+    right: 30px;
+  }
 }
 
 .scroll__btn::before {
@@ -46,9 +67,18 @@
   height: 20px;
   background-color: #222222;
   top: 50%;
-  right: 38px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+@media screen and (min-width: 768px) {
+  .scroll__btn::before {
+    right: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .scroll__btn::before {
+    right: 34px;
+  }
 }
 
 .faq__inner {
@@ -56,26 +86,35 @@
 }
 
 .faq__title {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   color: #222222;
-  margin-top: 113px;
+  margin-top: 90px;
+}
+@media screen and (min-width: 768px) {
+  .faq__title {
+    font-size: 32px;
+    margin-top: 113px;
+  }
 }
 
-.faq__table {
+.faq__lists {
   margin-top: 113px;
   margin-top: 96px;
   width: 100%;
 }
 
-.faq__body {
+.faq__list {
   padding: 36px 0;
   border-bottom: 1px solid #AFA86F;
-  display: block;
 }
 
-.faq__body:first-child {
+.faq__list:first-child {
   border-top: 1px solid #AFA86F;
+}
+
+.faq__question {
+  cursor: pointer;
 }
 
 .faq__question, .faq__answer {
@@ -84,13 +123,11 @@
   font-weight: 300;
   position: relative;
   padding: 0 36px;
-  display: block;
   width: 100%;
 }
 
 .faq__answer-wrap, .faq__question-wrap {
   width: 100%;
-  display: block;
 }
 
 .faq__question::before,
@@ -122,8 +159,6 @@
 }
 
 .faq__question.is-open::after {
-  -webkit-transform: translate(-50%, -50%) scaleY(0);
-  transform: translate(-50%, -50%) scaleY(0);
   opacity: 0;
 }
 

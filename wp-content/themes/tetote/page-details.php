@@ -5,8 +5,8 @@
       <h3 class="details__title">あなたが輝ける場所が、ここにはある</h3>
       <p class="details__txt">TETOTEでは、コンサルタントを中心に、様々な職種を募集しています。</p>
       <?php get_template_part('parts/scroll-btn'); ?>
-      <section class="container">
-        <h4 class="table-title">募集要項-コンサルタント</h4>
+      <section class="container" id="section01">
+        <h4 class="table-title" >募集要項-コンサルタント</h4>
         <table class="table" role="presentation">
           <tbody>
             <tr class="table__row">
@@ -53,7 +53,7 @@
         </table>
       </section>
 
-      <section class="container">
+      <section class="container" id="section02">
         <h4 class="table-title">募集要項-ソリューション営業</h4>
         <table class="table" role="presentation">
           <tbody>
@@ -101,7 +101,7 @@
         </table>
       </section>
 
-      <section class="container">
+      <section class="container" id="section03">
         <h4 class="table-title">募集要項-システムエンジニア</h4>
         <table class="table" role="presentation">
           <tbody>

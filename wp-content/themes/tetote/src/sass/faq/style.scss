@@ -6,26 +6,33 @@
 }
 
 .faq__title{
-  font-size: 32px;
+  font-size: 28px;
   font-weight: $bold;
   color: $black;
-  margin-top: 113px;
+  margin-top: 90px;
+  @include mq("md"){
+    font-size: 32px;
+    margin-top: 113px;
+  }
 }
 
-.faq__table{
+.faq__lists{
   margin-top: 113px;
   margin-top: 96px;
   width: 100%;
 }
 
-.faq__body{
+.faq__list{
   padding: 36px 0;
   border-bottom: 1px solid #AFA86F;
-  display: block;
 }
 
-.faq__body:first-child{
+.faq__list:first-child{
   border-top: 1px solid #AFA86F;
+}
+
+.faq__question{
+  cursor: pointer;
 }
 
 .faq__question, .faq__answer{
@@ -34,13 +41,11 @@
   font-weight: $regular;
   position: relative;
   padding: 0 36px;
-  display: block;
   width: 100%;
 }
 
 .faq__answer-wrap, .faq__question-wrap{
   width: 100%;
-  display: block;
 }
 
 .faq__question::before,
@@ -60,6 +65,8 @@
   right: 0;
 }
 
+
+
 /* 縦棒 */
 .faq__question::after{
   width: 2px; /* 太さ */
@@ -67,8 +74,9 @@
   right: 7px;
 }
 
+
 .faq__question.is-open::after{
-  transform: translate(-50%,-50%) scaleY(0);
+  // transform: translate(-50%,-50%) scaleY(0);
   opacity: 0;
 }
 

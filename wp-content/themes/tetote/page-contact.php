@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
 <main>
-  <div class="contact__inner">
+  <div class="contact__inner inner">
     <div class="contact__title-wrap">
       <h3 class="contact__title">
         <div class="contact__title-eng">ENTRY FORM</div>
         <div class="contact__title-ja">
-          <span class="contact__title--red">新卒・中途採用</span>エントリーフォーム
+          <span class="contact__title--red">新卒・中途採用</span><br class="md-none">エントリーフォーム
         </div>
       </h3>
       <p class="contact__txt">
@@ -17,6 +17,7 @@
 
     <div class="contact__body-wrap">
       <form class="contact" action="#" method="post" novalidate>
+
         <!-- 氏名 -->
         <div class="contact__group">
           <label class="contact__label" for="contact-name">
@@ -84,7 +85,9 @@
 
         <!-- 生年月日 -->
         <fieldset class="contact__field-group">
-          <label class="contact__label">生年月日<span class="contact__txt--red">&#8251;</span></label>
+          <label class="contact__label">
+            生年月日<span class="contact__txt--red">&#8251;</span>
+          </label>
 
           <div class="contact__birth-wrap">
             <!-- 年 -->
@@ -116,18 +119,9 @@
                     required
                   >
                     <option value="" hidden>選択してください</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
+                    <?php for ($i = 1; $i <= 12; $i++) : ?>
+                      <option value="<?= $i ?>"><?= $i ?></option>
+                    <?php endfor; ?>
                   </select>
                 </div>
                 <span class="contact__suffix">月</span>
@@ -143,37 +137,9 @@
                     required
                   >
                     <option value="" hidden>選択してください</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
+                    <?php for ($i = 1; $i <= 31; $i++) : ?>
+                      <option value="<?= $i ?>"><?= $i ?></option>
+                    <?php endfor; ?>
                   </select>
                 </div>
                 <span class="contact__suffix">日</span>
@@ -183,52 +149,50 @@
         </fieldset>
 
         <!-- 希望職種 -->
-<fieldset class="contact__group contact__group--job">
-  <div class="contact__label">
-    希望職種<span class="contact__txt--red">&#8251;</span>
-  </div>
+        <fieldset class="contact__group contact__group--job">
+          <div class="contact__label">
+            希望職種<span class="contact__txt--red">&#8251;</span>
+          </div>
 
-  <ul class="contact__choice-list" role="list">
-    <li class="contact__choice _round">
-      <label class="contact__radio-label">
-        <input
-          class="contact__radio"
-          type="radio"
-          name="job"
-          value="consultant"
-          required
-        />
-        コンサルタント
-      </label>
-    </li>
-
-    <li class="contact__choice _round">
-      <label class="contact__radio-label">
-        <input
-          class="contact__radio"
-          type="radio"
-          name="job"
-          value="solution-sales"
-          required
-        />
-        ソリューション営業
-      </label>
-    </li>
-
-    <li class="contact__choice _round">
-      <label class="contact__radio-label">
-        <input
-          class="contact__radio"
-          type="radio"
-          name="job"
-          value="system-engineer"
-          required
-        />
-        システムエンジニア
-      </label>
-    </li>
-  </ul>
-</fieldset>
+          <ul class="contact__choice-list" role="list">
+            <li class="contact__choice _round">
+              <label class="contact__radio-label">
+                <input
+                  class="contact__radio"
+                  type="radio"
+                  name="job"
+                  value="consultant"
+                  required
+                />
+                コンサルタント
+              </label>
+            </li>
+            <li class="contact__choice _round">
+              <label class="contact__radio-label">
+                <input
+                  class="contact__radio"
+                  type="radio"
+                  name="job"
+                  value="solution-sales"
+                  required
+                />
+                ソリューション営業
+              </label>
+            </li>
+            <li class="contact__choice _round">
+              <label class="contact__radio-label">
+                <input
+                  class="contact__radio"
+                  type="radio"
+                  name="job"
+                  value="system-engineer"
+                  required
+                />
+                システムエンジニア
+              </label>
+            </li>
+          </ul>
+        </fieldset>
 
         <!-- 自己PR -->
         <div class="contact__group contact__group--pr">
@@ -247,97 +211,61 @@
 
         <!-- きっかけ -->
         <fieldset class="contact__group contact__group--known">
-  <div class="contact__label">当社を知ったきっかけを教えて下さい。</div>
+          <div class="contact__label">当社を知ったきっかけを教えて下さい。</div>
 
-  <ul class="contact__choice-list" role="list">
-    <li class="contact__choice _square">
-      <label class="contact__checkbox-label">
-        <input
-          class="contact__checkbox"
-          type="checkbox"
-          name="known[]"
-          value="x"
-        />
-        X(旧Twitter)
-      </label>
-    </li>
-
-    <li class="contact__choice _square">
-      <label class="contact__checkbox-label">
-        <input
-          class="contact__checkbox"
-          type="checkbox"
-          name="known[]"
-          value="facebook"
-        />
-        Facebook
-      </label>
-    </li>
-
-    <li class="contact__choice _square">
-      <label class="contact__checkbox-label">
-        <input
-          class="contact__checkbox"
-          type="checkbox"
-          name="known[]"
-          value="instagram"
-        />
-        Instagram
-      </label>
-    </li>
-
-    <li class="contact__choice _square">
-      <label class="contact__checkbox-label">
-        <input
-          class="contact__checkbox"
-          type="checkbox"
-          name="known[]"
-          value="search"
-        />
-        検索広告
-      </label>
-    </li>
-
-    <li class="contact__choice _square">
-      <label class="contact__checkbox-label">
-        <input
-          class="contact__checkbox"
-          type="checkbox"
-          name="known[]"
-          value="friends"
-        />
-        知人友人・親戚
-      </label>
-    </li>
-
-    <li class="contact__choice _square">
-      <label class="contact__checkbox-label">
-        <input
-          class="contact__checkbox"
-          type="checkbox"
-          name="known[]"
-          value="other"
-        />
-        その他
-      </label>
-    </li>
-  </ul>
-</fieldset>
-
+          <ul class="contact__choice-list" role="list">
+            <li class="contact__choice _square">
+              <label class="contact__checkbox-label">
+                <input class="contact__checkbox" type="checkbox" name="known[]" value="x" />
+                X(旧Twitter)
+              </label>
+            </li>
+            <li class="contact__choice _square">
+              <label class="contact__checkbox-label">
+                <input class="contact__checkbox" type="checkbox" name="known[]" value="facebook" />
+                Facebook
+              </label>
+            </li>
+            <li class="contact__choice _square">
+              <label class="contact__checkbox-label">
+                <input class="contact__checkbox" type="checkbox" name="known[]" value="instagram" />
+                Instagram
+              </label>
+            </li>
+            <li class="contact__choice _square">
+              <label class="contact__checkbox-label">
+                <input class="contact__checkbox" type="checkbox" name="known[]" value="search" />
+                検索広告
+              </label>
+            </li>
+            <li class="contact__choice _square">
+              <label class="contact__checkbox-label">
+                <input class="contact__checkbox" type="checkbox" name="known[]" value="friends" />
+                知人友人・親戚
+              </label>
+            </li>
+            <li class="contact__choice _square">
+              <label class="contact__checkbox-label">
+                <input class="contact__checkbox" type="checkbox" name="known[]" value="other" />
+                その他
+              </label>
+            </li>
+          </ul>
+        </fieldset>
 
         <!-- 同意 -->
-     <div class="contact__choice contact__group--agree">
-  <label class="contact__agree-label">
-    <input
-      class="contact__checkbox-input"
-      type="checkbox"
-      name="agree"
-      value="1"
-      required
-    />
-    個人情報保護方針に同意する
-  </label>
-</div>
+        <div class="contact__choice contact__group--agree">
+          <label class="contact__agree-label">
+            <input
+              class="contact__checkbox-input"
+              type="checkbox"
+              name="agree"
+              value="1"
+              required
+            />
+            個人情報保護方針に同意する
+          </label>
+        </div>
 
         <!-- 送信 -->
         <div class="contact__actions">

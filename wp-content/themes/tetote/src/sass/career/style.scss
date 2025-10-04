@@ -5,9 +5,12 @@
 }
 
 .career__title{
-  font-size: 32px;
+  font-size: 28px;
   font-weight: $bold;
   color: $black;
+  @include mq("md"){
+    font-size: 32px;
+  }
 }
 
 .career__txt{
@@ -16,7 +19,10 @@
 }
 
 .career__txt._upper{
-  margin-top: 113px;
+  margin-top: 80px;
+  @include mq("md"){
+    margin-top: 113px;
+  }
 }
 
 .career__txt._lower{
@@ -39,10 +45,16 @@
 .list__title{
   background-color: #AFA86F;
   border-radius: 10px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: $bold;
   color: $black;
-  padding: 12px 21px;
+  padding: 10px 18px;
+  text-align: center;
+  @include mq("md"){
+    font-size: 24px;
+    padding: 12px 21px;
+    text-align: left;
+  }
 }
 
 .list__txt{

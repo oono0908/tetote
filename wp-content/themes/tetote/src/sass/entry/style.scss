@@ -1,5 +1,13 @@
 @use "../gloval" as *;
 
+// sp版のときに入力要素にmargin-topを付与
+.sp--md10{
+  margin-top: 10px;
+  @include mq("md"){
+    margin-top: 0;
+  }
+}
+
 // input, textarea, selectの共通css
 .input--appearence{
   padding: 20px;
@@ -11,6 +19,7 @@
 .contact__inner{
   margin-top: 100px;
   background-color: white;
+  padding-bottom: 90px;
   @include mq("md"){
     padding: 58px 71px 81px;
     max-width: 880px;
@@ -62,6 +71,10 @@
   }
 }
 
+/* =========================================================
+contact必要事項入力エリア
+========================================================= */
+
 .contact__body-wrap{
   padding-top: 60px;
   border-top: 1px solid #988C2C;
@@ -70,8 +83,12 @@
   }
 }
 
-.contact__group{
+.contact__field{
+  display: flex;
   align-items: center;
+}
+
+.contact__group{
   width: 100%;
   @include mq("md"){
     display: flex;
@@ -83,38 +100,35 @@
   margin-top: 27px;
 }
 
-.contact__label{
-  font-size: 16px;
-  font-weight: $regular;
-  color: $black;
-  width: calc(163 / 738 * 100%);
-  padding-right: 20px;
-}
-
-.contact__input, .contact__select, .contact__textarea{
+// input, textarea, selectの共通css
+.input--appearence{
   padding: 20px;
   background-color: #FAF7F1;
   border: 1px solid #988C2C;
   border-radius: 10px;
-  margin-top: 20px;
-  @include mq("md"){
-    margin-top: 0;
-  }
-}
-
-.contact__input{
-    width: 100%;
+  width: 100%;
     @include mq("md"){
       width: calc(575 / 738 * 100%);
   }
 }
 
-.contact__field{
+.contact__label{
+  font-size: 16px;
+  font-weight: $regular;
+  color: $black;
+  width: 100%;
+  padding-right: 20px;
   @include mq("md"){
-    display: flex;
-    align-items: center;
+     width: calc(163 / 738 * 100%);
   }
 }
+
+.contact__input, .contact__select, .contact__textarea{
+  @include mq("md"){
+    margin-top: 0;
+  }
+}
+
 
 .contact__input--year, .contact__select--month,.contact__select--day{
   width: 100%;
@@ -129,6 +143,13 @@
   }
 }
 
+.contact__birth-wrap{
+  width: 200px;
+  @include mq("md"){
+    width: auto;
+  }
+}
+
 .contact__select-wrap{
   &:after{
     border-bottom: 1px solid $black;
@@ -138,8 +159,14 @@
     transform: translateY(-60%) rotate(-45deg);
     width: 9px;
     position: absolute;
-    left: 80%;
+    right: 9%;
     top: 50%;
+  }
+  @include mq("md"){
+    margin-top: 0;
+    &:after{
+      right:11%;
+    }
   }
 }
 
@@ -157,12 +184,15 @@
 }
 
 .contact__field-wrap{
-  column-gap: 25px;
-  margin-top: 27px;
   @include mq("md"){
     display: flex;
     column-gap: 25px;
+    margin-top: 20px;
   }
+}
+
+.contact__field--month, .contact__field--day{
+  margin-top: 27px;
 }
 
 .contact__select{
@@ -184,7 +214,7 @@
 
 }
 
-.contact__choice > label{
+.label--click-area{
   position: relative;
   padding-left: 30px;
   &::before{
@@ -201,13 +231,13 @@
   }
 }
 
-.contact__choice._round > label{
+.label--click-area._round{
   &::before{
     border-radius: 50%;
   }
 }
 
-.contact__choice > label:has(input:checked)::after {
+.label--click-area:has(input:checked)::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -218,38 +248,24 @@
   transform: translateY(-50%);
 }
 
-.contact__choice._round > label:has(input:checked)::after {
+.label--click-area._round:has(input:checked)::after {
   border-radius: 50%;
-}
-
-.contact__textarea{
-   width: 100%;
-   @include mq("md"){
-     width: calc(575 / 738 * 100%);
-  }
 }
 
 .contact__group--known{
   align-items: start;
 }
 
-.contact__choice{
-  border-radius: 0;
-}
-
-.contact__choice.contact__group--agree{
+.contact__group--agree{
   margin-top: 99px;
   text-align: center;
 }
 
 .contact__actions{
-  width: 100%;
+  width: 256px;
   text-align: center;
   border: 1px solid $black;
   margin: 59px auto 0;
-  @include mq("md"){
-    width: 256px;
-  }
 }
 
 .contact__submit{

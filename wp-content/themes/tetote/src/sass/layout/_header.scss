@@ -42,11 +42,27 @@ header
   }
 }
 
+.js-header.is-open{
+  background-color: white;
+}
+
 .header__logo {
   width: 154px;
   @include mq("md"){
     width: 250px;
   }
+}
+
+.title-logo--black{
+  display: none;
+}
+
+.js-title-logo.is-open{
+  display: block;
+}
+
+.js-title-logo.is-open + .title-logo--white{
+  display: none;
 }
 
 .header__right {
@@ -174,6 +190,25 @@ header
   background-image: url("../../images/staff-top.jpg");
 }
 
+// パンくずリスト
+
+.bread-lists{
+  background-color: #F0F0F0;
+  padding: 20px 24px;
+}
+
+.bread-lists__inner > span > a > span{
+  color: $black;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.bread-lists__inner .current-item{
+  color: $black;
+  display: inline-block;
+  font-size: 14px;
+}
+
 
 /* =========================================================
   ハンパーガー
@@ -221,7 +256,7 @@ header
   bottom: 0;
 }
 
-.hamburger.is-open span:nth-child(1) {
+.js-hamburger.is-open span:nth-child(1) {
   top: 9px;
   transform: rotate(45deg);
   @include mq("md"){
@@ -229,11 +264,11 @@ header
   }
 }
 
-.hamburger.is-open span:nth-child(2) {
+.js-hamburger.is-open span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.is-open span:nth-child(3) {
+.js-hamburger.is-open span:nth-child(3) {
   bottom: auto;
   top: 9px;
   transform: rotate(-45deg);
@@ -242,8 +277,12 @@ header
   }
 }
 
-.hamburger.is-open span{
+.js-hamburger__lines.is-open > span{
   background-color: $black;
+}
+
+.js-hamburger__lines.is-open + .hamburger__text{
+  color: $black;
 }
 
 .hamburger__text{
@@ -258,6 +297,27 @@ header
   }
 }
 
+// topページ以外のheaderの色変更
+
+body:not(.home) header {
+  background-color: white;
+}
+
+body:not(.home) .js-hamburger__lines > span {
+  background-color: $black;
+}
+
+body:not(.home) .hamburger__text {
+  color: $black;
+}
+
+body:not(.home) .title-logo--white {
+  display: none;
+}
+
+body:not(.home) .title-logo--black {
+  display: block;
+}
 /* =========================================================
   Drawer
 ========================================================= */

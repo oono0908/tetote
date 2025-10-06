@@ -310,10 +310,13 @@ MVセクション
   height: 100%;
   width: width(299,351);
   line-height: 48px;
+  font-size: 12px;
+  padding-left: 3%;
   @include mq("md"){
     width: width(906,1263);
     font-size: 16px;
-    line-height: 62;
+    line-height: 62px;
+    padding-left:5%;
   }
 }
 
@@ -352,7 +355,10 @@ aboutセクション
 ========================================================= */
 
 .about__inner{
-  padding: 41px 0 71px 0;
+  padding-top: 41px;
+  @include mq("md"){
+    padding-top: 101px;
+  }
 }
 
 .about__swiper{
@@ -450,16 +456,15 @@ aboutセクション
 }
 
 /* =========================================================
-MEMBERセクション
+memberセクション
 ========================================================= */
 
 .member__inner{
-  padding-top: 71px;
+  padding-top: 95px;
   @include mq("md"){
-    padding-top: 86px;
+    padding-top: 163px;
   }
 }
-
 .member__slider{
   padding: 52px 0 64px 0;
   margin-left: calc(50% - 50vw);
@@ -498,6 +503,7 @@ MEMBERセクション
   background: $green;
   color: $black;
   font-size: 16px;
+  display: inline-block;
   @include mq("md"){
     font-size: 20px;
     padding: 5px 7px;
@@ -555,11 +561,11 @@ benefits
 ========================================================= */
 
 .benefits__inner{
-  padding-top: 71px;
-  padding-bottom: 71px;
+  padding-top: 95px;
+  padding-bottom: 78px;
   @include mq("md"){
-    padding-top: 121px;
-    padding-bottom: 121px;
+    padding-top: 150px;
+    padding-bottom: 107px;
   }
 }
 
@@ -599,7 +605,7 @@ benefits
     height: 430px;
     transition: transform 0.3s, opacity 0.3s;
     &:hover{
-      transform: scale(1.1);
+      transform: scale(1.03);
       opacity: 0.8;
     }
   }
@@ -650,6 +656,7 @@ benefits
   padding: 7px 7px;
   white-space: nowrap;
   text-align: center;
+  color: $black;
   @include mq("md"){
     font-size: 33px;
   }
@@ -663,6 +670,7 @@ benefits
   position: absolute;
   right: 0;
   top: 0;
+  color: $black;
   @include mq("md"){
     font-size: 24px; 
   }
@@ -673,6 +681,7 @@ benefits
   font-weight: $regular;
   line-height: 1.5;
   margin-top: 28px;
+  color: $black;
   @include mq("xl"){
     text-align: center;
   }
@@ -694,6 +703,9 @@ message
 .message__inner{
   padding-top: 78px;
   position: relative;
+  @include mq("md"){
+    padding-top: 87px;
+  }
 }
 
 .message__cards{
@@ -713,11 +725,9 @@ message
 }
 
 .message__img-wrap{
-  width: calc(121 / 341 * 100%);
-  @include mq("md"){
-  width: calc(156 / 452 * 100%);
-    
-  }
+  width: 156px;
+  aspect-ratio:156 / 180;
+  object-fit: cover;
 }
 
 .message__body{
@@ -725,6 +735,7 @@ message
   display: flex;
   flex-direction: column;
   height: 100%; 
+  width: calc(100% - 156px);
   @include mq("md"){
     padding: 20px 23px;
   }
@@ -808,7 +819,11 @@ recruit
 
 .recruit__inner{
   padding-top: 90px;
-  padding-bottom: 85px;
+  padding-bottom: 88px;
+  @include mq("md"){
+    padding-top: 167px;
+    padding-bottom: 139px;
+  }
 }
 
 .recruit__btns{

@@ -211,6 +211,10 @@ header
   }
 }
 
+.js-header.is-open {
+  background-color: white;
+}
+
 .header__logo {
   width: 154px;
 }
@@ -218,6 +222,18 @@ header
   .header__logo {
     width: 250px;
   }
+}
+
+.title-logo--black {
+  display: none;
+}
+
+.js-title-logo.is-open {
+  display: block;
+}
+
+.js-title-logo.is-open + .title-logo--white {
+  display: none;
 }
 
 .header__right {
@@ -359,6 +375,23 @@ header
   background-image: url("../../images/staff-top.jpg");
 }
 
+.bread-lists {
+  background-color: #F0F0F0;
+  padding: 20px 24px;
+}
+
+.bread-lists__inner > span > a > span {
+  color: #222222;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.bread-lists__inner .current-item {
+  color: #222222;
+  display: inline-block;
+  font-size: 14px;
+}
+
 /* =========================================================
   ハンパーガー
 ========================================================= */
@@ -415,35 +448,39 @@ header
   bottom: 0;
 }
 
-.hamburger.is-open span:nth-child(1) {
+.js-hamburger.is-open span:nth-child(1) {
   top: 9px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 @media screen and (min-width: 768px) {
-  .hamburger.is-open span:nth-child(1) {
+  .js-hamburger.is-open span:nth-child(1) {
     top: 15px;
   }
 }
 
-.hamburger.is-open span:nth-child(2) {
+.js-hamburger.is-open span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.is-open span:nth-child(3) {
+.js-hamburger.is-open span:nth-child(3) {
   bottom: auto;
   top: 9px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 @media screen and (min-width: 768px) {
-  .hamburger.is-open span:nth-child(3) {
+  .js-hamburger.is-open span:nth-child(3) {
     top: 15px;
   }
 }
 
-.hamburger.is-open span {
+.js-hamburger__lines.is-open > span {
   background-color: #222222;
+}
+
+.js-hamburger__lines.is-open + .hamburger__text {
+  color: #222222;
 }
 
 .hamburger__text {
@@ -458,6 +495,26 @@ header
     font-size: 12px;
     margin-top: 10px;
   }
+}
+
+body:not(.home) header {
+  background-color: white;
+}
+
+body:not(.home) .js-hamburger__lines > span {
+  background-color: #222222;
+}
+
+body:not(.home) .hamburger__text {
+  color: #222222;
+}
+
+body:not(.home) .title-logo--white {
+  display: none;
+}
+
+body:not(.home) .title-logo--black {
+  display: block;
 }
 
 /* =========================================================
@@ -841,14 +898,12 @@ header
 ========================================================= */
 .inner {
   padding: 0 17px;
-  margin-top: 80px;
 }
 @media screen and (min-width: 768px) {
   .inner {
     max-width: 1024px;
     padding: 0 22px;
     margin: 0 auto;
-    margin-top: 130px;
   }
 }
 

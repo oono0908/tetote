@@ -323,12 +323,15 @@ MVセクション
   height: 100%;
   width: 85.1851851852%;
   line-height: 48px;
+  font-size: 12px;
+  padding-left: 3%;
 }
 @media screen and (min-width: 768px) {
   .news__text {
     width: 71.7339667458%;
     font-size: 16px;
-    line-height: 62;
+    line-height: 62px;
+    padding-left: 5%;
   }
 }
 
@@ -369,7 +372,12 @@ MVセクション
 aboutセクション
 ========================================================= */
 .about__inner {
-  padding: 41px 0 71px 0;
+  padding-top: 41px;
+}
+@media screen and (min-width: 768px) {
+  .about__inner {
+    padding-top: 101px;
+  }
 }
 
 .about__swiper {
@@ -486,14 +494,14 @@ aboutセクション
 }
 
 /* =========================================================
-MEMBERセクション
+memberセクション
 ========================================================= */
 .member__inner {
-  padding-top: 71px;
+  padding-top: 95px;
 }
 @media screen and (min-width: 768px) {
   .member__inner {
-    padding-top: 86px;
+    padding-top: 163px;
   }
 }
 
@@ -539,6 +547,7 @@ MEMBERセクション
   background: #988C2C;
   color: #222222;
   font-size: 16px;
+  display: inline-block;
 }
 @media screen and (min-width: 768px) {
   .member__card-text {
@@ -605,13 +614,13 @@ MEMBERセクション
 benefits
 ========================================================= */
 .benefits__inner {
-  padding-top: 71px;
-  padding-bottom: 71px;
+  padding-top: 95px;
+  padding-bottom: 78px;
 }
 @media screen and (min-width: 768px) {
   .benefits__inner {
-    padding-top: 121px;
-    padding-bottom: 121px;
+    padding-top: 150px;
+    padding-bottom: 107px;
   }
 }
 
@@ -668,8 +677,8 @@ benefits
     transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
   }
   .benefits__thum:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
     opacity: 0.8;
   }
 }
@@ -716,6 +725,7 @@ benefits
   padding: 7px 7px;
   white-space: nowrap;
   text-align: center;
+  color: #222222;
 }
 @media screen and (min-width: 768px) {
   .benefits__title-main {
@@ -733,6 +743,7 @@ benefits
   position: absolute;
   right: 0;
   top: 0;
+  color: #222222;
 }
 @media screen and (min-width: 768px) {
   .benefits__title-sub {
@@ -745,6 +756,7 @@ benefits
   font-weight: 300;
   line-height: 1.5;
   margin-top: 28px;
+  color: #222222;
 }
 @media screen and (min-width: 1440px) {
   .benefits__body {
@@ -768,6 +780,11 @@ message
 .message__inner {
   padding-top: 78px;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .message__inner {
+    padding-top: 87px;
+  }
 }
 
 .message__cards {
@@ -793,12 +810,10 @@ message
 }
 
 .message__img-wrap {
-  width: 35.4838709677%;
-}
-@media screen and (min-width: 768px) {
-  .message__img-wrap {
-    width: 34.5132743363%;
-  }
+  width: 156px;
+  aspect-ratio: 156/180;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .message__body {
@@ -811,6 +826,7 @@ message
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
+  width: calc(100% - 156px);
 }
 @media screen and (min-width: 768px) {
   .message__body {
@@ -907,7 +923,13 @@ recruit
 
 .recruit__inner {
   padding-top: 90px;
-  padding-bottom: 85px;
+  padding-bottom: 88px;
+}
+@media screen and (min-width: 768px) {
+  .recruit__inner {
+    padding-top: 167px;
+    padding-bottom: 139px;
+  }
 }
 
 .recruit__btns {

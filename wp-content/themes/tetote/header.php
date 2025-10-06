@@ -32,21 +32,22 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <header class="header">
+  <header class="header js-header">
     <h1 class="header__logo">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="logo" aria-label="TETOTEのホームページへ戻る">
-        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-white.svg')); ?>" alt="TETOTEサイトのロゴ" />
+         <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-black.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--black js-title-logo"/>
+        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-white.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--white"/>
       </a>
     </h1>
 
     <div class="header__right">
       <div class="header__btns md-show">
-        <a class="btn btn--small btn--black" href="<?php echo esc_url(home_url('/recruit')); ?>">募集要項</a>
+        <a class="btn btn--small btn--black" href="<?php echo esc_url(home_url('/details')); ?>">募集要項</a>
         <a class="btn btn--small btn--green" href="<?php echo esc_url(home_url('/entry')); ?>">ENTRY</a>
       </div>
        <!-- ハンバーガー -->
-      <button class="hamburger js-humbuger" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開閉">
-        <div class="hamburger__lines">
+      <button class="hamburger js-hamburger" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開閉">
+        <div class="hamburger__lines js-hamburger__lines">
           <span></span><span></span><span></span>
         </div>
         <div class="hamburger__text">MENU</div>
@@ -103,6 +104,16 @@ if ( is_home() ) {
     </div>
   </div>
 <?php endif; ?>
+
+<?php if (!is_front_page() & (!is_singular('staff'))) { ?>
+	<?php if (function_exists('bcn_display')) { ?>
+		<div class="bread-lists md-show" vocab="http://schema.org/" typeof="BreadcrumbList">
+      <div class="bread-lists__inner inner">
+			  <?php bcn_display(); ?>
+      </div>
+		</div>
+	<?php } ?>
+<?php } ?>
 
   <!-- Drawer Menu -->
   <div class="drawer js-drawer" role="dialog" aria-labelledby="drawer-menu">

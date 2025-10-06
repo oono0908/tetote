@@ -13,37 +13,29 @@
     </div>
     <div class="staff-dt-top__thumb">
       <?php
-        // ACF 取得
-        $img      = get_field('staff-img');   // 画像（ID / 配列 / URL いずれも可）
 
-        // 画像HTMLを生成
+        $img      = get_field('staff-img');
         $img_html = '';
         $alt_text = $name ?: get_the_title();
 
-        if ( is_array($img) ) {                           // 配列返却
-          if ( !empty($img['ID']) ) {
-            $img_html = wp_get_attachment_image( $img['ID'], 'large', false, [
-              'class' => 'member__card__img',
-              'alt'   => $alt_text,
-            ] );
-          } elseif ( !empty($img['url']) ) {
+        if ( !empty($img['url']) ) {
             $img_html = '<img src="'.esc_url($img['url']).'" alt="'.esc_attr($alt_text).'" class="member__card__img" />';
           }
-        } elseif ( $img ) {                                // ID or URL
-          if ( is_numeric($img) ) {
-            $img_html = wp_get_attachment_image( (int)$img, 'large', false, [
-              'class' => 'member__card__img',
-              'alt'   => $alt_text,
-            ] );
-          } else {
-            $img_html = '<img src="'.esc_url($img).'" alt="'.esc_attr($alt_text).'" class="member__card__img" />';
-          }
-        }
+
         ?>
         <?php echo $img_html; ?>
     </div>
   </div>
 </div>
+
+	<?php if (function_exists('bcn_display')) { ?>
+		<div class="bread-lists md-show" vocab="http://schema.org/" typeof="BreadcrumbList">
+      <div class="bread-lists__inner inner">
+			  <?php bcn_display(); ?>
+      </div>
+		</div>
+	<?php } ?>
+
   <section class="staff-dt">
     <div class="staff-dt__inner inner">
       <div class="staff-dt__container">
@@ -73,6 +65,7 @@
           </ul>
         </div>
       </div>
+      
       <!-- 「その他のメンバー」 -->
       <div class="staff-dt__bottom">
         <h2 class="staff-dt__bottom-title">その他のメンバー</h2>
@@ -83,11 +76,11 @@
 
         // ランダムで3件（現在の投稿を除外）
         $args = array(
-          'post_type'      => 'staff',         // ← カスタム投稿タイプが staff の想定
+          'post_type'      => 'staff',
           'posts_per_page' => 3,
           'orderby'        => 'rand',
           'post__not_in'   => array( $current_id ),
-          'no_found_rows'  => true,            // パフォーマンス最適化
+          'no_found_rows'  => true,
           'ignore_sticky_posts' => true,
         );
 
@@ -98,36 +91,17 @@
           <ul class="staff__cards">
             <?php while ( $q->have_posts() ) : $q->the_post(); ?>
               <?php
-                // ---- ACFの取得（存在しない場合は空文字になるので安全）----
-                $img      = get_field('staff-img');   // 画像（ID / 配列 / URL いずれも可）
-                $message1 = get_field('message01');   // 1行目
-                $message2 = get_field('message02');   // 2行目
-                $role     = get_field('role');        // 役職等
-                $name     = get_field('name');        // 氏名
-
-                // 画像HTML生成
+                $img      = get_field('staff-img');
+                $message1 = get_field('message01');
+                $message2 = get_field('message02');
+                $role     = get_field('role');
+                $name     = get_field('name');
                 $img_html = '';
                 $alt_text = $name ?: get_the_title();
 
-                if ( is_array($img) ) {
-                  if ( !empty($img['ID']) ) {
-                    $img_html = wp_get_attachment_image( $img['ID'], 'large', false, array(
-                      'class' => 'member__card__img',
-                      'alt'   => $alt_text,
-                    ) );
-                  } elseif ( !empty($img['url']) ) {
+                if (  !empty($img['url']) ) {
                     $img_html = '<img src="' . esc_url($img['url']) . '" alt="' . esc_attr($alt_text) . '" class="member__card__img" />';
-                  }
-                } elseif ( $img ) {
-                  if ( is_numeric($img) ) {
-                    $img_html = wp_get_attachment_image( (int) $img, 'large', false, array(
-                      'class' => 'member__card__img',
-                      'alt'   => $alt_text,
-                    ) );
-                  } else {
-                    $img_html = '<img src="' . esc_url($img) . '" alt="' . esc_attr($alt_text) . '" class="member__card__img" />';
-                  }
-                }
+                  } 
               ?>
 
               <li class="staff__card">

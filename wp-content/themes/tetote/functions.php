@@ -5,7 +5,6 @@
 function my_theme_scripts() {
 
   wp_enqueue_style( 'common-css', get_theme_file_uri('assets/css/common/style.css'), [], '1.0' );
-  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
   wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Viga&display=swap', [], null );
 
   if ( is_front_page() ) {
@@ -17,40 +16,61 @@ function my_theme_scripts() {
 
   elseif ( is_page('about') ) {
     wp_enqueue_style( 'about-css', get_theme_file_uri('assets/css/about/style.css'), [], '1.0' );
+    wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
   }
 
   elseif (is_post_type_archive('staff')) {
     wp_enqueue_style( 'staff-css', get_theme_file_uri('assets/css/staff/style.css'), [], '1.0' );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+
   }
 
   elseif (is_singular( 'staff' ) ) {
     wp_enqueue_style( 'staff-single-css', get_theme_file_uri('assets/css/staff/single-style.css'), [], '1.0' );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+  wp_enqueue_script( 'staff-single-js', get_theme_file_uri('assets/js/staff/single-script.js'), ['jquery'], '1.0', true );
+
+
   }
   
   elseif (is_home( 'blog' ) ) {
     wp_enqueue_style( 'blog-css', get_theme_file_uri('assets/css/blog/style.css'), [], '1.0' );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+
   }
 
     elseif (is_single() ) {
     wp_enqueue_style( 'blog-single-css', get_theme_file_uri('assets/css/blog/single-style.css'), [], '1.0' );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+
   }
   elseif (is_page('benefits') ) {
     wp_enqueue_style( 'benefits-css', get_theme_file_uri('assets/css/benefits/style.css'), [], '1.0' );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+
   }
   elseif (is_page('career') ) {
     wp_enqueue_style( 'career-css', get_theme_file_uri('assets/css/career/style.css'), [], '1.0' );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+
   }
   elseif (is_page('details') ) {
     wp_enqueue_style( 'details-css', get_theme_file_uri('assets/css/details/style.css'), [], '1.0' );
     wp_enqueue_script( 'scroll-btn-js', get_theme_file_uri('assets/js/scroll-btn/script.js'), ['jquery'], '1.0', true );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+
   }
   elseif (is_page('faq') ) {
     wp_enqueue_style( 'faq-css', get_theme_file_uri('assets/css/faq/style.css'), [], '1.0' );
     wp_enqueue_script( 'scroll-btn-js', get_theme_file_uri('assets/js/scroll-btn/script.js'), ['jquery'], '1.0', true );
     wp_enqueue_script( 'faq-js', get_theme_file_uri('assets/js/faq/script.js'), ['jquery'], '1.0', true );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+
   }
-  elseif (is_page('contact') ) {
-    wp_enqueue_style( 'contact-css', get_theme_file_uri('assets/css/contact/style.css'), [], '1.0' );
+  elseif (is_page('entry') ) {
+    wp_enqueue_style( 'entry-css', get_theme_file_uri('assets/css/entry/style.css'), [], '1.0' );
+  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+
   }
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );

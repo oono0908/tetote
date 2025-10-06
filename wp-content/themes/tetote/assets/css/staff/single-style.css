@@ -118,6 +118,7 @@
 @media screen and (min-width: 1024px) {
   .staff-dt__main {
     width: 74.4897959184%;
+    position: relative;
   }
 }
 
@@ -149,6 +150,10 @@
   .staff-dt__side-bar {
     width: 230px;
     display: block;
+    position: sticky;
+    top: 118px;
+    right: 0;
+    height: 400px;
   }
 }
 
@@ -158,6 +163,14 @@
   font-weight: 700;
   line-height: 1.5;
   color: #999999;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.side-bar__item.is-active {
+  color: #222222;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 /* =========================================================

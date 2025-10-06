@@ -8,32 +8,15 @@
             <?php while (have_posts()) : the_post(); ?>
               <li class="message__card">
                 <?php
-                  // ACF 取得
-                  $img      = get_field('message-img');   // 画像（ID / 配列 / URL いずれも可）
+                
+                  $img      = get_field('message-img');
 
-                  // 画像HTMLを生成
                   $img_html = '';
                   $alt_text = $name ?: get_the_title();
 
-                  if ( is_array($img) ) {                           // 配列返却
-                    if ( !empty($img['ID']) ) {
-                      $img_html = wp_get_attachment_image( $img['ID'], 'large', false, [
-                        'class' => 'message__thumb',
-                        'alt'   => $alt_text,
-                      ] );
-                    } elseif ( !empty($img['url']) ) {
+                  if (  !empty($img['url']) ) {
                       $img_html = '<img src="'.esc_url($img['url']).'" alt="'.esc_attr($alt_text).'" class="message__thumb" />';
-                    }
-                  } elseif ( $img ) {                                // ID or URL
-                    if ( is_numeric($img) ) {
-                      $img_html = wp_get_attachment_image( (int)$img, 'large', false, [
-                        'class' => 'message__thumb',
-                        'alt'   => $alt_text,
-                      ] );
-                    } else {
-                      $img_html = '<img src="'.esc_url($img).'" alt="'.esc_attr($alt_text).'" class="message__thumb" />';
-                    }
-                  }
+                    } 
                 ?>
                 <figure class="message__img-wrap">
                    <?php echo $img_html; ?>

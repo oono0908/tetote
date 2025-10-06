@@ -8,7 +8,7 @@
         少数精鋭のチームで<br>
         あなたも会社も一緒に成長していきましょう。
         </p>
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__entry-btn btn btn--arrow">ENTRY</a>
+        <a href="<?php echo esc_url(home_url('/entry/')); ?>" class="footer__entry-btn btn btn--arrow">ENTRY</a>
       </div>
     </div>
     <div class="footer__body">
@@ -21,31 +21,25 @@
         <nav class="footer__nav">
           <ul class="footer__items">
             <li class="footer__item">
-              <a href="" class="footer__link">ホーム</a>
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="footer__link">ホーム</a>
             </li>
             <li class="footer__item">
-              <a href="" class="footer__link">TETOTEについて</a>
+              <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="footer__link">TETOTEについて</a>
             </li>
             <li class="footer__item">
-              <a href="" class="footer__link">研修制度とキャリアパス</a>
+              <a href="<?php echo esc_url( home_url( '/benefits/' ) ); ?>" class="footer__link">福利厚生について</a>
             </li>
             <li class="footer__item">
-              <a href="" class="footer__link">人を知る</a>
+              <a href="<?php echo esc_url( home_url( '/staff/' ) ); ?>" class="footer__link">社員について</a>
             </li>
             <li class="footer__item">
-              <a href="" class="footer__link">研修制度とキャリアパス</a>
+              <a href="<?php echo esc_url( home_url( '/career/' ) ); ?>" class="footer__link">研修制度とキャリアパス</a>
             </li>
             <li class="footer__item">
-              <a href="" class="footer__link">福利厚生</a>
+              <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="footer__link">採用ブログ</a>
             </li>
             <li class="footer__item">
-              <a href="" class="footer__link">採用ブログ</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">募集要項</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">よくある質問</a>
+              <a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>" class="footer__link">よくある質問</a>
             </li>
           </ul>
         </nav>

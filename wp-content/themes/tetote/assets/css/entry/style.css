@@ -1,3 +1,13 @@
+@charset "UTF-8";
+.sp--md10 {
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .sp--md10 {
+    margin-top: 0;
+  }
+}
+
 .input--appearence {
   padding: 20px;
   background-color: #FAF7F1;
@@ -8,6 +18,7 @@
 .contact__inner {
   margin-top: 100px;
   background-color: white;
+  padding-bottom: 90px;
 }
 @media screen and (min-width: 768px) {
   .contact__inner {
@@ -67,6 +78,9 @@
   }
 }
 
+/* =========================================================
+contact必要事項入力エリア
+========================================================= */
 .contact__body-wrap {
   padding-top: 60px;
   border-top: 1px solid #988C2C;
@@ -77,10 +91,16 @@
   }
 }
 
-.contact__group {
+.contact__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.contact__group {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -98,44 +118,35 @@
   margin-top: 27px;
 }
 
-.contact__label {
-  font-size: 16px;
-  font-weight: 300;
-  color: #222222;
-  width: 22.0867208672%;
-  padding-right: 20px;
-}
-
-.contact__input, .contact__select, .contact__textarea {
+.input--appearence {
   padding: 20px;
   background-color: #FAF7F1;
   border: 1px solid #988C2C;
   border-radius: 10px;
-  margin-top: 20px;
-}
-@media screen and (min-width: 768px) {
-  .contact__input, .contact__select, .contact__textarea {
-    margin-top: 0;
-  }
-}
-
-.contact__input {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .contact__input {
+  .input--appearence {
     width: 77.9132791328%;
   }
 }
 
+.contact__label {
+  font-size: 16px;
+  font-weight: 300;
+  color: #222222;
+  width: 100%;
+  padding-right: 20px;
+}
 @media screen and (min-width: 768px) {
-  .contact__field {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  .contact__label {
+    width: 22.0867208672%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact__input, .contact__select, .contact__textarea {
+    margin-top: 0;
   }
 }
 
@@ -154,6 +165,15 @@
   }
 }
 
+.contact__birth-wrap {
+  width: 200px;
+}
+@media screen and (min-width: 768px) {
+  .contact__birth-wrap {
+    width: auto;
+  }
+}
+
 .contact__select-wrap:after {
   border-bottom: 1px solid #222222;
   border-left: 1px solid #222222;
@@ -163,8 +183,16 @@
   transform: translateY(-60%) rotate(-45deg);
   width: 9px;
   position: absolute;
-  left: 80%;
+  right: 9%;
   top: 50%;
+}
+@media screen and (min-width: 768px) {
+  .contact__select-wrap {
+    margin-top: 0;
+  }
+  .contact__select-wrap:after {
+    right: 11%;
+  }
 }
 
 .contact__label::-webkit-input-placeholder {
@@ -208,12 +236,6 @@
   }
 }
 
-.contact__field-wrap {
-  -webkit-column-gap: 25px;
-  -moz-column-gap: 25px;
-  column-gap: 25px;
-  margin-top: 27px;
-}
 @media screen and (min-width: 768px) {
   .contact__field-wrap {
     display: -webkit-box;
@@ -222,7 +244,12 @@
     -webkit-column-gap: 25px;
     -moz-column-gap: 25px;
     column-gap: 25px;
+    margin-top: 20px;
   }
+}
+
+.contact__field--month, .contact__field--day {
+  margin-top: 27px;
 }
 
 .contact__select {
@@ -244,11 +271,11 @@
   margin-top: 18px;
 }
 
-.contact__choice > label {
+.label--click-area {
   position: relative;
   padding-left: 30px;
 }
-.contact__choice > label::before {
+.label--click-area::before {
   content: "";
   width: 24px;
   height: 24px;
@@ -262,11 +289,11 @@
   pointer-events: none;
 }
 
-.contact__choice._round > label::before {
+.label--click-area._round::before {
   border-radius: 50%;
 }
 
-.contact__choice > label:has(input:checked)::after {
+.label--click-area:has(input:checked)::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -278,17 +305,8 @@
   transform: translateY(-50%);
 }
 
-.contact__choice._round > label:has(input:checked)::after {
+.label--click-area._round:has(input:checked)::after {
   border-radius: 50%;
-}
-
-.contact__textarea {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .contact__textarea {
-    width: 77.9132791328%;
-  }
 }
 
 .contact__group--known {
@@ -297,25 +315,16 @@
   align-items: start;
 }
 
-.contact__choice {
-  border-radius: 0;
-}
-
-.contact__choice.contact__group--agree {
+.contact__group--agree {
   margin-top: 99px;
   text-align: center;
 }
 
 .contact__actions {
-  width: 100%;
+  width: 256px;
   text-align: center;
   border: 1px solid #222222;
   margin: 59px auto 0;
-}
-@media screen and (min-width: 768px) {
-  .contact__actions {
-    width: 256px;
-  }
 }
 
 .contact__submit {

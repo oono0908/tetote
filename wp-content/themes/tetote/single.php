@@ -8,31 +8,13 @@
       </h2>
       <?php
         // ACF 取得
-        $img      = get_field('message-dt-img');   // 画像（ID / 配列 / URL いずれも可）
-
-        // 画像HTMLを生成
+        $img      = get_field('message-dt-img');
         $img_html = '';
         $alt_text = $name ?: get_the_title();
 
-        if ( is_array($img) ) {                           // 配列返却
-          if ( !empty($img['ID']) ) {
-            $img_html = wp_get_attachment_image( $img['ID'], 'large', false, [
-              'class' => 'message-dt-img',
-              'alt'   => $alt_text,
-            ] );
-          } elseif ( !empty($img['url']) ) {
+        if ( !empty($img['url'])  ) {
             $img_html = '<img src="'.esc_url($img['url']).'" alt="'.esc_attr($alt_text).'" class="message-dt-img" />';
-          }
-        } elseif ( $img ) {                                // ID or URL
-          if ( is_numeric($img) ) {
-            $img_html = wp_get_attachment_image( (int)$img, 'large', false, [
-              'class' => 'message-dt-img',
-              'alt'   => $alt_text,
-            ] );
-          } else {
-            $img_html = '<img src="'.esc_url($img).'" alt="'.esc_attr($alt_text).'" class="message-dt-img" />';
-          }
-        }
+          } 
       ?>
       <figure class="message-dt__img-wrap">
           <?php echo $img_html; ?>

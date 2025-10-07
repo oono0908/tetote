@@ -4,8 +4,14 @@
 
 
 .details__inner{
-  padding-bottom: 139px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  @include mq("md"){
+    padding-bottom: 139px;
+    padding-top: 145px;
+  }
 }
+
 .details__title{
   font-size: 28px;
   font-weight: $bold;
@@ -16,7 +22,7 @@
 }
 
 .details__txt{
-  margin-top: 90px;
+  margin-top: 70px;
   font-size: 16px;
   color: $black;
   @include mq("md"){

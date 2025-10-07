@@ -1,0 +1,41 @@
+.thanks {
+  background-color: #FAF7F1;
+  padding: 32px 0;
+  margin-bottom: 139px;
+  margin-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  .thanks {
+    margin-top: 118px;
+  }
+}
+
+.thanks__inner {
+  max-width: 880px;
+  padding: 30px 17px 50px;
+  margin: 0 auto;
+  background-color: white;
+}
+@media screen and (min-width: 768px) {
+  .thanks__inner {
+    padding: 58px 22px 95px;
+  }
+}
+
+.thanks__title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .thanks__title {
+    font-size: 32px;
+  }
+}
+
+.thanks__sub {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 51px;
+  font-weight: 300;
+}

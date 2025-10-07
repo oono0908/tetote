@@ -1,5 +1,12 @@
 .staff__inner {
-  padding-bottom: 130px;
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+@media screen and (min-width: 768px) {
+  .staff__inner {
+    padding-bottom: 130px;
+    padding-bottom: 130px;
+  }
 }
 
 .staff__cards {
@@ -38,6 +45,11 @@
   max-width: 300px;
   margin: 0 auto;
   display: inline-block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.staff__card-wrap:hover {
+  opacity: 0.8;
 }
 
 .staff__card-thum {

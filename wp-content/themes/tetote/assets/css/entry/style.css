@@ -1,4 +1,15 @@
 @charset "UTF-8";
+.contact {
+  font-family: "Noto Serif JP", sans-serif;
+  background-color: #FAF7F1;
+  margin-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    margin-top: 118px;
+  }
+}
+
 .sp--md10 {
   margin-top: 10px;
 }
@@ -16,7 +27,7 @@
 }
 
 .contact__inner {
-  margin-top: 100px;
+  margin-top: 20px;
   background-color: white;
   padding-bottom: 90px;
 }
@@ -25,7 +36,7 @@
     padding: 58px 71px 81px;
     max-width: 880px;
     margin: 0 auto;
-    margin-top: 172px;
+    margin-top: 32px;
   }
 }
 
@@ -102,6 +113,7 @@ contact必要事項入力エリア
 
 .contact__group {
   width: 100%;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .contact__group {
@@ -227,6 +239,7 @@ contact必要事項入力エリア
 
 .contact__field-group {
   margin-top: 27px;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .contact__field-group {
@@ -244,7 +257,6 @@ contact必要事項入力エリア
     -webkit-column-gap: 25px;
     -moz-column-gap: 25px;
     column-gap: 25px;
-    margin-top: 20px;
   }
 }
 
@@ -253,7 +265,7 @@ contact必要事項入力エリア
 }
 
 .contact__select {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .contact__suffix {
@@ -316,8 +328,14 @@ contact必要事項入力エリア
 }
 
 .contact__group--agree {
-  margin-top: 99px;
+  margin-top: 70px;
   text-align: center;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .contact__group--agree {
+    margin-top: 99px;
+  }
 }
 
 .contact__actions {
@@ -332,4 +350,40 @@ contact必要事項入力エリア
   width: 100%;
   font-size: 16px;
   color: #222222;
+}
+
+.contact__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+エラーメッセージ
+========================================================= */
+.form-error {
+  position: absolute;
+  bottom: -24px;
+  color: red;
+  font-size: 12px;
+  left: 0;
+}
+@media screen and (min-width: 768px) {
+  .form-error {
+    left: 22.6287262873%;
+    font-size: 14px;
+  }
+}
+
+.contact__group--agree > .form-error {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+/* =========================================================
+送信後の完了メッセージの非表示
+========================================================= */
+.wpcf7 form.sent .wpcf7-response-output {
+  display: none;
 }

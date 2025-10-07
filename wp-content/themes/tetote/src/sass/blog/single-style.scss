@@ -2,8 +2,12 @@
 
 .message-dt{
   background-color: $white;
-  margin-top: 118px;
-  padding-bottom: 139px;
+  margin-top: 80px;
+  padding-bottom: 90px;
+  @include mq("md"){
+    margin-top: 118px;
+    padding-bottom: 139px;
+  }
 }
 
 .message-dt__inner{
@@ -41,6 +45,10 @@
   }
 }
 
+.post-categories > li > a{
+  color: $black;
+}
+
 .message-dt__time{
   margin-left: 20px;
   font-size: 14px;
@@ -50,11 +58,12 @@
 }
 
 .message-dt__title{
-  font-size: 32px;
+  font-size: 24px;
   font-weight: $bold;
   margin-top: 25px;
   color: $black;
   @include mq("md"){
+    font-size: 32px;
   }
 }
 
@@ -62,6 +71,10 @@
   width: 100%;
   object-fit: cover;
   aspect-ratio: 720 / 411;
+  margin-top: 40px;
+  @include mq("md"){
+    margin-top: 52px;
+  }
 }
 
 .message-dt__txt01{
@@ -80,43 +93,43 @@
 /* =========================================================
 ページネーション
 ========================================================= */
-.pagination {
-  text-align: center;
-}
+// .pagination {
+//   text-align: center;
+// }
 
-.pagination .page-numbers {
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  width: 58px;
-  height: 58px;
-  margin: 98px 32px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  background: #fff;
-  color: #333;
-  text-decoration: none;
-  font-size: 16px;
-  transition: all 0.3s;
-  line-height: 58px;
-}
+// .pagination .page-numbers {
+//   display: inline-block;
+//   align-items: center;
+//   justify-content: center;
+//   width: 58px;
+//   height: 58px;
+//   margin: 98px 32px;
+//   border-radius: 50%;
+//   border: 1px solid #ccc;
+//   background: #fff;
+//   color: #333;
+//   text-decoration: none;
+//   font-size: 16px;
+//   transition: all 0.3s;
+//   line-height: 58px;
+// }
 
-.pagination .page-numbers:hover {
-  background: $black;
-  color: #fff;
-  border-color: $black;
-}
+// .pagination .page-numbers:hover {
+//   background: $black;
+//   color: #fff;
+//   border-color: $black;
+// }
 
-.pagination .page-numbers.current {
-  background: $black;
-  color: #fff;
-  border-color: $black;
-}
+// .pagination .page-numbers.current {
+//   background: $black;
+//   color: #fff;
+//   border-color: $black;
+// }
 
-.pagination .prev,
-.pagination .next {
-  display: none;
-}
+// .pagination .prev,
+// .pagination .next {
+//   display: none;
+// }
 
 /* =========================================================
 single.pageの前後の記事のページネーション
@@ -130,9 +143,12 @@ single.pageの前後の記事のページネーション
   display: flex;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 38px 50px;
+  padding: 20px;
   align-items: center;
   justify-content: space-between;
+  @include mq("md"){
+    padding: 38px 50px;
+  }
 }
 
 .message-nav__item{
@@ -142,6 +158,11 @@ single.pageの前後の記事のページネーション
   height: 100%;
   column-gap: 30px;
   width: 50%;
+  transition: 0.2s;
+  font-weight: $regular;
+  &:hover{
+    opacity: 0.7;
+  }
 }
 
 .massage-nav__item:first-child{
@@ -166,7 +187,7 @@ single.pageの前後の記事のページネーション
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 55%;
   width: 7px;
   height: 7px;
   border-left: 2px solid $black;
@@ -178,7 +199,7 @@ single.pageの前後の記事のページネーション
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 45%;
   width: 7px;
   height: 7px;
   border-right: 2px solid $black;
@@ -191,9 +212,12 @@ single.pageの前後の記事のページネーション
 }
 
 .message-nav__title{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: $regular;
   color: $black;
+  @include mq("md"){
+    font-size: 16px;
+  }
 }
 
 .message-nav__time{

@@ -5,7 +5,7 @@
 function my_theme_scripts() {
 
   wp_enqueue_style( 'common-css', get_theme_file_uri('assets/css/common/style.css'), [], '1.0' );
-  wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Viga&display=swap', [], null );
+  wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Poppins&family=Viga&display=swap', [], null );
 
   if ( is_front_page() ) {
     wp_enqueue_style( 'swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', [], '8' );
@@ -69,17 +69,26 @@ function my_theme_scripts() {
   }
   elseif (is_page('entry') ) {
     wp_enqueue_style( 'entry-css', get_theme_file_uri('assets/css/entry/style.css'), [], '1.0' );
-  wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+    wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
+    wp_enqueue_script( 'entry-js', get_theme_file_uri('assets/js/entry/script.js'), ['jquery'], '1.0', true );
+
+  }
+  elseif (is_page('entry-thanks') ) {
+    wp_enqueue_style( 'entry-css', get_theme_file_uri('assets/css/entry/thanks.css'), [], '1.0' );
 
   }
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
+
+
 
 /* --------------------------------------------
  * サムネイル画像を有効にする
  * -------------------------------------------- */
 
 add_theme_support( 'post-thumbnails' );
+
+
 
 /* --------------------------------------------
  * カスタム投稿タイプ[スタッフ】
@@ -108,4 +117,53 @@ function cpt_register_staff(){
 	register_post_type('staff', $args);
 }
 add_action('init', 'cpt_register_staff');
+
+
+
+/* =========================================================
+投稿URLの先頭に「blog」を付ける
+========================================================= */
+
+function add_blog_to_post_permalink($permalink, $post, $leavename) {
+    if ($post->post_type == 'post') {
+        return home_url('blog/' . $post->post_name . '/');
+    }
+    return $permalink;
+}
+add_filter('post_link', 'add_blog_to_post_permalink', 10, 3);
+
+// リライトルールを追加
+function add_blog_rewrite_rules() {
+    add_rewrite_rule('^blog/([^/]+)/?$', 'index.php?name=$matches[1]', 'top');
+}
+add_action('init', 'add_blog_rewrite_rules');
+
+
+/* =========================================================
+Contact Form 7で自動挿入されるPタグ、brタグを削除
+========================================================= */
+
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+  return false;
+}
+
+
+/* =========================================================
+エントリー完了後のthanksページへの遷移
+========================================================= */
+
+
+add_action('wp_footer', 'redirect_to_thanks_page');
+function redirect_to_thanks_page() {
+  $homeUrl = home_url();
+  echo <<< EOD
+    <script>
+      document.addEventListener( 'wpcf7mailsent', function( event ) {
+        location = '{$homeUrl}/entry-thanks/';
+      }, false );
+    </script>
+  EOD;
+}
+
 

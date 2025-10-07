@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .table-title {
-  font-size: 24px;
+  font-size: 20px;
   font-size: 700;
 }
 @media screen and (min-width: 768px) {
@@ -99,6 +99,7 @@
 ========================================================= */
 .about__inner {
   padding-bottom: 90px;
+  font-family: "Noto Serif JP", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .about__inner {
@@ -174,7 +175,6 @@
   font-weight: 300;
   background-color: transparent;
   display: inline-block;
-  font-family: "Noto Sans JP", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .about01__item-num {

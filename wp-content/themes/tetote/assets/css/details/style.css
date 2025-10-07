@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .table-title {
-  font-size: 24px;
+  font-size: 20px;
   font-size: 700;
 }
 @media screen and (min-width: 768px) {
@@ -177,7 +177,14 @@
 }
 
 .details__inner {
-  padding-bottom: 139px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+@media screen and (min-width: 768px) {
+  .details__inner {
+    padding-bottom: 139px;
+    padding-top: 145px;
+  }
 }
 
 .details__title {
@@ -192,7 +199,7 @@
 }
 
 .details__txt {
-  margin-top: 90px;
+  margin-top: 70px;
   font-size: 16px;
   color: #222222;
 }

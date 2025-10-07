@@ -26,20 +26,26 @@
             <li class="footer__item">
               <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="footer__link">TETOTEについて</a>
             </li>
-            <li class="footer__item">
-              <a href="<?php echo esc_url( home_url( '/benefits/' ) ); ?>" class="footer__link">福利厚生について</a>
-            </li>
-            <li class="footer__item">
-              <a href="<?php echo esc_url( home_url( '/staff/' ) ); ?>" class="footer__link">社員について</a>
+             <li class="footer__item">
+              <a href="<?php echo esc_url( home_url( '/staff/' ) ); ?>" class="footer__link">人を知る</a>
             </li>
             <li class="footer__item">
               <a href="<?php echo esc_url( home_url( '/career/' ) ); ?>" class="footer__link">研修制度とキャリアパス</a>
             </li>
             <li class="footer__item">
+              <a href="<?php echo esc_url( home_url( '/benefits/' ) ); ?>" class="footer__link">福利厚生</a>
+            </li>
+            <li class="footer__item">
               <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" class="footer__link">採用ブログ</a>
             </li>
             <li class="footer__item">
+              <a href="<?php echo esc_url( home_url( '/details/' ) ); ?>" class="footer__link">募集要項</a>
+            </li>
+            <li class="footer__item">
               <a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>" class="footer__link">よくある質問</a>
+            </li>
+            <li class="footer__item">
+              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="footer__link">会社概要</a>
             </li>
           </ul>
         </nav>

@@ -128,7 +128,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__head">電話番号</td>
-                <td class="table__data"><a class="table__link" href="tel:0312345678">03-1234-5678</a></td>
+                <td class="table__data">03-1234-5678</td>
               </tr>
               <tr class="table__row">
                 <td class="table__head">ウェブサイトURL</td>
@@ -136,7 +136,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__head">メールアドレス</td>
-                <td class="table__data"><a class="table__link" href="mailto:tetote@tetote.co.jp">tetote@tetote.co.jp</a></td>
+                <td class="table__data">tetote@tetote.co.jp</td>
               </tr>
               <tr class="table__row">
                 <td class="table__head">設立年月</td>

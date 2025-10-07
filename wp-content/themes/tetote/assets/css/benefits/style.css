@@ -1,5 +1,5 @@
 .table-title {
-  font-size: 24px;
+  font-size: 20px;
   font-size: 700;
 }
 @media screen and (min-width: 768px) {
@@ -93,8 +93,19 @@
   color: #222222;
 }
 
+.benefits__inner {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+@media screen and (min-width: 768px) {
+  .benefits__inner {
+    padding-top: 145px;
+    padding-bottom: 139px;
+  }
+}
+
 .benefits__container {
-  padding: 128px 0 138px 0;
+  padding-top: 128px;
 }
 
 .benefits__title {
@@ -105,15 +116,25 @@
 
 .benefits__items {
   margin-top: 23px;
+  row-gap: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .benefits__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-column-gap: 46px;
     -moz-column-gap: 46px;
     column-gap: 46px;
+    row-gap: 0;
   }
 }
 

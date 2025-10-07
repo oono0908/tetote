@@ -1,7 +1,12 @@
 @use "../gloval" as *;
 
 .career__inner{
-  padding-bottom: 178px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  @include mq("md"){
+    padding-top: 145px;
+    padding-bottom: 178px;
+  }
 }
 
 .career__title{

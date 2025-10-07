@@ -2,8 +2,8 @@
 <main>
   <section class="details">
     <div class="details__inner inner">
-      <h3 class="details__title">あなたが輝ける場所が、ここにはある</h3>
-      <p class="details__txt">TETOTEでは、コンサルタントを中心に、様々な職種を募集しています。</p>
+      <h3 class="details__title">あなたが輝ける場所が、<br class="md-none">ここにはある</h3>
+      <p class="details__txt">TETOTEでは、コンサルタントを中心に、<br class="md-none">様々な職種を募集しています。</p>
       <?php get_template_part('parts/scroll-btn'); ?>
       <section class="container" id="section01">
         <h4 class="table-title" >募集要項-コンサルタント</h4>

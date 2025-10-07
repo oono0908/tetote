@@ -1,5 +1,14 @@
 @use "../gloval" as *;
 
+.contact{
+  font-family: $noto;
+  background-color: $white;
+  margin-top: 80px;
+  @include mq("md"){
+    margin-top: 118px;
+  }
+}
+
 // sp版のときに入力要素にmargin-topを付与
 .sp--md10{
   margin-top: 10px;
@@ -17,14 +26,14 @@
 }
 
 .contact__inner{
-  margin-top: 100px;
+  margin-top: 20px;
   background-color: white;
   padding-bottom: 90px;
   @include mq("md"){
     padding: 58px 71px 81px;
     max-width: 880px;
     margin: 0 auto;
-    margin-top: 172px;
+    margin-top: 32px;
   }
 }
 
@@ -90,6 +99,7 @@ contact必要事項入力エリア
 
 .contact__group{
   width: 100%;
+  position: relative;
   @include mq("md"){
     display: flex;
     align-items: center;
@@ -178,6 +188,7 @@ contact必要事項入力エリア
 
 .contact__field-group{
   margin-top: 27px;
+  position: relative;
   @include mq("md"){
     display: flex;
   }
@@ -187,7 +198,6 @@ contact必要事項入力エリア
   @include mq("md"){
     display: flex;
     column-gap: 25px;
-    margin-top: 20px;
   }
 }
 
@@ -196,7 +206,7 @@ contact必要事項入力エリア
 }
 
 .contact__select{
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .contact__suffix{
@@ -257,8 +267,12 @@ contact必要事項入力エリア
 }
 
 .contact__group--agree{
-  margin-top: 99px;
+  margin-top: 70px;
   text-align: center;
+  position: relative;
+  @include mq("md"){
+    margin-top: 99px;
+  }
 }
 
 .contact__actions{
@@ -275,5 +289,39 @@ contact必要事項入力エリア
   color: $black;
 }
 
+.contact__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+エラーメッセージ
+========================================================= */
+.form-error{
+  position: absolute;
+  bottom: -24px;
+  color: red;
+  font-size: 12px;
+  left:0;
+  @include mq("md"){
+    left:calc(167 / 738 * 100%);
+    font-size: 14px;
+  }
+}
+
+.contact__group--agree > .form-error{
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+
+/* =========================================================
+送信後の完了メッセージの非表示
+========================================================= */
+
+.wpcf7 form.sent .wpcf7-response-output {
+  display: none;
+}
 
 

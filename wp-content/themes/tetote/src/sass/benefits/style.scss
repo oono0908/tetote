@@ -1,8 +1,16 @@
 @use "../gloval" as *;
 @use "../parts/table";
 
+.benefits__inner{
+  padding-top: 90px;
+  padding-bottom: 90px;
+  @include mq("md"){
+    padding-top: 145px;
+    padding-bottom: 139px;
+  }
+}
 .benefits__container{
-  padding: 128px 0 138px 0;
+  padding-top: 128px;
 }
 
 .benefits__title{
@@ -13,9 +21,13 @@
 
 .benefits__items{
   margin-top: 23px;
+  row-gap: 40px;
+  display: flex;
+  flex-direction: column;
   @include mq("md"){
-    display: flex;
+    flex-direction: row;
     column-gap: 46px;
+    row-gap: 0;
   }
 }
 

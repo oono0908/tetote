@@ -28,13 +28,8 @@
   </div>
 </div>
 
-	<?php if (function_exists('bcn_display')) { ?>
-		<div class="bread-lists md-show" vocab="http://schema.org/" typeof="BreadcrumbList">
-      <div class="bread-lists__inner inner">
-			  <?php bcn_display(); ?>
-      </div>
-		</div>
-	<?php } ?>
+<!-- パンくず -->
+<?php get_template_part('parts/scroll-btn'); ?>
 
   <section class="staff-dt">
     <div class="staff-dt__inner inner">
@@ -43,15 +38,15 @@
           <h2 class="staff-dt__title">業務内容について</h2>
           <p class="staff-dt__txt"><?php the_field( 'job-description'); ?></p>
           <h2 class="staff-dt__title">学生時代に力を入れたことは？</h2>
-          <p class="staff-dt__txt"><?php echo esc_html(get_field('student-era')); ?></p>
+          <p class="staff-dt__txt"><?php echo get_field('student-era'); ?></p>
           <h2 class="staff-dt__title">TETOTEを志望した理由は？</h2>
-          <p class="staff-dt__txt"><?php echo esc_html(get_field('reasons')); ?></p>
+          <p class="staff-dt__txt"><?php echo get_field('reasons'); ?></p>
           <h2 class="staff-dt__title">やりがいを感じる瞬間は？</h2>
-          <p class="staff-dt__txt"><?php echo esc_html(get_field('challenge')); ?></p>
+          <p class="staff-dt__txt"><?php echo get_field('challenge'); ?></p>
           <h2 class="staff-dt__title">どんな人と一緒に働きたい？</h2>
-          <p class="staff-dt__txt"><?php echo esc_html(get_field('college')); ?></p>
+          <p class="staff-dt__txt"><?php echo get_field('college'); ?></p>
           <h2 class="staff-dt__title">応募者へのメッセージ</h2>
-          <p class="staff-dt__txt"><?php echo esc_html(get_field('message')); ?></p>
+          <p class="staff-dt__txt"><?php echo get_field('message'); ?></p>
         </div>
         <div class="staff-dt__side-bar">
           <p class="side-bar__title">目次</p>
@@ -109,13 +104,13 @@
                   <div class="staff__card-thum">
                     <?php echo $img_html; ?>
                     <div class="staff__card-title">
-                      <?php if ( $message1 ) : ?><p class="staff__card-text"><?php echo esc_html($message1); ?></p><?php endif; ?>
-                      <?php if ( $message2 ) : ?><p class="staff__card-text"><?php echo esc_html($message2); ?></p><?php endif; ?>
+                      <?php if ( $message1 ) : ?><p class="staff__card-text"><?php echo $message1; ?></p><?php endif; ?>
+                      <?php if ( $message2 ) : ?><p class="staff__card-text"><?php echo $message2; ?></p><?php endif; ?>
                     </div>
                   </div>
                   <div class="staff__card-body">
-                    <?php if ( $role ) : ?><p class="staff__card-role"><?php echo esc_html($role); ?></p><?php endif; ?>
-                    <?php if ( $name ) : ?><p class="staff__card-name"><?php echo esc_html($name); ?></p><?php endif; ?>
+                    <?php if ( $role ) : ?><p class="staff__card-role"><?php echo $role; ?></p><?php endif; ?>
+                    <?php if ( $name ) : ?><p class="staff__card-name"><?php echo $name; ?></p><?php endif; ?>
                   </div>
                 </a>
               </li>

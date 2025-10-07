@@ -1,7 +1,12 @@
 @charset "UTF-8";
 .staff-dt-top {
-  margin-top: 118px;
+  margin-top: 80px;
   background-color: #FAF7F1;
+}
+@media screen and (min-width: 768px) {
+  .staff-dt-top {
+    margin-top: 118px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -31,21 +36,31 @@
 }
 
 .staff-dt-top__txt01 {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 700;
   margin-top: 20px;
   display: inline-block;
   background-color: white;
   padding: 3px 10px;
 }
+@media screen and (min-width: 768px) {
+  .staff-dt-top__txt01 {
+    font-size: 36px;
+  }
+}
 
 .staff-dt-top__txt02 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   margin-top: 18px;
   display: inline-block;
   background-color: white;
   padding: 3px 10px;
+}
+@media screen and (min-width: 768px) {
+  .staff-dt-top__txt02 {
+    font-size: 24px;
+  }
 }
 
 .staff-dt-top__role {
@@ -57,10 +72,15 @@
 
 .staff-dt-top__name {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 20px;
   margin-top: 12px;
   display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .staff-dt-top__name {
+    font-size: 24px;
+  }
 }
 
 .staff-dt-top__year {
@@ -124,20 +144,36 @@
 
 .staff-dt__title {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   color: #222222;
+}
+@media screen and (min-width: 768px) {
+  .staff-dt__title {
+    font-size: 24px;
+  }
 }
 
 .staff-dt__title:not(:first-child) {
-  margin-top: 23px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) {
+  .staff-dt__title:not(:first-child) {
+    margin-top: 23px;
+  }
 }
 
 .staff-dt__txt {
-  margin-top: 50px;
-  font-size: 16px;
+  margin-top: 30px;
+  font-size: 15px;
   font-weight: 300;
   color: #222222;
   line-height: 1.8;
+}
+@media screen and (min-width: 768px) {
+  .staff-dt__txt {
+    margin-top: 50px;
+    font-size: 16px;
+  }
 }
 
 /* =========================================================
@@ -165,6 +201,10 @@
   color: #999999;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  cursor: pointer;
+}
+.side-bar__item:hover {
+  opacity: 0.8;
 }
 
 .side-bar__item.is-active {
@@ -181,9 +221,14 @@
 }
 
 .staff-dt__bottom-title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .staff-dt__bottom-title {
+    font-size: 32px;
+  }
 }
 
 .staff__cards {
@@ -277,7 +322,7 @@
 }
 
 .staff__card-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   margin-top: 14px;
   color: #222222;
@@ -300,11 +345,4 @@
     margin-top: 21px;
     font-size: 16px;
   }
-}
-
-.staff__card-name {
-  color: #222222;
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 16px;
 }

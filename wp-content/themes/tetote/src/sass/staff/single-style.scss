@@ -1,8 +1,11 @@
 @use "../gloval" as *;
 
 .staff-dt-top{
-  margin-top: 118px;
+  margin-top: 80px;
   background-color: $white;
+  @include mq("md"){
+    margin-top: 118px;
+  }
 }
 .staff-dt-top__inner{
   @include mq("md"){
@@ -26,21 +29,27 @@
 }
 
 .staff-dt-top__txt01{
-  font-size: 36px;
+  font-size: 24px;
   font-weight: $bold;
   margin-top: 20px;
   display: inline-block;
   background-color: white;
   padding: 3px 10px;
+  @include mq("md"){
+    font-size: 36px;
+  }
 }
 
 .staff-dt-top__txt02{
-  font-size: 24px;
+  font-size: 20px;
   font-weight: $bold;
   margin-top: 18px;
   display: inline-block;
   background-color: white;
   padding: 3px 10px;
+  @include mq("md"){
+    font-size: 24px;
+  }
 }
 
 .staff-dt-top__role{
@@ -52,10 +61,13 @@
 
 .staff-dt-top__name{
   font-weight: $bold;
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 20px;
   margin-top: 12px;
   display: inline-block;
+  @include mq("md"){
+    font-size: 24px;
+  }
 }
 
 .staff-dt-top__year{
@@ -109,20 +121,30 @@
 
 .staff-dt__title{
   font-weight: $bold;
-  font-size: 24px;
+  font-size: 20px;
   color: $black;
+  @include mq("md"){
+    font-size: 24px;
+  }
 }
 
 .staff-dt__title:not(:first-child){
-  margin-top: 23px;
+  margin-top: 30px;
+  @include mq("md"){
+    margin-top: 23px;
+  }
 }
 
 .staff-dt__txt{
-  margin-top: 50px;
-  font-size: 16px;
+  margin-top: 30px;
+  font-size: 15px;
   font-weight: $regular;
   color: $black;
   line-height: 1.8;
+  @include mq("md"){
+    margin-top: 50px;
+    font-size: 16px;
+  }
 }
 /* =========================================================
 サイドバー
@@ -147,6 +169,10 @@
   line-height: 1.5;
   color: #999999;
   transition: 0.2s;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.8;
+  }
 }
 
 .side-bar__item.is-active{
@@ -164,9 +190,12 @@
 }
 
 .staff-dt__bottom-title{
-  font-size: 32px;
+  font-size: 24px;
   font-weight: $bold;
   text-align: center;
+  @include mq("md"){
+    font-size: 32px;
+  }
 }
 
 .staff__cards{
@@ -242,7 +271,7 @@
 }
 
 .staff__card-name{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: $bold;
   margin-top: 14px;
   color: $black;
@@ -261,12 +290,6 @@
     margin-top: 21px;
     font-size: 16px;
   }
-}
-.staff__card-name{
-  color: $black;
-  font-size: 24px;
-  font-weight: $bold;
-  margin-top: 16px;
 }
 
 

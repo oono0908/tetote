@@ -93,7 +93,10 @@
   <section class="member">
     <div class="member__inner inner">
       <div class="section-title">
-        <h2 class="section-title__main _member"><span class="_underline">人</span>を知る</h2>
+        <div class="section-title__main-wrap">
+          <h2 class="section-title__main _member"><span class="_underline">人</span>を知る</h2>
+          <p class="section-title__back _member">MEMBER</p>
+        </div>
         <p class="section-title__sub">TETOTEの社員がどういった信念を持って働いているのか、</br>
            一日のスケジュールや仕事内容などを紹介します。</p>
       </div>
@@ -110,11 +113,9 @@
     <?php if ( $the_query->have_posts() ) : ?>
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <?php
-          // Advanced Custom Fields の値を取得
-          $image = get_field('staff-img'); // 画像フィールド
+          $image = get_field('staff-img');
           $name = get_field('name'); // 名前
           $role = get_field('role'); // 役職
-          $year = get_field('year'); // 入社年
           $message01 = get_field('message01');
           $message02 = get_field('message02');
         ?>
@@ -133,10 +134,9 @@
             </div>
           </div>
           <div class="member__card-body">
-            <?php if ( $role || $year ) : ?>
+            <?php if ( $role ): ?>
               <p class="member__card-role">
                 <?php echo esc_html( $role ); ?>
-                <?php if ( $year ) : ?> <?php echo esc_html( $year ); ?>年入社<?php endif; ?>
               </p>
             <?php endif; ?>
             <?php if ( $name ) : ?>
@@ -168,7 +168,10 @@
 <section class="benefits">
   <div class="benefits__inner inner">
     <div class="section-title section-title--center">
-      <h2 class="section-title__main _benefits"><span class="_underline">制度・環境</span>を知る</h2>
+      <div class="section-title__main-wrap">
+        <h2 class="section-title__main _benefits"><span class="_underline">制度・環境</span>を知る</h2>
+        <p class="section-title__back _benefits">BENEFITS</p>
+      </div>
       <p class="section-title__sub">当社では働く従業員とそのご家族が健やかに過ごせるよう、多様な研修、福利厚生を提供しています。</p>
     </div>
     <ul class="benefits__items">
@@ -202,7 +205,10 @@
   <section class="message">
     <div class="message__inner inner">
       <div class="section-title">
-        <h2 class="section-title__main _message">採用ブログ</h2>
+        <div class="section-title__main-wrap">
+          <h2 class="section-title__main _message">採用ブログ</h2>
+          <p class="section-title__back _message">BLOG</p>
+        </div>
         <p class="section-title__sub">採用情報やイベント情報、社員の紹介など、</br>日々の現場の様子をご紹介します。</p>
       </div>
 <ul class="message__cards">
@@ -260,10 +266,14 @@
       </a>
     </div>
   </section>
+
   <section class="recruit">
     <div class="recruit__inner inner">
       <div class="section-title section-title--center">
-        <h2 class="section-title__main _recruit">採用情報</h2>
+        <div class="section-title__main-wrap">
+          <h2 class="section-title__main _recruit">採用情報</h2>
+          <p class="section-title__back _recruit">RECRUITMENT</p>
+        </div>
         <p class="section-title__sub">募集要項（職種、業務内容、応募条件、選考フロー）とよくある質問・会社概要などをまとめています。</p>
       </div>
       <div class="recruit__btns">

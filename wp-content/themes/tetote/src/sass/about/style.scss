@@ -7,6 +7,7 @@
 
 .about__inner{
   padding-bottom: 90px;
+  font-family: $noto;
   @include mq("md"){
     padding-bottom: 139px;
   }
@@ -67,7 +68,6 @@
   font-weight: $regular;
   background-color: transparent;
   display: inline-block;
-  font-family: "Noto Sans JP", sans-serif;
   @include mq("md"){
     width: 48px;
     height: 48px;

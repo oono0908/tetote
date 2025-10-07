@@ -2,8 +2,8 @@
 <main>
   <section class="career">
     <div class="career__inner inner">
-      <h3 class="career__title">キャリアパスに沿った研修制度を用意</h3>
-      <p class="career__txt _upper">弊社では、コンサルタントのキャリアパスを、大きく4つのステージに分けています。</p>
+      <h3 class="career__title">キャリアパスに沿った<br class="md-none">研修制度を用意</h3>
+      <p class="career__txt _upper">弊社では、コンサルタントのキャリアパスを、<br class="md-none">大きく4つのステージに分けています。</p>
       <div class="career__img-wrap">
         <img src="<?php echo esc_url(get_theme_file_uri('assets/images/career/tetote-carrer-path.png')); ?>" alt="" class="career__img">
       </div>

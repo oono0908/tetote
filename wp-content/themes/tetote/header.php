@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
 
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
-	 <meta name="robots" content="noindex,nofollow">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0 viewport-fit=cover">
-    <meta name="format-detection" content="telephone=no">
-    <!-- meta情報-->
-    <title>
-		<?php
-		  wp_title('|', true, 'right');
-		  bloginfo('name');
-		?>
-	</title>
-    <meta name="description" content="テクノロジーで社会課題を解決する。AIやビッグデータ分析などの技術を活用した社会課題解決サービスを提供するTETOTEの採用サイト。">
-    <meta name="keywords" content="Tetote,AI,ビッグデータ,テクノロジー,社会課題解決,採用">
-    <!-- ogp-->
-    <meta property="og:title" content="TETOTE">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-    <meta property="og:site_name" content="TETOTE">
-    <meta property="og:description" content="テクノロジーで社会課題を解決する。AIやビッグデータ分析などの技術を活用した社会課題解決サービスを提供するTETOTEの採用サイト。">
-    <meta name="twitter:card" content="summary">
-    <!-- ファビコン-->
-    <link rel="icon" href="">
-    <link rel="apple-touch-icon" href="">
-    <!-- Google Fonts-->
-	<?php wp_head(); ?>
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="noindex,nofollow">
+  <?php
+    if ( is_front_page()) :
+      $page_title = '採用特設サイト | 株式会社TETOTE';
+      $page_description = 'テクノロジーで社会課題を解決する。AIやビッグデータ分析などの技術を活用した社会課題解決サービスを提供するTETOTEの採用サイト。';
+    else :
+      $page_title = wp_title('|', false, 'right') . '株式会社TETOTE';
+      $page_description = 'テクノロジーで社会課題を解決する。AIやビッグデータ分析などの技術を活用した社会課題解決サービスを提供するTETOTEの採用サイト。このページでは、' . get_the_title() . 'について解説しています。';
+    endif;
+  ?>
+
+  <title><?php echo esc_html($page_title); ?></title>
+  <meta name="description" content="<?php echo esc_attr($page_description); ?>">
+  <meta name="keywords" content="Tetote,AI,ビッグデータ,テクノロジー,社会課題解決,採用">
+
+  <!-- OGP -->
+  <meta property="og:title" content="<?php echo esc_html($page_title); ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<?php echo esc_url(home_url(add_query_arg(array(), $wp->request))); ?>">
+  <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/assets/img/ogp.jpg'); ?>">
+  <meta property="og:site_name" content="株式会社TETOTE">
+  <meta property="og:description" content="<?php echo esc_attr($page_description); ?>">
+  <meta name="twitter:card" content="summary">
+
+  <!-- ファビコン -->
+  <link rel="icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/favicon.ico'); ?>">
+  <link rel="apple-touch-icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/images/apple-touch-icon.png'); ?>">
+
+  <?php wp_head(); ?>
 </head>
+
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   <header class="header js-header">
     <h1 class="header__logo">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="logo" aria-label="TETOTEのホームページへ戻る">
-         <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-black.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--black js-title-logo"/>
+        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-black.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--black js-title-logo"/>
         <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-white.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--white"/>
       </a>
     </h1>
@@ -43,7 +52,7 @@
     <div class="header__right">
       <div class="header__btns md-show">
         <a class="btn btn--small btn--black" href="<?php echo esc_url(home_url('/details')); ?>">募集要項</a>
-        <a class="btn btn--small btn--green" href="<?php echo esc_url(home_url('/entry')); ?>">ENTRY</a>
+        <a class="btn btn--small btn--ochres" href="<?php echo esc_url(home_url('/entry')); ?>">ENTRY</a>
       </div>
        <!-- ハンバーガー -->
       <button class="hamburger js-hamburger" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開閉">
@@ -106,13 +115,7 @@ if ( is_home() ) {
 <?php endif; ?>
 
 <?php if (!is_front_page() & (!is_singular('staff'))) { ?>
-	<?php if (function_exists('bcn_display')) { ?>
-		<div class="bread-lists md-show" vocab="http://schema.org/" typeof="BreadcrumbList">
-      <div class="bread-lists__inner inner">
-			  <?php bcn_display(); ?>
-      </div>
-		</div>
-	<?php } ?>
+   <?php get_template_part('parts/breadcrumb'); ?>
 <?php } ?>
 
   <!-- Drawer Menu -->
@@ -170,7 +173,7 @@ if ( is_home() ) {
           </div>
         </div>
         <div class="gnav__btns">
-          <a class="btn btn--medium btn--green" href="<?php echo esc_url(home_url('/recruit')); ?>">募集要項</a>
+          <a class="btn btn--medium btn--ochres" href="<?php echo esc_url(home_url('/recruit')); ?>">募集要項</a>
           <a class="btn btn--medium btn--black" href="<?php echo esc_url(home_url('/entry')); ?>">ENTRY</a>
         </div>
       </nav>

@@ -7,7 +7,6 @@
         <?php the_title(); ?>
       </h2>
       <?php
-        // ACF 取得
         $img      = get_field('message-dt-img');
         $img_html = '';
         $alt_text = $name ?: get_the_title();

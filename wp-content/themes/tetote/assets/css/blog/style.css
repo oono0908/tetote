@@ -1,6 +1,16 @@
 @charset "UTF-8";
+.message__inner {
+  padding-top: 90px;
+  padding-bottom: 80px;
+}
+@media screen and (min-width: 768px) {
+  .message__inner {
+    padding-top: 130px;
+    padding-bottom: 139px;
+  }
+}
+
 .message__cards {
-  margin-top: 43px;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 9px;
@@ -62,6 +72,10 @@
   }
 }
 
+.post-categories > li > a {
+  color: #222222;
+}
+
 .message__tag::before {
   content: "";
   position: absolute;
@@ -88,6 +102,7 @@
   color: #222222;
   display: block;
   text-decoration: underline;
+  text-underline-offset: 4px;
 }
 @media screen and (min-width: 768px) {
   .message__txt {
@@ -107,6 +122,12 @@
 ========================================================= */
 .pagination {
   text-align: center;
+  margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .pagination {
+    margin-top: 98px;
+  }
 }
 
 .pagination .page-numbers {
@@ -119,7 +140,6 @@
   justify-content: center;
   width: 58px;
   height: 58px;
-  margin: 98px 32px;
   border-radius: 50%;
   border: 1px solid #ccc;
   background: #fff;
@@ -129,6 +149,7 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   line-height: 58px;
+  margin: 0 16px;
 }
 
 .pagination .page-numbers:hover {

@@ -1,8 +1,14 @@
 @charset "UTF-8";
 .message-dt {
   background-color: #FAF7F1;
-  margin-top: 118px;
-  padding-bottom: 139px;
+  margin-top: 80px;
+  padding-bottom: 90px;
+}
+@media screen and (min-width: 768px) {
+  .message-dt {
+    margin-top: 118px;
+    padding-bottom: 139px;
+  }
 }
 
 .message-dt__inner {
@@ -39,6 +45,10 @@
   }
 }
 
+.post-categories > li > a {
+  color: #222222;
+}
+
 .message-dt__time {
   margin-left: 20px;
   font-size: 14px;
@@ -48,16 +58,28 @@
 }
 
 .message-dt__title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   margin-top: 25px;
   color: #222222;
 }
+@media screen and (min-width: 768px) {
+  .message-dt__title {
+    font-size: 32px;
+  }
+}
+
 .message-dt__img-wrap {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   aspect-ratio: 720/411;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .message-dt__img-wrap {
+    margin-top: 52px;
+  }
 }
 
 .message-dt__txt01 {
@@ -76,49 +98,6 @@
 /* =========================================================
 ページネーション
 ========================================================= */
-.pagination {
-  text-align: center;
-}
-
-.pagination .page-numbers {
-  display: inline-block;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 58px;
-  height: 58px;
-  margin: 98px 32px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  background: #fff;
-  color: #333;
-  text-decoration: none;
-  font-size: 16px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  line-height: 58px;
-}
-
-.pagination .page-numbers:hover {
-  background: #222222;
-  color: #fff;
-  border-color: #222222;
-}
-
-.pagination .page-numbers.current {
-  background: #222222;
-  color: #fff;
-  border-color: #222222;
-}
-
-.pagination .prev,
-.pagination .next {
-  display: none;
-}
-
 /* =========================================================
 single.pageの前後の記事のページネーション
 ========================================================= */
@@ -132,13 +111,18 @@ single.pageの前後の記事のページネーション
   display: flex;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 38px 50px;
+  padding: 20px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .message-nav__inner {
+    padding: 38px 50px;
+  }
 }
 
 .message-nav__item {
@@ -154,6 +138,12 @@ single.pageの前後の記事のページネーション
   -moz-column-gap: 30px;
   column-gap: 30px;
   width: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-weight: 300;
+}
+.message-nav__item:hover {
+  opacity: 0.7;
 }
 
 .massage-nav__item:first-child {
@@ -180,7 +170,7 @@ single.pageの前後の記事のページネーション
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 55%;
   width: 7px;
   height: 7px;
   border-left: 2px solid #222222;
@@ -193,7 +183,7 @@ single.pageの前後の記事のページネーション
   content: "";
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 45%;
   width: 7px;
   height: 7px;
   border-right: 2px solid #222222;
@@ -207,9 +197,14 @@ single.pageの前後の記事のページネーション
 }
 
 .message-nav__title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #222222;
+}
+@media screen and (min-width: 768px) {
+  .message-nav__title {
+    font-size: 16px;
+  }
 }
 
 .message-nav__time {

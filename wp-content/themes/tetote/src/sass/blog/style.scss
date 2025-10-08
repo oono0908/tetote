@@ -3,6 +3,7 @@
 .message__inner{
   padding-top: 90px;
   padding-bottom: 80px;
+  font-family: $noto;
   @include mq("md"){
     padding-top: 130px;
     padding-bottom: 139px;

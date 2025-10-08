@@ -1,5 +1,6 @@
 <?php get_header(); ?>
   <section class="message-dt">
+   <?php get_template_part('parts/breadcrumb'); ?>
     <div class="message-dt__inner inner">
       <span class="message-dt__tag"><?php the_category(); ?></span>
       <time datetime="<?php echo get_the_date('Y.m.d'); ?>" class="message-dt__time"><?php echo get_the_date('Y.m.d'); ?></time>

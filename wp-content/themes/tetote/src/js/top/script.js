@@ -1,7 +1,7 @@
 // mvの画像表示切り替えのswiper
 
 jQuery(function ($) {
-	var mvSwiper = new Swiper('.mv__swiper', {
+	const mvSwiper = new Swiper('.mv__swiper', {
     effect: 'fade',
     fadeEffect: { crossFade: true },
     loop: true,
@@ -26,6 +26,7 @@ jQuery(function($){
     loopAdditionalSlides: 10,
     speed: 12000,
     allowTouchMove: false,
+    simulateTouch: false,
     freeMode: true,
     freeModeMomentum: false,
     autoplay: {
@@ -38,8 +39,9 @@ jQuery(function($){
   });
 });
 
+// memberセクションのswiper
 jQuery(function($){
-  var memberSwiper = new Swiper('.member__slider', {
+  const memberSwiper = new Swiper('.member__slider', {
         slidesPerView: "auto",
         spaceBetween: 20,
         loop: true,
@@ -58,7 +60,7 @@ jQuery(function($){
    });
 });
 
-
+// scroll時のheaderの背景変化
 jQuery(function ($) {
   const $header = $('.js-header');
   const $hamburger = $('.js-hamburger');
@@ -86,7 +88,7 @@ jQuery(function ($) {
     }
   });
 
-  // ==== ハンバーガーメニュー開閉 ====
+  // ハンバーガーメニュー開閉
   $hamburger.on('click', function () {
     const isOpen = $hamburger.attr('aria-expanded') === 'true';
     const scrollTop = $(window).scrollTop();

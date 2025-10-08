@@ -104,9 +104,11 @@
     width: 355px;
     padding: 30px 0;
   }
-  &:hover{
-    background-color: $black;
-    color: white;
+  @include mq("xl"){
+    &:hover{
+      background-color: $black;
+      color: white;
+    }
   }
 }
 
@@ -130,10 +132,12 @@
     width: 15px;
     transition: 0.2s;
   }
-   &:hover{
-    &:after{
-      border-right: 3px solid white;
-      border-top: 3px solid white;
+  @include mq("xl"){
+    &:hover{
+      &:after{
+        border-right: 3px solid white;
+        border-top: 3px solid white;
+      }
     }
   }
 }
@@ -730,6 +734,7 @@ message
 .message__inner{
   padding-top: 78px;
   position: relative;
+  overflow: hidden;
   @include mq("md"){
     padding-top: 87px;
   }
@@ -852,6 +857,7 @@ recruit
 .recruit__inner{
   padding-top: 90px;
   padding-bottom: 88px;
+  overflow: hidden;
   @include mq("md"){
     padding-top: 167px;
     padding-bottom: 139px;

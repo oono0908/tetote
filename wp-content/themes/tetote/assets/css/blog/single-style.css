@@ -3,6 +3,7 @@
   background-color: #FAF7F1;
   margin-top: 80px;
   padding-bottom: 90px;
+  font-family: "Noto Serif JP", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .message-dt {
@@ -13,7 +14,7 @@
 
 .message-dt__inner {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 32px auto 0;
   padding: 40px;
   background-color: white;
 }
@@ -96,9 +97,6 @@
 }
 
 /* =========================================================
-ページネーション
-========================================================= */
-/* =========================================================
 single.pageの前後の記事のページネーション
 ========================================================= */
 .message-nav {
@@ -111,7 +109,7 @@ single.pageの前後の記事のページネーション
   display: flex;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -134,9 +132,9 @@ single.pageの前後の記事のページネーション
   align-items: center;
   text-decoration: none;
   height: 100%;
-  -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
   width: 50%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -146,8 +144,8 @@ single.pageの前後の記事のページネーション
   opacity: 0.7;
 }
 
-.massage-nav__item:first-child {
-  padding-right: 20px;
+.message-nav__item:first-child {
+  padding-right: 15px;
 }
 
 .message-nav__item:nth-child(2) {
@@ -155,7 +153,7 @@ single.pageの前後の記事のページネーション
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .message-nav__btn {
@@ -193,7 +191,7 @@ single.pageの前後の記事のページネーション
 }
 
 .message-nav__title-wrap {
-  width: 70%;
+  width: 80%;
 }
 
 .message-nav__title {
@@ -211,5 +209,5 @@ single.pageの前後の記事のページネーション
   font-size: 12px;
   font-weight: 300;
   color: #222222;
-  margin-top: 6px;
+  margin-top: 6p;
 }

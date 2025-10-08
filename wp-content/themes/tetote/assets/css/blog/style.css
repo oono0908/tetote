@@ -2,6 +2,7 @@
 .message__inner {
   padding-top: 90px;
   padding-bottom: 80px;
+  font-family: "Noto Serif JP", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .message__inner {

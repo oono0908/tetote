@@ -4,6 +4,7 @@
   background-color: $white;
   margin-top: 80px;
   padding-bottom: 90px;
+  font-family: $noto;
   @include mq("md"){
     margin-top: 118px;
     padding-bottom: 139px;
@@ -12,7 +13,7 @@
 
 .message-dt__inner{
   max-width: 800px;
-  margin: 0 auto;
+  margin: 32px auto 0;
   padding: 40px;
   background-color: white;
 }
@@ -91,47 +92,6 @@
 }
 
 /* =========================================================
-ページネーション
-========================================================= */
-// .pagination {
-//   text-align: center;
-// }
-
-// .pagination .page-numbers {
-//   display: inline-block;
-//   align-items: center;
-//   justify-content: center;
-//   width: 58px;
-//   height: 58px;
-//   margin: 98px 32px;
-//   border-radius: 50%;
-//   border: 1px solid #ccc;
-//   background: #fff;
-//   color: #333;
-//   text-decoration: none;
-//   font-size: 16px;
-//   transition: all 0.3s;
-//   line-height: 58px;
-// }
-
-// .pagination .page-numbers:hover {
-//   background: $black;
-//   color: #fff;
-//   border-color: $black;
-// }
-
-// .pagination .page-numbers.current {
-//   background: $black;
-//   color: #fff;
-//   border-color: $black;
-// }
-
-// .pagination .prev,
-// .pagination .next {
-//   display: none;
-// }
-
-/* =========================================================
 single.pageの前後の記事のページネーション
 ========================================================= */
 
@@ -143,7 +103,7 @@ single.pageの前後の記事のページネーション
   display: flex;
   max-width: 1024px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
   align-items: center;
   justify-content: space-between;
   @include mq("md"){
@@ -156,7 +116,7 @@ single.pageの前後の記事のページネーション
   align-items: center;
   text-decoration: none;
   height: 100%;
-  column-gap: 30px;
+  column-gap: 20px;
   width: 50%;
   transition: 0.2s;
   font-weight: $regular;
@@ -165,14 +125,14 @@ single.pageの前後の記事のページネーション
   }
 }
 
-.massage-nav__item:first-child{
-  padding-right: 20px;
+.message-nav__item:first-child{
+  padding-right: 15px;
 }
 
 .message-nav__item:nth-child(2){
   border-left: 1px solid $black;
   justify-content: flex-end;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .message-nav__btn{
@@ -208,7 +168,7 @@ single.pageの前後の記事のページネーション
 }
 
 .message-nav__title-wrap{
-  width: 70%;
+  width: 80%;
 }
 
 .message-nav__title{
@@ -224,6 +184,6 @@ single.pageの前後の記事のページネーション
   font-size: 12px;
   font-weight: $regular;
   color: $black;
-  margin-top: 6px;
+  margin-top: 6p;
 }
 

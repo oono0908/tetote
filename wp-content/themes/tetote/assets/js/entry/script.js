@@ -122,10 +122,10 @@ jQuery(function($) {
     const d = parseInt($d.val(), 10);
 
     // 年の基本チェック
-    const limitedYear = 2050
-    if (!y || String(y).length !== 4 || y < 1900 || y > limitedYear) {
+    const thisYear = new Date().getFullYear();
+    if (!y || String(y).length !== 4 || y < 1900 || y > thisYear) {
       markInvalid($y, true); markInvalid($m, false); markInvalid($d, false);
-      setError($g, '生年は西暦4桁（1900〜' + limitedYear + '）で入力してください。');
+      setError($g, '生年は西暦4桁（1900〜' + thisYear + '）で入力してください。');
       return false;
     }
     if (!m) {

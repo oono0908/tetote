@@ -3,6 +3,7 @@
 .staff-dt-top{
   margin-top: 80px;
   background-color: $white;
+  font-family: $noto;
   @include mq("md"){
     margin-top: 118px;
   }
@@ -98,6 +99,7 @@
 .staff-dt__inner{
   margin-top: 60px;
   padding-bottom: 90px;
+  font-family: $noto;
   @include mq("md"){
   margin-top: 100px;
   padding-bottom: 139px;

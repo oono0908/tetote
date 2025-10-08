@@ -19,16 +19,20 @@
 
 .btn--black{
   background-color: $black;
-  &:hover{
-    background-color: white;
-    color: $black;
+  @include mq("xl"){
+     &:hover{
+        background-color: white;
+        color: $black;
+      }
   }
 }
 
 .btn--ochres{
   background-color: $ochres;
-  &:hover{
-    background-color: $green;
+  @include mq("xl"){
+    &:hover{
+      background-color: $green;
+    }
   }
 }
 
@@ -346,7 +350,7 @@ body:not(.home) .title-logo--black {
   transition: opacity 0.25s ease;
   z-index: map-get($zindex, drawer);
   overflow: scroll;
-  padding-bottom: 80px;
+  padding-bottom: 150px;
   @include mq("md"){
     padding-bottom: 0;
   }
@@ -369,7 +373,7 @@ body:not(.home) .title-logo--black {
   padding: 90px 12px 53px 12px;
   @include mq("md"){
     position: absolute;
-    top: 50%;
+    top: 52%;
     right: 9%;
     transform: translateY(-50%);
     height: auto;

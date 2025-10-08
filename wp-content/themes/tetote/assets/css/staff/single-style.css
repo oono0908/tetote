@@ -2,6 +2,7 @@
 .staff-dt-top {
   margin-top: 80px;
   background-color: #FAF7F1;
+  font-family: "Noto Serif JP", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .staff-dt-top {
@@ -113,6 +114,7 @@
 .staff-dt__inner {
   margin-top: 60px;
   padding-bottom: 90px;
+  font-family: "Noto Serif JP", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .staff-dt__inner {

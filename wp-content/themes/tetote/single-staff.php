@@ -29,7 +29,7 @@
 </div>
 
 <!-- パンくず -->
-<?php get_template_part('parts/scroll-btn'); ?>
+<?php get_template_part('parts/breadcrumb'); ?>
 
   <section class="staff-dt">
     <div class="staff-dt__inner inner">

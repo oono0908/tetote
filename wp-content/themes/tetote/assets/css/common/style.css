@@ -181,7 +181,7 @@ fieldset {
 .btn--black {
   background-color: #222222;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .btn--black:hover {
     background-color: white;
     color: #222222;
@@ -191,7 +191,7 @@ fieldset {
 .btn--ochres {
   background-color: #AFA86F;
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .btn--ochres:hover {
     background-color: #988C2C;
   }

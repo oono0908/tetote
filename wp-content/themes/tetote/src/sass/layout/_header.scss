@@ -19,7 +19,7 @@
 
 .btn--black{
   background-color: $black;
-  @include mq("xl"){
+  @include mq("md"){
      &:hover{
         background-color: white;
         color: $black;
@@ -29,7 +29,7 @@
 
 .btn--ochres{
   background-color: $ochres;
-  @include mq("xl"){
+  @include mq("md"){
     &:hover{
       background-color: $green;
     }

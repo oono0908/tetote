@@ -30,6 +30,7 @@
   display: -ms-flexbox;
   display: flex;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .message__img-wrap {
@@ -37,6 +38,7 @@
   aspect-ratio: 156/180;
   -o-object-fit: cover;
   object-fit: cover;
+  height: 100%;
 }
 
 .message__body {

@@ -19,6 +19,10 @@
   }
 }
 
+.staff__card__img{
+  border-radius: 30px;
+}
+
 .staff-dt-top__body{
   @include mq("md"){
     padding-right: 25px;

@@ -4,6 +4,7 @@
 ========================================================= */
 .section-title__main-wrap {
   position: relative;
+  width: 100%;
 }
 
 .section-title__main {
@@ -320,7 +321,7 @@ MVセクション
   border-radius: 50px;
   z-index: 1;
   width: 93.6vw;
-  top: 91.3043478261vh;
+  bottom: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -330,6 +331,7 @@ MVセクション
 }
 @media screen and (min-width: 768px) {
   .news {
+    position: absolute;
     bottom: 38px;
     left: 66px;
     width: 87.7083333333vw;
@@ -439,6 +441,10 @@ aboutセクション
   padding-right: calc(50vw - 50%);
   overflow: hidden;
   padding-bottom: 105px;
+}
+
+.about__swiper .swiper-slide * {
+  pointer-events: none;
 }
 
 .about__card {
@@ -865,6 +871,7 @@ message
   display: -ms-flexbox;
   display: flex;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .message__img-wrap {
@@ -872,6 +879,7 @@ message
   aspect-ratio: 156/180;
   -o-object-fit: cover;
   object-fit: cover;
+  height: 100%;
 }
 
 .message__body {
@@ -885,6 +893,7 @@ message
   flex-direction: column;
   height: 100%;
   width: calc(100% - 156px);
+  background-color: white;
 }
 @media screen and (min-width: 768px) {
   .message__body {
@@ -984,6 +993,7 @@ recruit
 ========================================================= */
 .recruit {
   background-color: #FAF7F1;
+  position: relative;
 }
 
 .recruit__inner {

@@ -75,6 +75,7 @@ function my_theme_scripts() {
   }
   elseif (is_page('entry-thanks') ) {
     wp_enqueue_style( 'entry-css', get_theme_file_uri('assets/css/entry/thanks.css'), [], '1.0' );
+    wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true );
 
   }
 }

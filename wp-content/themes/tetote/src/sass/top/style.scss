@@ -1,5 +1,4 @@
 @use "../gloval" as *;
-
 /* =========================================================
 トップページ共通パーツ
 ========================================================= */
@@ -8,6 +7,7 @@
 
 .section-title__main-wrap{
   position: relative;
+  width: 100%;
 }
 
 .section-title__main{
@@ -291,13 +291,14 @@ MVセクション
   border-radius: 50px;
   z-index: map-get($zindex, base);
   width: vw(351,375);
-  top: vh(609,667);
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   height: 48px;
   background-color: $white;
   overflow: hidden;
   @include mq("md"){
+    position: absolute;
     bottom: 38px;
     left: 66px;
     width: vw(1263, 1440);
@@ -396,6 +397,10 @@ aboutセクション
   padding-right: calc(50vw - 50%);
   overflow: hidden;
   padding-bottom: 105px;
+}
+
+.about__swiper .swiper-slide * {
+  pointer-events: none;
 }
 
 .about__card{
@@ -754,12 +759,14 @@ message
 .message__card{
   display: flex;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .message__img-wrap{
   width: 156px;
   aspect-ratio:156 / 180;
   object-fit: cover;
+  height: 100%;
 }
 
 .message__body{
@@ -768,6 +775,7 @@ message
   flex-direction: column;
   height: 100%; 
   width: calc(100% - 156px);
+  background-color: white;
   @include mq("md"){
     padding: 20px 23px;
   }
@@ -852,6 +860,7 @@ recruit
 
 .recruit{
   background-color: $white;
+  position: relative;
 }
 
 .recruit__inner{

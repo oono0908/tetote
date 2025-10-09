@@ -18,26 +18,37 @@ jQuery(function ($) {
 
 // aboutセクションのswiper
 
-jQuery(function($){
-  const aboutSwiper = new Swiper('.about__swiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 16,
-    loop: true,
-    loopAdditionalSlides: 10,
-    speed: 12000,
-    allowTouchMove: false,
-    simulateTouch: false,
-    freeMode: true,
-    freeModeMomentum: false,
-    autoplay: {
-      delay: 0,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: false
+const aboutSwiper = new Swiper('.about__swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  loop: true,
+  loopAdditionalSlides: 10,
+  speed: 12000,
+  allowTouchMove: false,
+  simulateTouch: false,
+  freeMode: true,
+  freeModeMomentum: false,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false
+  },
+  preventClicks: true,
+  preventClicksPropagation: true,
+  breakpoints: {
+    768: {
+      simulateTouch: false,
     },
-    preventClicks: true,
-    preventClicksPropagation: true
-  });
+  },
+  on: {
+    // 何かの拍子に pause しても即再開させる保険
+    click() { this.autoplay.start(); },
+    touchEnd() { this.autoplay.start(); }
+  }
 });
+
+
+
 
 // memberセクションのswiper
 jQuery(function($){

@@ -388,3 +388,13 @@ contact必要事項入力エリア
 .wpcf7 form.sent .wpcf7-response-output {
   display: none;
 }
+
+.contact__input:focus,
+.contact__textarea:focus,
+.contact__select:focus,
+.contact__radio-label:focus-within::before,
+.contact__checkbox-label:focus-within::before,
+.contact__agree-label:focus-within::before,
+.contact__submit:focus {
+  border: 2px solid #1e90ff;
+}

@@ -173,7 +173,7 @@ if ( is_home() ) {
           </div>
         </div>
         <div class="gnav__btns">
-          <a class="btn btn--medium btn--ochres" href="<?php echo esc_url(home_url('/recruit')); ?>">募集要項</a>
+          <a class="btn btn--medium btn--ochres" href="<?php echo esc_url(home_url('/details')); ?>">募集要項</a>
           <a class="btn btn--medium btn--black" href="<?php echo esc_url(home_url('/entry')); ?>">ENTRY</a>
         </div>
       </nav>

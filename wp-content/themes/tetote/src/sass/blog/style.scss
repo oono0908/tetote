@@ -22,12 +22,14 @@
 .message__card{
   display: flex;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .message__img-wrap{
   width: 156px;
   aspect-ratio:156 / 180;
   object-fit: cover;
+  height: 100%;
 }
 
 .message__body{

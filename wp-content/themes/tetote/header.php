@@ -114,7 +114,7 @@ if ( is_home() ) {
   </div>
 <?php endif; ?>
 
-<?php if (!is_front_page() & (!is_singular('staff')) & (!is_single())) { ?>
+<?php if (!is_front_page() & (!is_singular('staff')) & (!is_single()) & (!is_page('entry'))) { ?>
    <?php get_template_part('parts/breadcrumb'); ?>
 <?php } ?>
 

@@ -86,7 +86,7 @@ contact必要事項入力エリア
 
 .contact__body-wrap{
   padding-top: 60px;
-  border-top: 1px solid #988C2C;
+  border-top: 1px solid $green2;
   @include mq("md"){
     padding-top: 97px;
   }

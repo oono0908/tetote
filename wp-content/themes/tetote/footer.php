@@ -6,7 +6,7 @@
       <div class="footer__btn-wrap">
         <p class="footer__btn-txt">わたしたちと一緒に働く仲間を募集中です。<br>
         少数精鋭のチームで<br>
-        あなたも会社も一緒に成長していきましょう。
+        あなたも会社も一緒に<br class="md-none">成長していきましょう。
         </p>
         <a href="<?php echo esc_url(home_url('/entry/')); ?>" class="footer__entry-btn btn btn--arrow">ENTRY</a>
       </div>
@@ -45,7 +45,7 @@
               <a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>" class="footer__link">よくある質問</a>
             </li>
             <li class="footer__item">
-              <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="footer__link">会社概要</a>
+              <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="footer__link">会社概要</a>
             </li>
           </ul>
         </nav>

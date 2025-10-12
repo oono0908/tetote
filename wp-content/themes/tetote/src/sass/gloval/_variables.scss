@@ -16,16 +16,18 @@ $black: #222222;
 $white: #FAF7F1;
 $ochres: #AFA86F;
 $green: #988C2C;
+$green2:#AFA86F;
 $gray: #979797;
 
 // z-index
 $zindex: (
   base: 1,
+  secondary:50,
   drawer: 100,   // ドロワーメニュー
   header: 200,   // 固定ヘッダー
-  modal: 500,   // モーダル
-  hamburger: 1000,   // ハンバーガー
-  toast: 2000,   // 通知
+  modal: 300,   // モーダル
+  hamburger: 400,   // ハンバーガー
+  toast: 500,   // 通知
 );
 
 

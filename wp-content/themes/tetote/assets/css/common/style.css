@@ -412,7 +412,7 @@ header
   ハンパーガー
 ========================================================= */
 .hamburger {
-  z-index: 1000;
+  z-index: 400;
   width: 32px;
 }
 @media screen and (min-width: 768px) {
@@ -741,7 +741,7 @@ body:not(.home) .title-logo--black {
     width: 66.5277777778%;
     padding: 50px 0;
     max-width: 958px;
-    padding: 24px;
+    padding: 50px 24px;
   }
 }
 
@@ -811,6 +811,11 @@ body:not(.home) .title-logo--black {
   width: 240px;
   margin: 29px auto 0;
 }
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    margin: 0;
+  }
+}
 
 .footer__logo-link {
   text-decoration: none;
@@ -839,6 +844,7 @@ body:not(.home) .title-logo--black {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  row-gap: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer__items {
@@ -852,11 +858,8 @@ body:not(.home) .title-logo--black {
     -moz-column-gap: 20px;
     column-gap: 20px;
     row-gap: 41px;
+    padding-top: 25px;
   }
-}
-
-.footer__item:not(first-child) {
-  margin-top: 23px;
 }
 
 .footer__link {
@@ -943,7 +946,7 @@ body:not(.home) .title-logo--black {
 @media screen and (min-width: 768px) {
   .inner {
     max-width: 1024px;
-    padding: 0 22px;
+    padding: 0 34px;
     margin: 0 auto;
   }
 }

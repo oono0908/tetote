@@ -34,17 +34,7 @@ const aboutSwiper = new Swiper('.about__swiper', {
     pauseOnMouseEnter: false
   },
   preventClicks: true,
-  preventClicksPropagation: true,
-  breakpoints: {
-    768: {
-      simulateTouch: false,
-    },
-  },
-  on: {
-    // 何かの拍子に pause しても即再開させる保険
-    click() { this.autoplay.start(); },
-    touchEnd() { this.autoplay.start(); }
-  }
+  preventClicksPropagation: true
 });
 
 

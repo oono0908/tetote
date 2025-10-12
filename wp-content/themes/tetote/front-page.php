@@ -52,25 +52,21 @@
           </li>
           <li class="swiper-slide about__card">
             <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about02.jpg')); ?>" alt="ワークスペースで資料を見る社員" width="271" height="211"/>
-            <div class="about__card-txt-wrap">
-              <p class="about__card-txt">後悔しないキャリアを作る、</p>
-              <p class="about__card-txt">それこそが、我々の使命だ</p>
-            </div>
           </li>
           <li class="swiper-slide about__card">
             <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about03.jpg')); ?>" alt="面談で説明する採用担当者" width="271" height="211"/>
           </li>
           <li class="swiper-slide about__card">
             <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about01.jpg')); ?>" alt="オフィスで電話対応する社員" width="271" height="211"/>
-            <div class="about__card-txt-wrap">
-              <p class="about__card-txt">後悔しないキャリアを作る、</p>
-              <p class="about__card-txt">それこそが、我々の使命だ</p>
-            </div>
           </li>
           <li class="swiper-slide about__card">
             <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about02.jpg')); ?>" alt="ワークスペースで資料を見る社員" width="271" height="211"/>
           </li>
         </ul>
+        <div class="about__card-txt-wrap">
+          <p class="about__card-txt">後悔しないキャリアを作る、</p>
+          <p class="about__card-txt">それこそが、我々の使命だ</p>
+        </div>
       </div>
       <div class="about__body">
         <p class="about__txt">「人手不足」</br>

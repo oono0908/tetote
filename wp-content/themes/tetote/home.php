@@ -8,18 +8,10 @@
             <?php while (have_posts()) : the_post(); ?>
               <li class="message__card">
                 <?php
-                
-                  $img      = get_field('message-img');
-
-                  $img_html = '';
-                  $alt_text = $name ?: get_the_title();
-
-                  if (  !empty($img['url']) ) {
-                      $img_html = '<img src="'.esc_url($img['url']).'" alt="'.esc_attr($alt_text).'" class="message__thumb" />';
-                    } 
+                  $image = get_field('message-img');
                 ?>
                 <figure class="message__img-wrap">
-                   <?php echo $img_html; ?>
+                   <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title(); ?>" class="message__thumb" width="158" height="182" />
                 </figure>
                 <div class="message__body">
                   <span class="message__tag"><?php the_category(); ?></span>

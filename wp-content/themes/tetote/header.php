@@ -27,8 +27,8 @@
   <!-- OGP -->
   <meta property="og:title" content="<?php echo esc_html($page_title); ?>">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="<?php echo esc_url(home_url(add_query_arg(array(), $wp->request))); ?>">
-  <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/assets/img/ogp.jpg'); ?>">
+  <meta property="og:url" content="<?php echo esc_url( get_permalink() ); ?>">
+  <meta property="og:image" content="<?php echo esc_url(get_template_directory_uri() . '/assets/images/ogp.jpg'); ?>">
   <meta property="og:site_name" content="株式会社TETOTE">
   <meta property="og:description" content="<?php echo esc_attr($page_description); ?>">
   <meta name="twitter:card" content="summary">
@@ -46,8 +46,8 @@
   <header class="header js-header">
     <h1 class="header__logo">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="logo" aria-label="TETOTEのホームページへ戻る">
-        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-black.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--black js-title-logo"/>
-        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-white.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--white"/>
+        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-black.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--black js-title-logo" width="250" height="61" />
+        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-white.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--white" width="250" height="61" />
       </a>
     </h1>
     <div class="header__right">

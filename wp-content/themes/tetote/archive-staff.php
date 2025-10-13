@@ -8,23 +8,23 @@
             <?php while (have_posts()) : the_post(); ?>
               <a href="<?php the_permalink(); ?>" class="staff__card-wrap">
                 <?php
-                  $img      = get_field('staff-img');
+                  $image      = get_field('staff-img');
                   $message1 = get_field('message01');
                   $message2 = get_field('message02');
                   $role     = get_field('role');
                   $name     = get_field('name');
-
-                  $img_html = '';
-                  $alt_text = $name ?: get_the_title();
-
-                  if ( !empty($img['url']) ) {
-                     $img_html = '<img src="'.esc_url($img['url']).'" alt="'.esc_attr($alt_text).'" class="member__card__img" />';
-                    }
                 ?>
 
                   <li class="staff__card">
                     <div class="staff__card-thum">
-                      <?php echo $img_html; ?>
+                    <?php if ( $image ) : ?>
+                      <img src="<?php echo esc_url( $image['url'] ); ?>" 
+                        alt="<?php echo esc_attr( $name ); ?>" 
+                        class="member__card__img" 
+                        width="300" 
+                        height="379" 
+                      />
+                    <?php endif; ?>
                       <div class="staff__card-title">
                         <?php if ( $message1 ) : ?><p class="staff__card-text"><?php echo esc_html($message1); ?></p><?php endif; ?>
                         <?php if ( $message2 ) : ?><p class="staff__card-text"><?php echo esc_html($message2); ?></p><?php endif; ?>

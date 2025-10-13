@@ -10,7 +10,7 @@
       <?php
         $img      = get_field('message-dt-img');
         $img_html = '';
-        $alt_text = $name ?: get_the_title();
+        $alt_text = get_the_title();
 
         if ( !empty($img['url'])  ) {
             $img_html = '<img src="'.esc_url($img['url']).'" alt="'.esc_attr($alt_text).'" class="message-dt-img" />';

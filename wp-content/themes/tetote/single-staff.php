@@ -13,17 +13,9 @@
     </div>
     <div class="staff-dt-top__thumb">
       <?php
-
-        $img      = get_field('staff-img');
-        $img_html = '';
-        $alt_text = $name ?: get_the_title();
-
-        if ( !empty($img['url']) ) {
-            $img_html = '<img src="'.esc_url($img['url']).'" alt="'.esc_attr($alt_text).'" class="staff__card__img" />';
-          }
-
-        ?>
-        <?php echo $img_html; ?>
+        $image = get_field('staff-img');
+      ?>
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title(); ?>" class="staff__card__img" width="286" height="368" />
     </div>
   </div>
 </div>
@@ -92,10 +84,10 @@
                 $role     = get_field('role');
                 $name     = get_field('name');
                 $img_html = '';
-                $alt_text = $name ?: get_the_title();
+                $alt_text = get_the_title();
 
                 if (  !empty($img['url']) ) {
-                    $img_html = '<img src="' . esc_url($img['url']) . '" alt="' . esc_attr($alt_text) . '" class="member__card__img" />';
+                    $img_html = '<img src="' . esc_url($img['url']) . '" alt="' . esc_attr($alt_text) . '" class="member__card__img" width="300" height="379" />';
                   } 
               ?>
 

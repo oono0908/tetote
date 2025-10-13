@@ -760,7 +760,7 @@ body:not(.home) .title-logo--black {
 }
 
 .footer__entry-btn {
-  background-color: #988C2C;
+  background-color: #AFA86F;
   color: #222222;
   font-size: 14px;
   width: 200px;
@@ -778,7 +778,7 @@ body:not(.home) .title-logo--black {
     font-size: 16px;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .footer__entry-btn:hover {
     background-color: #222222;
     color: white;

@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="noindex,nofollow">
+
+  <!-- トップページと下層ページでのタイトルとディスクリプションの切り替え -->
   <?php
     if ( is_front_page()) :
       $page_title = '採用特設サイト | 株式会社TETOTE';
@@ -48,13 +50,12 @@
         <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-white.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--white"/>
       </a>
     </h1>
-
     <div class="header__right">
       <div class="header__btns md-show">
         <a class="btn btn--small btn--black" href="<?php echo esc_url(home_url('/details')); ?>">募集要項</a>
         <a class="btn btn--small btn--ochres" href="<?php echo esc_url(home_url('/entry')); ?>">ENTRY</a>
       </div>
-       <!-- ハンバーガー -->
+      <!-- ハンバーガー -->
       <button class="hamburger js-hamburger" aria-expanded="false" aria-controls="drawer" aria-label="メニューを開閉">
         <div class="hamburger__lines js-hamburger__lines">
           <span></span><span></span><span></span>
@@ -63,9 +64,9 @@
       </button>
     </div>
   </header>
-  
+
 <?php
-// 下層ページ header 下画像の切り替え（簡潔版）
+// 下層ページ header 下画像の切り替え
 $visual_classes = [
   'about'    => 'about-top-visual',
   'details'   => 'details-top-visual',

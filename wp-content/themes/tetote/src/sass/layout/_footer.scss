@@ -62,7 +62,7 @@
 }
 
 .footer__entry-btn{
-  background-color: $green;
+  background-color: $green2;
   color: $black;
   font-size: 14px;
   width: 200px;
@@ -76,7 +76,7 @@
     padding: 27px 0;
     font-size: 16px;
   }
-  @include mq("xl"){
+  @include mq("md"){
     &:hover{
       background-color: $black;
       color: white;

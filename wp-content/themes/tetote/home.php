@@ -11,7 +11,7 @@
                   $image = get_field('message-img');
                 ?>
                 <figure class="message__img-wrap">
-                   <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title(); ?>" class="message__thumb" width="158" height="182" />
+                   <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title(); ?>" class="message__thumb" width="158" height="182" loading="lazy" />
                 </figure>
                 <div class="message__body">
                   <span class="message__tag"><?php the_category(); ?></span>

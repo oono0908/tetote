@@ -7,7 +7,8 @@
       <div class="career__img-wrap">
         <img src="<?php echo esc_url(get_theme_file_uri('assets/images/career/tetote-carrer-path.png')); ?>" 
              alt="TETOTEにおけるコンサルタントのキャリアパスを説明する図。1段目は「コンサルタント（入社後2〜3年）」、2段目は「シニアコンサルタント（3〜5年）」、3段目は「マネージャー（5年以上）」、4段目は「パートナー（マネージャー経験10年以上）」を表している。" 
-             class="career__img">
+             class="career__img"
+             loading="lazy">
       </div>
       <p class="career__txt _lower">TETOTE は、コンサルタントのキャリアパスを支えるために、以下の独自の研修制度を設けています。</p>
       <ul class="career__lists">

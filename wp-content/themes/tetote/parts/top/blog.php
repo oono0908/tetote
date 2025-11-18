@@ -28,13 +28,15 @@
                      width="158" 
                      height="182" 
                      alt="<?php echo esc_attr( get_the_title() ); ?>" 
-                     class="message__thumb">
+                     class="message__thumb"
+                     loading="lazy">
               <?php else : ?>
                 <img src="<?php echo esc_url( get_theme_file_uri('./assets/images/noimage.jpg') ); ?>" 
                      alt="画像がありません"
                      width="158" 
                      height="182" 
-                     class="message__thumb">
+                     class="message__thumb"
+                     loading="lazy">
               <?php endif; ?>
             </figure>
             <div class="message__body">

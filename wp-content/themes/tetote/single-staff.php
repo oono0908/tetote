@@ -15,7 +15,7 @@
       <?php
         $image = get_field('staff-img');
       ?>
-        <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title(); ?>" class="staff__card__img" width="286" height="368" />
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo get_the_title(); ?>" class="staff__card__img" width="286" height="368" loading="lazy" />
     </div>
   </div>
 </div>
@@ -87,7 +87,7 @@
                 $alt_text = get_the_title();
 
                 if (  !empty($img['url']) ) {
-                    $img_html = '<img src="' . esc_url($img['url']) . '" alt="' . esc_attr($alt_text) . '" class="staff__card__img" width="300" height="379" />';
+                    $img_html = '<img src="' . esc_url($img['url']) . '" alt="' . esc_attr($alt_text) . '" class="staff__card__img" width="300" height="379" loading="lazy" />';
                   } 
               ?>
 

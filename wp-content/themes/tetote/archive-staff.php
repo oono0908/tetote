@@ -23,6 +23,7 @@
                         class="staff__card__img" 
                         width="300" 
                         height="379" 
+                        loading="lazy"
                       />
                     <?php endif; ?>
                       <div class="staff__card-title">

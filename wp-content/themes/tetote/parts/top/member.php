@@ -35,6 +35,7 @@
                     class="member__card__img" 
                     width="300" 
                     height="379" 
+                    loading="lazy"
                   />
                 <?php endif; ?>
                 <div class="member__card-title">

@@ -72,7 +72,7 @@
             </li>
           </ul>
           <div class="benefits__img-wrap">
-            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/benefits/benefits-page-img.jpg')); ?>" alt="" class="benefits__img">
+            <img src="<?php echo esc_url(get_theme_file_uri('assets/images/benefits/benefits-page-img.jpg')); ?>" alt="" class="benefits__img" loading="lazy">
           </div>
       </section>
     </div>

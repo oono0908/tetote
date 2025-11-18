@@ -13,7 +13,7 @@
         $alt_text = get_the_title();
 
         if ( !empty($img['url'])  ) {
-            $img_html = '<img src="'.esc_url($img['url']).'" alt="'.esc_attr($alt_text).'" class="message-dt-img" />';
+            $img_html = '<img src="'.esc_url($img['url']).'" alt="'.esc_attr($alt_text).'" class="message-dt-img" loading="lazy" />';
           } 
       ?>
       <figure class="message-dt__img-wrap">

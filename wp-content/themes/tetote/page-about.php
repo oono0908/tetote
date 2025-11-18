@@ -46,7 +46,7 @@
           <h3 class="about-title">代表メッセージ</h3>
           <div class="about02__wrap">
             <div class="about02__thumb">
-              <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about02-ceo.jpg')); ?>" alt="" class="about02__img">
+              <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about02-ceo.jpg')); ?>" alt="" class="about02__img" loading="lazy">
             </div>
             <div class="about02__body">
               <p class="about02__txt-main">あなたがやりたいこと<br>
@@ -60,7 +60,7 @@
                 <p class="about02__txt-sub">私たちと共に、未来を創造していきましょう。</p>
               </div>
               <p class="about02__name">
-                <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about02-name.svg')); ?>" alt="" class="about02__name-img">
+                <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about02-name.svg')); ?>" alt="" class="about02__name-img" loading="lazy">
               </p>
             </div>
           </div>
@@ -71,7 +71,7 @@
           <ul class="about03__cards">
             <li class="about03__card">
               <div class="about03__thumb">
-                <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about03-01.jpg')); ?>" alt="" class="about03__img">
+                <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about03-01.jpg')); ?>" alt="" class="about03__img" loading="lazy">
               </div>
               <div class="about03__body">
                 <div class="about03__title">コンサルティング事業</div>
@@ -81,7 +81,7 @@
             </li>
             <li class="about03__card">
               <div class="about03__thumb">
-                <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about03-02.jpg')); ?>" alt="" class="about03__img">
+                <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about03-02.jpg')); ?>" alt="" class="about03__img" loading="lazy">
               </div>
               <div class="about03__body">
                 <div class="about03__title">ソリューション営業事業</div>
@@ -91,7 +91,7 @@
             </li>
             <li class="about03__card">
               <div class="about03__thumb">
-                <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about03-03.jpg')); ?>" alt="" class="about03__img">
+                <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about/about03-03.jpg')); ?>" alt="" class="about03__img" loading="lazy">
               </div>
               <div class="about03__body">
                 <div class="about03__title">業務系システム開発事業</div>

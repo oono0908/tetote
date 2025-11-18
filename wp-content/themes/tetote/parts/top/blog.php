@@ -31,7 +31,7 @@
                      class="message__thumb"
                      loading="lazy">
               <?php else : ?>
-                <img src="<?php echo esc_url( get_theme_file_uri('./assets/images/noimage.jpg') ); ?>" 
+                <img src="<?php echo esc_url( get_theme_file_uri('./assets/images/top/noimage.jpg') ); ?>" 
                      alt="画像がありません"
                      width="158" 
                      height="182" 

@@ -3,19 +3,19 @@
     <div class="swiper about__swiper">
       <ul class="swiper-wrapper">
         <li class="swiper-slide about__card">
-          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about01.jpg')); ?>" alt="オフィスで電話対応する社員" width="271" height="211" loading="lazy"/>
+          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/top/about01.jpg')); ?>" alt="オフィスで電話対応する社員" width="271" height="211" loading="lazy"/>
         </li>
         <li class="swiper-slide about__card">
-          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about02.jpg')); ?>" alt="ワークスペースで資料を見る社員" width="271" height="211" loading="lazy"/>
+          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/top/about02.jpg')); ?>" alt="ワークスペースで資料を見る社員" width="271" height="211" loading="lazy"/>
         </li>
         <li class="swiper-slide about__card">
-          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about03.jpg')); ?>" alt="面談で説明する採用担当者" width="271" height="211" loading="lazy"/>
+          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/top/about03.jpg')); ?>" alt="面談で説明する採用担当者" width="271" height="211" loading="lazy"/>
         </li>
         <li class="swiper-slide about__card">
-          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about01.jpg')); ?>" alt="オフィスで電話対応する社員" width="271" height="211" loading="lazy"/>
+          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/top/about01.jpg')); ?>" alt="オフィスで電話対応する社員" width="271" height="211" loading="lazy"/>
         </li>
         <li class="swiper-slide about__card">
-          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/about02.jpg')); ?>" alt="ワークスペースで資料を見る社員" width="271" height="211" loading="lazy"/>
+          <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/top/about02.jpg')); ?>" alt="ワークスペースで資料を見る社員" width="271" height="211" loading="lazy"/>
         </li>
       </ul>
       <div class="about__card-txt-wrap">

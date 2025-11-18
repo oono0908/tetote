@@ -46,8 +46,8 @@
   <header class="header js-header">
     <h1 class="header__logo">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="logo" aria-label="TETOTEのホームページへ戻る">
-        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-black.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--black js-title-logo" width="250" height="61" loading="lazy" />
-        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/title-white.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--white" width="250" height="61" loading="lazy" />
+        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/header/title-black.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--black js-title-logo" width="250" height="61" loading="lazy" />
+        <img src="<?php echo esc_url(get_theme_file_uri('./assets/images/header/title-white.svg')); ?>" alt="TETOTEサイトのロゴ" class="title-logo--white" width="250" height="61" loading="lazy" />
       </a>
     </h1>
     <div class="header__right">

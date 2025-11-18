@@ -509,7 +509,7 @@ aboutセクション
 @media screen and (min-width: 768px) {
   .about__body {
     padding-bottom: 52px;
-    background: url("../../images/about-map.jpg") no-repeat center/contain;
+    background: url("../../images/top/about-map.jpg") no-repeat center/contain;
   }
 }
 
@@ -527,7 +527,7 @@ aboutセクション
 }
 
 .about__txt:nth-child(1) {
-  background: url("../../images/about-map.jpg") no-repeat center/contain;
+  background: url("../../images/top/about-map.jpg") no-repeat center/contain;
 }
 
 .about__txt:nth-child(2) {
@@ -749,7 +749,7 @@ benefits
 }
 
 .benefits__item:first-child .benefits__thum::after {
-  background-image: url("../../images/benefits01.png");
+  background-image: url("../../images/top/benefits01.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -764,7 +764,7 @@ benefits
 }
 
 .benefits__item:nth-child(2) .benefits__thum::after {
-  background-image: url("../../images/benefits02.png");
+  background-image: url("../../images/top/benefits02.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

@@ -346,7 +346,7 @@ header
 }
 
 .top-title__ja-sub {
-  color: #988C2C;
+  color: #988c2c;
   font-weight: 700;
   font-size: 14px;
   padding: 3px 10px;
@@ -364,35 +364,35 @@ header
 }
 
 .about-top-visual {
-  background-image: url("../../images/about-top.jpg");
+  background-image: url("../../images/header/about-top.jpg");
 }
 
 .details-top-visual {
-  background-image: url("../../images/details-top.jpg");
+  background-image: url("../../images/header/details-top.jpg");
 }
 
 .career-top-visual {
-  background-image: url("../../images/career-top.jpg");
+  background-image: url("../../images/header/carrer-top.jpg");
 }
 
 .benefits-top-visual {
-  background-image: url("../../images/benefits-top.jpg");
+  background-image: url("../../images/header/benefits-top.jpg");
 }
 
 .faq-top-visual {
-  background-image: url("../../images/faq-top.jpg");
+  background-image: url("../../images/header/faq-top.jpg");
 }
 
 .blog-top-visual {
-  background-image: url("../../images/blog-top.jpg");
+  background-image: url("../../images/header/blog-top.jpg");
 }
 
 .staff-top-visual {
-  background-image: url("../../images/staff-top.jpg");
+  background-image: url("../../images/header/staff-top.jpg");
 }
 
 .bread-lists {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   padding: 20px 24px;
 }
 
@@ -710,7 +710,7 @@ body:not(.home) .title-logo--black {
 .footer__bcg {
   position: relative;
   height: 250px;
-  background-image: url("../../images/footer.jpg");
+  background-image: url("../../images/footer/footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

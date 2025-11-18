@@ -2,7 +2,7 @@
 
 // ボタン共通
 // headerのボタン
-.btn--small{
+.btn--small {
   width: 126px;
   padding: 14px 0;
   color: $white;
@@ -10,27 +10,27 @@
 }
 
 // drawerのボタン
-.btn--medium{
+.btn--medium {
   width: 248px;
   padding: 14px 0;
   color: $white;
   transition: 0.2s;
 }
 
-.btn--black{
+.btn--black {
   background-color: $black;
-  @include mq("md"){
-     &:hover{
-        background-color: white;
-        color: $black;
-      }
+  @include mq("md") {
+    &:hover {
+      background-color: white;
+      color: $black;
+    }
   }
 }
 
-.btn--ochres{
+.btn--ochres {
   background-color: $ochres;
-  @include mq("md"){
-    &:hover{
+  @include mq("md") {
+    &:hover {
       background-color: $green;
     }
   }
@@ -49,35 +49,35 @@ header
   justify-content: space-between;
   padding: 0 12px;
   height: 80px;
-  @include mq("md"){
+  @include mq("md") {
     height: 118px;
     padding: 30px;
   }
 }
 
-.js-header.is-open{
+.js-header.is-open {
   background-color: white;
 }
 
 .header__logo {
   width: 154px;
-  @include mq("md"){
+  @include mq("md") {
     width: 250px;
   }
-  &:hover{
+  &:hover {
     opacity: 0.7;
   }
 }
 
-.title-logo--black{
+.title-logo--black {
   display: none;
 }
 
-.js-title-logo.is-open{
+.js-title-logo.is-open {
   display: block;
 }
 
-.js-title-logo.is-open + .title-logo--white{
+.js-title-logo.is-open + .title-logo--white {
   display: none;
 }
 
@@ -86,19 +86,19 @@ header
   align-items: center;
 }
 
-.header__right .hamburger{
+.header__right .hamburger {
   margin-left: 40px;
 }
 
-.header__btns{
+.header__btns {
   align-items: center;
 }
 
-.header__btns > .btn:nth-child(2){
+.header__btns > .btn:nth-child(2) {
   margin-left: 22px;
 }
 
-.header__btns > .btn{
+.header__btns > .btn {
   font-size: 14px;
   font-weight: $bold;
   display: inline-block;
@@ -108,7 +108,7 @@ header
   header下の画像
 ========================================================= */
 
-.top-title{
+.top-title {
   width: 100%;
   height: 338px;
   background-size: cover;
@@ -117,19 +117,19 @@ header
   object-fit: cover;
   padding: 0 17px;
   margin-top: 80px;
-  @include mq("md"){
+  @include mq("md") {
     margin-top: 118px;
     padding: 0 22px;
   }
 }
 
-.top-title__inner{
+.top-title__inner {
   max-width: 1024px;
   margin: 0 auto;
   position: relative;
 }
 
-.top-title__main{
+.top-title__main {
   background: white;
   color: $black;
   font-weight: $regular;
@@ -139,14 +139,14 @@ header
   position: absolute;
   top: 78px;
   left: 0;
-  @include mq("md"){
+  @include mq("md") {
     position: absolute;
     top: 58px;
     font-size: 64px;
   }
 }
 
-.top-title__ja-main{
+.top-title__ja-main {
   font-size: 20px;
   font-weight: $regular;
   padding: 3px 10px;
@@ -155,15 +155,15 @@ header
   position: absolute;
   left: 0;
   top: 162px;
-  @include mq("md"){
+  @include mq("md") {
     position: absolute;
     top: 171px;
     font-size: 24px;
   }
 }
 
-.top-title__ja-sub{
-  color: #988C2C;
+.top-title__ja-sub {
+  color: #988c2c;
   font-weight: $bold;
   font-size: 14px;
   padding: 3px 10px;
@@ -172,59 +172,58 @@ header
   position: absolute;
   top: 215px;
   left: 0;
-  @include mq("md"){
+  @include mq("md") {
     top: 228px;
     font-size: 16px;
   }
 }
 
-.about-top-visual{
-  background-image: url("../../images/about-top.jpg");
+.about-top-visual {
+  background-image: url("../../images/header/about-top.jpg");
 }
 
-.details-top-visual{
-  background-image: url("../../images/details-top.jpg");
+.details-top-visual {
+  background-image: url("../../images/header/details-top.jpg");
 }
 
-.career-top-visual{
-  background-image: url("../../images/career-top.jpg");
+.career-top-visual {
+  background-image: url("../../images/header/carrer-top.jpg");
 }
 
-.benefits-top-visual{
-  background-image: url("../../images/benefits-top.jpg");
+.benefits-top-visual {
+  background-image: url("../../images/header/benefits-top.jpg");
 }
 
-.faq-top-visual{
-  background-image: url("../../images/faq-top.jpg");
+.faq-top-visual {
+  background-image: url("../../images/header/faq-top.jpg");
 }
 
-.blog-top-visual{
-  background-image: url("../../images/blog-top.jpg");
+.blog-top-visual {
+  background-image: url("../../images/header/blog-top.jpg");
 }
 
-.staff-top-visual{
-  background-image: url("../../images/staff-top.jpg");
+.staff-top-visual {
+  background-image: url("../../images/header/staff-top.jpg");
 }
 
 // パンくずリスト
 
-.bread-lists{
-  background-color: #F0F0F0;
+.bread-lists {
+  background-color: #f0f0f0;
   padding: 20px 24px;
 }
 
-.bread-lists__inner > span > a > span{
+.bread-lists__inner > span > a > span {
   color: $black;
   display: inline-block;
   font-size: 14px;
 }
 
-.bread-lists__inner .current-item{
+.bread-lists__inner .current-item {
   color: $black;
   display: inline-block;
   font-size: 14px;
 }
-
 
 /* =========================================================
   ハンパーガー
@@ -232,8 +231,8 @@ header
 .hamburger {
   z-index: map-get($zindex, hamburger);
   width: 32px;
-  @include mq("md"){
-   width: 52px;
+  @include mq("md") {
+    width: 52px;
   }
 }
 
@@ -241,9 +240,9 @@ header
   height: 21px;
   position: relative;
   width: 100%;
-  @include mq("md"){
-   height: 31px;
- }
+  @include mq("md") {
+    height: 31px;
+  }
 }
 
 .hamburger span {
@@ -254,7 +253,8 @@ header
   height: 1px;
   background-color: #fff;
   transform-origin: center;
-  transition: transform .25s ease, opacity .2s ease, top .2s ease, bottom .2s ease;
+  transition: transform 0.25s ease, opacity 0.2s ease, top 0.2s ease,
+    bottom 0.2s ease;
 }
 
 .hamburger span:nth-child(1) {
@@ -263,7 +263,7 @@ header
 
 .hamburger span:nth-child(2) {
   top: 9px;
-  @include mq("md"){
+  @include mq("md") {
     top: 15px;
   }
 }
@@ -275,7 +275,7 @@ header
 .js-hamburger.is-open span:nth-child(1) {
   top: 9px;
   transform: rotate(45deg);
-  @include mq("md"){
+  @include mq("md") {
     top: 15px;
   }
 }
@@ -288,28 +288,28 @@ header
   bottom: auto;
   top: 9px;
   transform: rotate(-45deg);
-  @include mq("md"){
+  @include mq("md") {
     top: 15px;
   }
 }
 
-.js-hamburger__lines.is-open > span{
+.js-hamburger__lines.is-open > span {
   background-color: $black;
 }
 
-.js-hamburger__lines.is-open + .hamburger__text{
+.js-hamburger__lines.is-open + .hamburger__text {
   color: $black;
 }
 
-.hamburger__text{
+.hamburger__text {
   font-size: 10px;
   color: $white;
   text-align: center;
   font-weight: $regular;
   margin-top: 5px;
-  @include mq("md"){
-   font-size: 12px;
-   margin-top: 10px;
+  @include mq("md") {
+    font-size: 12px;
+    margin-top: 10px;
   }
 }
 
@@ -338,11 +338,11 @@ body:not(.home) .title-logo--black {
   Drawer
 ========================================================= */
 
-.drawer{
+.drawer {
   width: 100%;
   height: 100vh;
   background-color: $white;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   display: none;
@@ -351,27 +351,26 @@ body:not(.home) .title-logo--black {
   z-index: map-get($zindex, drawer);
   overflow: scroll;
   padding-bottom: 150px;
-  @include mq("md"){
+  @include mq("md") {
     padding-bottom: 0;
   }
 }
 
-.drawer.is-open{
+.drawer.is-open {
   display: grid;
   opacity: 1;
 }
 
-.drawer__inner{
+.drawer__inner {
   height: inherit;
   width: 100%;
   position: relative;
 }
 
-
-.gnav{
+.gnav {
   height: inherit;
   padding: 90px 12px 53px 12px;
-  @include mq("md"){
+  @include mq("md") {
     position: absolute;
     top: 52%;
     right: 9%;
@@ -379,7 +378,7 @@ body:not(.home) .title-logo--black {
     height: auto;
     border-left: 1px solid $green;
     padding: 0;
-    @include mq("lg"){
+    @include mq("lg") {
       &::before {
         content: "";
         position: absolute;
@@ -395,81 +394,78 @@ body:not(.home) .title-logo--black {
   }
 }
 
-.gnav__col{
-  @include mq("md"){
+.gnav__col {
+  @include mq("md") {
     width: 248px;
     border-top: 1px solid $green;
   }
 }
 
-.gnav__col:nth-child(2){
-  @include mq("md"){
+.gnav__col:nth-child(2) {
+  @include mq("md") {
     margin-left: 30px;
   }
 }
 
-.gnav__cols{
-  @include mq("md"){
+.gnav__cols {
+  @include mq("md") {
     display: flex;
     padding-left: 63px;
-    }
+  }
 }
 
-.gnav__list{
+.gnav__list {
   height: inherit;
 }
 
-.gnav__item{
+.gnav__item {
   height: inherit;
   border-bottom: 1px solid $green;
 }
 
-.gnav__link{
+.gnav__link {
   display: inline-block;
   padding: 13px 0;
   color: $black;
   height: inherit;
-  @include mq("md"){
+  @include mq("md") {
     padding: 23px 0;
   }
 }
 
-.gnav__title{
+.gnav__title {
   font-size: 18px;
   font-weight: $regular;
-  @include mq("md"){
+  @include mq("md") {
     font-size: 32px;
   }
 }
 
-.gnav__subtitle{
+.gnav__subtitle {
   font-size: 12px;
   font-weight: $bold;
   margin-top: 10px;
-  @include mq("md"){
+  @include mq("md") {
     font-size: 16px;
     margin-top: 11px;
   }
 }
 
-.gnav__btns{
+.gnav__btns {
   margin-top: 53px;
-  @include mq("md"){
+  @include mq("md") {
     margin-left: 63px;
   }
 }
 
-.gnav__btns > .btn{
+.gnav__btns > .btn {
   display: inline-block;
 }
 
-.gnav__btns > .btn:nth-child(2){
+.gnav__btns > .btn:nth-child(2) {
   margin-top: 13px;
-  @include mq("md"){
+  @include mq("md") {
     margin-top: 0;
     margin-left: 30px;
   }
 }
-
-
-

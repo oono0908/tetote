@@ -15,7 +15,7 @@
       <div class="footer__body-upper">
         <div class="footer__logo md-show">
           <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__logo-link">
-            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/title-black.svg')); ?>" alt="タイトルロゴ" class="footer__logo-img" loading="lazy">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/footer/title-black.svg')); ?>" alt="タイトルロゴ" class="footer__logo-img" loading="lazy">
           </a>
         </div>
         <nav class="footer__nav">
@@ -54,23 +54,23 @@
         <ul class="footer__sns-items">
           <li class="footer__sns-item">
             <a href="" class="footer__sns-link">
-              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/facebook-icon.svg')); ?>" alt="フェースブックのアイコン" class="footer__sns-img" loading="lazy">
+              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/footer/facebook-icon.svg')); ?>" alt="フェースブックのアイコン" class="footer__sns-img" loading="lazy">
             </a>
           </li>
           <li class="footer__sns-item">
             <a href="" class="footer__sns-link">
-              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/twitter-icon.svg')); ?>" alt="ツイッターのアイコン" class="footer__sns-img" loading="lazy">
+              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/footer/twitter-icon.svg')); ?>" alt="ツイッターのアイコン" class="footer__sns-img" loading="lazy">
             </a>
           </li>
           <li class="footer__sns-item">
             <a href="" class="footer__sns-link">
-              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/yutube-icon.svg')); ?>" alt="ユーチューブのアイコン" class="footer__sns-img" loading="lazy">
+              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/footer/yutube-icon.svg')); ?>" alt="ユーチューブのアイコン" class="footer__sns-img" loading="lazy">
             </a>
           </li>
         </ul>
         <div class="footer__logo md-none">
           <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__logo-link">
-            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/title-black.svg')); ?>" alt="タイトルロゴ" class="footer__logo-img" loading="lazy">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/footer/title-black.svg')); ?>" alt="タイトルロゴ" class="footer__logo-img" loading="lazy">
           </a>
         </div>
         <p class="footer__copy">&copy;&nbsp;2024&nbsp;TETOTE&nbsp;All&nbsp;Right&nbsp;Reserved.</p>

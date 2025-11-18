@@ -239,11 +239,19 @@
 .about02__thumb {
   width: 70%;
   margin: 0 auto;
+  aspect-ratio: 300/379;
 }
 @media screen and (min-width: 768px) {
   .about02__thumb {
     width: 50%;
   }
+}
+
+.about02__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .about02__body {
@@ -371,11 +379,19 @@
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
+  aspect-ratio: 457/281;
 }
 @media screen and (min-width: 1024px) {
   .about03__thumb {
     width: 50%;
   }
+}
+
+.about03__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .about03__body {

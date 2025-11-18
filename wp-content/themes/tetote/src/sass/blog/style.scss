@@ -28,8 +28,12 @@
 .message__img-wrap{
   width: 156px;
   aspect-ratio:156 / 180;
-  object-fit: cover;
+}
+
+.message__thumb{
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .message__body{

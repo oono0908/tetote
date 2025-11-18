@@ -119,9 +119,16 @@
 .about02__thumb{
   width: 70%;
   margin: 0 auto;
+  aspect-ratio: 300 / 379;
   @include mq("md"){
     width: 50%;
   }
+}
+
+.about02__img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .about02__body{
@@ -236,9 +243,16 @@
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
+  aspect-ratio: 457 / 281;
   @include mq("lg"){
     width: 50%;
   }
+}
+
+.about03__img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .about03__body{

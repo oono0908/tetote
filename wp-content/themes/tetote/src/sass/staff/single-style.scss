@@ -92,9 +92,16 @@
 .staff-dt-top__thumb{
   margin: 40px auto 0;
   width: 300px;
+  aspect-ratio: 300 / 379;
   @include mq("md"){
     margin-top: 0;
   }
+}
+
+.staff__card__img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 /* =========================================================
 メイン
@@ -234,24 +241,30 @@
 
 .staff__card-thum{
   position: relative;
+  aspect-ratio: 300 / 379;
+  max-width: 300px;
+}
+
+.staff__card__img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .staff__card-title{
   position: absolute;
   bottom: -5%;
   left: 0;
-  width: 94%;
-  @include mq("md"){
-  width: 94%;
-  }
 }
 
 .staff__card-text{
   font-weight: $bold;
-  background: $green;
+  background: $green2;
   color: $black;
   font-size: 18px;
-  display: inline-block;
+  white-space: nowrap;
+  width: fit-content;
+  padding: 0 10px;
   @include mq("md"){
     font-size: 20px;
   }

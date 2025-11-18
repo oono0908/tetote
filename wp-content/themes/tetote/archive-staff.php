@@ -20,7 +20,7 @@
                     <?php if ( $image ) : ?>
                       <img src="<?php echo esc_url( $image['url'] ); ?>" 
                         alt="<?php echo esc_attr( $name ); ?>" 
-                        class="member__card__img" 
+                        class="staff__card__img" 
                         width="300" 
                         height="379" 
                       />

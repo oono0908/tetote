@@ -17,17 +17,6 @@
   @include mq("lg"){
     font-size: 52px;
   }
-  // &:after{
-  //   content: "";
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 0;
-  //   transform: translateY(-50%);
-  //   height: 80px;
-  //   @include mq("lg"){
-  //     font-size: 52px;
-  //   }
-  // }
 }
 
 .section-title__back{
@@ -527,6 +516,14 @@ memberセクション
 
 .member__card-thum{
   position: relative;
+  max-width: 300px;
+  aspect-ratio: 300 / 379;
+}
+
+.member__card__img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .member__card-title{
@@ -540,7 +537,9 @@ memberセクション
   background: $green2;
   color: $black;
   font-size: 16px;
-  display: inline-block;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 0 10px;
   @include mq("md"){
     font-size: 20px;
     padding: 5px 7px;
@@ -769,8 +768,12 @@ message
 .message__img-wrap{
   width: 156px;
   aspect-ratio:156 / 180;
-  object-fit: cover;
+}
+
+.message__thumb{
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .message__body{

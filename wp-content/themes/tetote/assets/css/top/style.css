@@ -584,6 +584,15 @@ memberセクション
 
 .member__card-thum {
   position: relative;
+  max-width: 300px;
+  aspect-ratio: 300/379;
+}
+
+.member__card__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .member__card-title {
@@ -597,7 +606,11 @@ memberセクション
   background: #AFA86F;
   color: #222222;
   font-size: 16px;
-  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 0 10px;
 }
 @media screen and (min-width: 768px) {
   .member__card-text {
@@ -869,9 +882,13 @@ message
 .message__img-wrap {
   width: 156px;
   aspect-ratio: 156/180;
+}
+
+.message__thumb {
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 100%;
 }
 
 .message__body {

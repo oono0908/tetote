@@ -87,7 +87,7 @@
                 $alt_text = get_the_title();
 
                 if (  !empty($img['url']) ) {
-                    $img_html = '<img src="' . esc_url($img['url']) . '" alt="' . esc_attr($alt_text) . '" class="member__card__img" width="300" height="379" />';
+                    $img_html = '<img src="' . esc_url($img['url']) . '" alt="' . esc_attr($alt_text) . '" class="staff__card__img" width="300" height="379" />';
                   } 
               ?>
 

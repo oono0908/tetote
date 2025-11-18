@@ -41,24 +41,30 @@
 
 .staff__card-thum{
   position: relative;
+  aspect-ratio: 300 / 379;
+  max-width: 300px;
+}
+
+.staff__card__img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .staff__card-title{
   position: absolute;
   bottom: -5%;
   left: 0;
-  width: 84%;
-  @include mq("md"){
-    width: 94%;
-  }
 }
 
 .staff__card-text{
   font-weight: $bold;
-  background: $green;
+  background: $green2;
   color: $black;
   font-size:18px;
-  display: inline-block;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 0 10px;
   @include mq("md"){
     font-size: 20px;
   }

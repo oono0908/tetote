@@ -105,11 +105,19 @@
 .staff-dt-top__thumb {
   margin: 40px auto 0;
   width: 300px;
+  aspect-ratio: 300/379;
 }
 @media screen and (min-width: 768px) {
   .staff-dt-top__thumb {
     margin-top: 0;
   }
+}
+
+.staff__card__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 /* =========================================================
@@ -279,26 +287,33 @@
 
 .staff__card-thum {
   position: relative;
+  aspect-ratio: 300/379;
+  max-width: 300px;
+}
+
+.staff__card__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .staff__card-title {
   position: absolute;
   bottom: -5%;
   left: 0;
-  width: 94%;
-}
-@media screen and (min-width: 768px) {
-  .staff__card-title {
-    width: 94%;
-  }
 }
 
 .staff__card-text {
   font-weight: 700;
-  background: #988C2C;
+  background: #AFA86F;
   color: #222222;
   font-size: 18px;
-  display: inline-block;
+  white-space: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 10px;
 }
 @media screen and (min-width: 768px) {
   .staff__card-text {

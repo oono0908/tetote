@@ -36,9 +36,13 @@
 .message__img-wrap {
   width: 156px;
   aspect-ratio: 156/180;
+}
+
+.message__thumb {
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  height: 100%;
 }
 
 .message__body {

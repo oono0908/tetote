@@ -234,6 +234,8 @@ MVセクション
 }
 
 .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
   height: inherit;
 }
 

@@ -19,23 +19,18 @@ jQuery(function ($) {
 // aboutセクションのswiper
 
 const aboutSwiper = new Swiper('.about__swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 16,
-  loop: true,
-  loopAdditionalSlides: 10,
-  speed: 12000,
-  allowTouchMove: false,
-  simulateTouch: false,
-  freeMode: true,
-  freeModeMomentum: false,
-  autoplay: {
-    delay: 1,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: false
-  },
-  preventClicks: true,
-  preventClicksPropagation: true
+    slidesPerView: 'auto',
+    loop: true, // ループ有効
+    spaceBetween: 16,
+    speed: 12000, // ループの時間
+    allowTouchMove: false, // スワイプ無効
+    loopAdditionalSlides: 10,
+    autoplay: {
+     delay: 0, // 途切れなくループ
+    },
 });
+
+
 
 
 

@@ -218,7 +218,9 @@ MVセクション
   height: inherit;
 }
 
-.swiper-wrapper{
+
+.swiper-wrapper {
+  transition-timing-function: linear !important;
   height: inherit;
 }
 

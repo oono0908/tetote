@@ -810,7 +810,7 @@ message
   top: 50%;
   width: 12px;
   height: 14px;
-  background: url("../../images/blog-tag-img.svg") no-repeat center center / contain;
+  background: url("../../images/blog/blog-tag-img.svg") no-repeat center center / contain;
   transform: translateY(-50%);
   @include mq("md"){
     width: 14px;

@@ -933,7 +933,7 @@ message
   top: 50%;
   width: 12px;
   height: 14px;
-  background: url("../../images/blog-tag-img.svg") no-repeat center center/contain;
+  background: url("../../images/blog/blog-tag-img.svg") no-repeat center center/contain;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }

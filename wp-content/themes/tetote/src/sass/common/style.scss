@@ -23,6 +23,49 @@
   cursor: pointer;
 }
 
+// ローディング
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.loading {
+  position: fixed;
+  inset: 0;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.loading__text {
+  font-size: 32px;
+  font-weight: 700;
+  color: $green;
+  animation: blink 1.2s ease-in-out infinite;
+  text-transform: lowercase;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 // spでは非表示
 .md-none{
   @include mq("md"){

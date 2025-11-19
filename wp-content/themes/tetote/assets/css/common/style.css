@@ -957,6 +957,64 @@ body:not(.home) .title-logo--black {
   cursor: pointer;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.loading {
+  position: fixed;
+  inset: 0;
+  background-color: #FAF7F1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+
+.loading__text {
+  font-size: 32px;
+  font-weight: 700;
+  color: #988C2C;
+  -webkit-animation: blink 1.2s ease-in-out infinite;
+  animation: blink 1.2s ease-in-out infinite;
+  text-transform: lowercase;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media screen and (min-width: 768px) {
   .md-none {
     display: none !important;

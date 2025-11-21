@@ -17,7 +17,7 @@
     ?>
 
     <div class="swiper member__slider">
-      <ul class="swiper-wrapper member__cards">
+      <div class="swiper-wrapper member__cards">
         <?php if ( $the_query->have_posts() ) : ?>
           <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <?php
@@ -27,7 +27,7 @@
               $message01 = get_field('message01');
               $message02 = get_field('message02');
             ?>
-            <li class="swiper-slide member__card">
+            <div class="swiper-slide member__card">
               <div class="member__card-thum">
                 <?php if ( $image ) : ?>
                   <img src="<?php echo esc_url( $image['url'] ); ?>" 
@@ -57,13 +57,13 @@
                   <p class="member__card-name"><?php echo esc_html( $name ); ?></p>
                 <?php endif; ?>
               </div>
-            </li>
+            </div>
           <?php endwhile; ?>
           <?php wp_reset_postdata(); ?>
         <?php else : ?>
-          <li>スタッフ情報がありません。</li>
+          <div>スタッフ情報がありません。</div>
         <?php endif; ?>
-      </ul>
+      </div>
     </div>
 
     <div class="member__btns">

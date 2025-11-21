@@ -16,20 +16,4 @@ jQuery(function ($) {
   });
 });
 
-// loading
 
-jQuery(function ($) {
-  $(window).on("load", function () {
-    const $loading = $(".loading");
-
-    if ($loading.length === 0) return;
-    
-    setTimeout(function () {
-      $loading.css("opacity", "0");
-
-      $loading.on("transitionend webkitTransitionEnd", function () {
-        $loading.css("display", "none");
-      });
-    }, 1000);
-  });
-});

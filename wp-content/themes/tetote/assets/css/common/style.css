@@ -957,12 +957,6 @@ body:not(.home) .title-logo--black {
   cursor: pointer;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .loading {
   position: fixed;
   inset: 0;
@@ -977,7 +971,6 @@ html, body {
   -ms-flex-align: center;
   align-items: center;
   z-index: 9999;
-  overflow: hidden;
   opacity: 1;
   -webkit-transition: opacity 0.6s ease;
   transition: opacity 0.6s ease;

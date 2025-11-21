@@ -12,33 +12,26 @@ function my_theme_scripts() {
     wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', [], '8', true, ['defer' => true] );
     wp_enqueue_style( 'top-css', get_theme_file_uri('assets/css/top/style.css'), [], '1.0' );
     wp_enqueue_script( 'top-js', get_theme_file_uri('assets/js/top/script.js'), ['jquery','swiper-js'], '1.0', true, ['defer' => true] );
-    wp_enqueue_script('loading-js', get_theme_file_uri('assets/js/common/loading.js'), ['jquery'], null, false);
-
   }
 
   elseif ( is_page('about') ) {
     wp_enqueue_style( 'about-css', get_theme_file_uri('assets/css/about/style.css'), [], '1.0' );
     wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
-    wp_enqueue_script('loading-js', get_theme_file_uri('assets/js/common/loading.js'), ['jquery'], null, false);
   }
 
   elseif (is_post_type_archive('staff')) {
     wp_enqueue_style( 'staff-css', get_theme_file_uri('assets/css/staff/style.css'), [], '1.0' );
     wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
-    wp_enqueue_script('loading-js', get_theme_file_uri('assets/js/common/loading.js'), ['jquery'], null, false);
   }
 
   elseif (is_singular( 'staff' ) ) {
     wp_enqueue_style( 'staff-single-css', get_theme_file_uri('assets/css/staff/single-style.css'), [], '1.0' );
     wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
     wp_enqueue_script( 'staff-single-js', get_theme_file_uri('assets/js/staff/single-script.js'), ['jquery'], '1.0', true, ['defer' => true] );
-    wp_enqueue_script('loading-js', get_theme_file_uri('assets/js/common/loading.js'), ['jquery'], null, false);
   }
-  
   elseif (is_home( 'blog' ) ) {
     wp_enqueue_style( 'blog-css', get_theme_file_uri('assets/css/blog/style.css'), [], '1.0' );
     wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
-    wp_enqueue_script('loading-js', get_theme_file_uri('assets/js/common/loading.js'), ['jquery'], null, false);
   }
 
     elseif (is_single() ) {
@@ -49,7 +42,7 @@ function my_theme_scripts() {
   elseif (is_page('benefits') ) {
     wp_enqueue_style( 'benefits-css', get_theme_file_uri('assets/css/benefits/style.css'), [], '1.0' );
     wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
-    wp_enqueue_script('loading-js', get_theme_file_uri('assets/js/common/loading.js'), ['jquery'], null, false);
+    
   }
   elseif (is_page('career') ) {
     wp_enqueue_style( 'career-css', get_theme_file_uri('assets/css/career/style.css'), [], '1.0' );
@@ -67,18 +60,18 @@ function my_theme_scripts() {
     wp_enqueue_script( 'scroll-btn-js', get_theme_file_uri('assets/js/scroll-btn/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
     wp_enqueue_script( 'faq-js', get_theme_file_uri('assets/js/faq/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
     wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
-    wp_enqueue_script('loading-js', get_theme_file_uri('assets/js/common/loading.js'), ['jquery'], null, false);
+    
   }
   elseif (is_page('entry') ) {
     wp_enqueue_style( 'entry-css', get_theme_file_uri('assets/css/entry/style.css'), [], '1.0' );
     wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
     wp_enqueue_script( 'entry-js', get_theme_file_uri('assets/js/entry/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
-    wp_enqueue_script('loading-js', get_theme_file_uri('assets/js/common/loading.js'), ['jquery'], null, false);
+    
   }
   elseif (is_page('entry-thanks') ) {
     wp_enqueue_style( 'entry-css', get_theme_file_uri('assets/css/entry/thanks.css'), [], '1.0' );
     wp_enqueue_script( 'common-js', get_theme_file_uri('assets/js/common/script.js'), ['jquery'], '1.0', true, ['defer' => true] );
-    wp_enqueue_script('loading-js', get_theme_file_uri('assets/js/common/loading.js'), ['jquery'], null, false);
+    
   }
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );

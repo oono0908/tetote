@@ -43,7 +43,6 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <?php get_template_part('parts/loading'); ?>
   <header class="header js-header">
     <h1 class="header__logo">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="logo" aria-label="TETOTEのホームページへ戻る">
